@@ -6,6 +6,24 @@
 	<body>
 		<div id='wrapper'>
 			<div id='header'>
-				<h1>This is the header</h1>
+				<div id="main-menu">
+					<ul>
+						<li>
+							<a href="#">¿Quiénes somos?</a>
+						</li>
+						<li>
+							<a href="#">Emprendedora Victoria 147</a>
+						</li>
+						<li>
+							<a href="#">Mujer Victoria 147</a>
+						</li>
+						<li>
+							<a href="#">Productos Victoria147</a>
+						</li>
+						<li>
+							<a href="#">Contáctanos</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		

@@ -16,7 +16,6 @@
 		?>
 		
 	</div>
-	<?php get_sidebar();?>
 </div>
 <div id='delimiter'></div>
 <?php get_footer();?>
