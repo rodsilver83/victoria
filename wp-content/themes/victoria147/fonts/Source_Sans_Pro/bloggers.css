@@ -1,0 +1,195 @@
+/* common styles */
+
+#header {
+    border-bottom: 1px solid #00b3a2 !important;
+    height: 91px !important;
+}
+
+#content {
+    padding-top: 0px !important;
+}
+
+p.ico-v147{
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* css for fonts */
+
+@font-face { /* Source Sans Pro Bold */
+    font-family: 'source_sans_probold';
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.eot');
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_problack';
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.eot');
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.woff') format('woff'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.ttf') format('truetype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.svg#source_sans_problack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* css for top menu font*/
+
+#main-nav a{
+    font-family: 'source_sans_probold' !important;
+    font-size: 22px !important;
+    font-style: normal !important;
+}
+
+
+/* css custom plugin tiles-post */
+
+ul#post-tiles {
+    padding: 0 0 10px !important;
+}
+#post-tiles-container {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+ul#post-tiles li{
+    margin: 0 !important;
+}
+
+/* css for last blog post */
+
+.one-half h6.section-title{
+    font-size: 18px;
+    font-weight: 700;
+    color: #00b3a2;
+}
+
+.one-half h6.section-title code{
+    font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+ul.one-column li{
+    width: 440px;    
+}
+
+#content ul.one-column .entry-body{
+    width: 390px;
+}
+
+/* css for section [Primera Generacion] */
+
+.container h3{
+    background: url( ../../uploads/2013/03/v147_ellas.png ) no-repeat 770px 0;    
+
+    line-height: 190px;
+    width: 940px;
+    height: 125px;
+}
+
+.one-half, .one-third, .two-third, .one-fourth, .three-fourth {
+    margin-right: 10px !important;
+}
+
+.team-member .content {
+    height: 190px;
+}
+
+.team-member .social-links {
+    bottom: 0;
+    position: absolute;
+}
+
+.container .team-member:hover{
+    background-image: url( images/textura_gris.png );
+    background-repeat: repeat-y;
+}
+
+.container p.conent-cite {
+    overflow: hidden;
+    margin: 0 80px;
+}
+
+.container .text-qoute{
+    float: left;
+    width: 635px;
+    font-size: 20px;
+}
+
+.container .quote-starting{
+    background-image: url( ../../uploads/2013/05/adornotxt_izq.png );
+    width: 75px;
+    height: 52px;
+    float: left;
+    text-indent: -999px;
+    margin-top: 5px;
+}
+
+.container .quote-ending{
+    background-image: url( ../../uploads/2013/05/adornotxt_der.png );
+    width: 67px;
+    height: 46px;
+    float: left;
+    text-indent: -999px;
+    margin-top: 5px;
+}
+
+.container .text-qoute span{
+    color: #00b3a2;
+}
+
+/* css for form contact */
+
+#form-solicitud input {
+    height: 20px !important;
+}
+
+#form-solicitud dd{
+    margin-bottom: 10px !important;
+}
+
+#form-solicitud span.required{
+    color: #00b3a2;
+}
+
+dd.float-left , dt.float-left{
+    float: left;
+}
+
+#box-name, #email-address, #address-box, #company-box,
+#appointment-box{
+    width: 600px;
+}
+
+#phone-box, #mobile-box{
+    width: 205px;
+}
+
+span.logo-facebook{
+    background: url( images/casilla_facebook.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+span.logo-twitter{
+    background: url( images/casilla_twitter.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+#facebook-box, #twitter-box {
+    width: 193px;
+}
