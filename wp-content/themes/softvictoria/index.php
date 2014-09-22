@@ -16,6 +16,29 @@
 		</div>
 	</div>
 </div>
+<div class="row news-sections">
+	<div class="large-4 columns column-section">
+		<a href="">Hello</a>
+		<div class="section-actionable"></div>
+		<div class="section-image">
+			<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
+		</div>
+	</div>
+	<div class="large-4 columns column-section">
+		<a href="">Hello</a>
+		<div class="section-actionable"></div>
+		<div class="section-image">
+			<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
+		</div>
+	</div>
+	<div class="large-4 columns column-section">
+		<a href="">Hello</a>
+		<div class="section-actionable"></div>
+		<div class="section-image">
+			<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
+		</div>
+	</div>
+</div>
 <div class="content-other">
 	<?php
 	 if (have_posts()): while(have_posts()): the_post(); ?>
