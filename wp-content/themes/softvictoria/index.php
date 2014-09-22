@@ -1,8 +1,38 @@
 <?php get_header(); ?>
 <link rel="stylesheet" href="../../plugins/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-<div id='main'>
-	<div id='content'>
-		<h1>Main content area</h1>
+<div id="main-intro">
+	<div class="intro-spacer"></div>
+	<div id="content" class="row">
+		<div class="large-12 columns">
+			<img src="<?php bloginfo('template_directory'); ?>/img/victoria-mail-logo.png" alt="Victoria 147" width="50%" height="auto">
+		</div>
+		<div class="large-12 columns intro-bottom">
+			<blockquote class="intro-quote">“Somos una organización que busca redefinir el concepto de la mujer actual.”</blockquote class="intro">
+				<br>
+			<a href="" class="intro-scroll">
+				<p class="text-center">SCROLL</p>
+				<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
+			</a>
+		</div>
+	</div>
+</div>
+<div class="content-other">
+	<?php
+	 if (have_posts()): while(have_posts()): the_post(); ?>
+		<h1><?php the_title();?></h1>
+		<h4>Posted on <?php the_time('F jS Y')?></h4>
+		<p><?php the_content(__('(more ...)'));?></p>
+		<hr/>
+	<?php endwhile; else:?>
+		<p><?php _e('Sorry, we couldn\'t find the post you are looking for...')?></p>
+	<?php endif;
+	?>
+	<?php
+	?>
+</div>
+<!-- Team Members -->
+<div class="content-team">
+	<div id='content-teams'>
 		<!--- @@ pnm begin -->
 		<?php
 
@@ -56,8 +86,7 @@
 		<h1><hr><hr></h1>
 		<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
 		<!-- @@ pnm end-->
-	</div>
-	<?php get_sidebar();?>
 </div>
-<div id='delimiter'></div>
+<!-- End Team Members -->
+<div id="delimiter"></div>
 <?php get_footer();?>
