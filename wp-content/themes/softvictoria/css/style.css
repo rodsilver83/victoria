@@ -1,0 +1,218 @@
+/*
+Theme Name:     softvictoria
+Theme URI:      http://www.victoria147.org/
+Description:    Custom wordpress theme for Victoria 147
+Author:         ---- 
+Author URI:     http://www.victoria147.org/
+Template:       softvictoria
+Version:        1.00
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+
+html{
+	overflow-x: hidden;
+}
+body{
+	font-family: 'Lato', sans-serif !important;
+	font-weight: 400;
+	text-align: center;
+	display: block;
+	margin: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif !important;
+	font-weight: normal;
+	font-style: normal;
+	color: #222222;
+	text-rendering: optimizeLegibility;
+	margin-top: 0.2rem;
+	margin-bottom: 0.5rem;
+	line-height: 1.4;
+}
+
+#wrapper{
+	display: block;
+}
+
+#header{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 100;
+	padding: 20px 0px 0px;
+}
+/*------------------
+		Main Menu
+------------------*/
+#main-menu {
+	padding: 10px 0 10px 0;
+	min-height: 50px;
+	display: block;
+}
+.top-menu-columns {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	margin-right: -5px
+}
+.double-lined-btn{
+	background-color: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	padding-top: 7px !important;
+	padding-right: 15px !important;
+	padding-bottom: 15px !important;
+	padding-left: 15px !important;
+	max-height: 45px;
+	min-width: 80%;
+	vertical-align: middle;
+}
+.double-lined-btn:hover{
+	background-color: #fff;
+	color: #999;
+}
+.top-menu-btn {
+	background-color: transparent;
+	color: #fff;
+	border: 2px solid #fff;
+	padding-top: 15px !important;
+	padding-right: 15px !important;
+	padding-bottom: 15px !important;
+	padding-left: 15px !important;
+	max-height: 45px;
+	min-width: 80%;
+	vertical-align: middle;
+}
+.top-menu-btn:hover{
+	background-color: #fff;
+	color: #999;
+}
+.the-search{
+
+}
+/*  Social Buttons  */
+.top-social-btns{
+	width: 160px;
+	position: relative;
+	top: 10px;
+}
+.social-btn{
+	float: left;
+	display: inline;
+	width: 29px;
+	height: 28px;
+	margin-right: 3px;
+}
+.fb-btn{
+	background-image: url('../img/social-sprite.png');
+	background-repeat: no-repeat;
+}
+.tw-btn{
+	background-image: url('../img/social-sprite.png');
+	background-repeat: no-repeat;
+	background-position: 20.3% 0%;
+}
+.insta-btn{
+	background-image: url('../img/social-sprite.png');
+	background-repeat: no-repeat;
+	background-position: 60.9% 0%;
+}
+.yt-btn{
+	background-image: url('../img/social-sprite.png');
+	background-repeat: no-repeat;
+	background-position: 100.6% 0%;
+}
+/*#main-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+#main-menu ul li { 
+	display: inline; 
+}
+
+#main-menu ul li a {
+	text-decoration: none;
+	padding: .74em 1em;
+	color: #333;
+	width: 100px;
+	border: 1px solid #333;
+}
+
+#main-menu ul li a:hover {
+	color: #fff;
+	background-color: #333;
+}*/
+/*------------------
+		Main Index
+------------------*/
+#main-intro {
+	background-image: url("../img/main-victoria.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;
+	position: relative;
+	color: #fff;
+	top: -110px;
+	width: 100%;
+	z-index: 0;
+	min-height: 800px;
+	display: list-item;
+}
+#content{
+	width: 960px;
+	max-width: 960px;
+}
+.intro-spacer{
+	padding: 150px 0px;
+}
+blockquote.intro-quote{
+	color: #fff;
+	font-size: 26px;
+	font-weight: 300;
+	line-height: 24px;
+	max-width: 550px;
+	text-align: center;
+	border-left: none;
+	margin: 0 auto;
+}
+.intro-bottom{
+	top: 90px;
+	color: #fff;
+}
+.intro-scroll{
+	position: relative;
+	top: 40px;
+	color: #fff;
+}
+.intro-scroll p{
+	margin: 0;
+}
+
+#sidebar{
+	width: 23%;
+	float: right;
+}
+
+#delimiter{
+	clear: both;
+}
+
+#footer{
+}
+
+.title{
+	font-size:11pt;
+	font-family: arial;
+	font-weight: bold;
+}
+/*--------------------
+	
+	Special Styles
+
+--------------------*/
+.hidden {
+	display: none !important;
+}
