@@ -88,13 +88,22 @@ h1, h2, h3, h4, h5, h6 {
 	color: #999;
 }
 .the-search{
-
+	font-size: 30px;
+	font-weight: lighter;
+	color: #fff;
+	margin-right: 10px;
+	float: left;
+	width: 35px;
+}
+.the-search:hover{
+	cursor: pointer;
 }
 /*  Social Buttons  */
 .top-social-btns{
-	width: 160px;
-	position: relative;
-	top: 10px;
+	width: 205px;
+	position: absolute;
+	top: 40px;
+	right: -5px;
 }
 .social-btn{
 	float: left;
