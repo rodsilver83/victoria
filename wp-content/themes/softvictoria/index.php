@@ -89,105 +89,73 @@
 					</div>
 				</div>
 			</div>
-			<div class="row news-sections">
-				<div class="large-12">
-					<h1>Nuestras Secciones</h1>
-				</div>
-				<div class="large-4 columns column-section">
-					<a href="">Hello</a>
-					<div class="section-actionable"></div>
-					<div class="section-image">
-						<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
-					</div>
-				</div>
-				<div class="large-4 columns column-section">
-					<a href="">Hello</a>
-					<div class="section-actionable"></div>
-					<div class="section-image">
-						<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
-					</div>
-				</div>
-				<div class="large-4 columns column-section">
-					<a href="">Hello</a>
-					<div class="section-actionable"></div>
-					<div class="section-image">
-						<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
-					</div>
-				</div>
-			</div>
-			<div class="content-other">
-				<?php
-				 if (have_posts()): while(have_posts()): the_post(); ?>
-					<h1><?php the_title();?></h1>
-					<h4>Posted on <?php the_time('F jS Y')?></h4>
-					<p><?php the_content(__('(more ...)'));?></p>
-					<hr/>
-				<?php endwhile; else:?>
-					<p><?php _e('Sorry, we couldn\'t find the post you are looking for...')?></p>
-				<?php endif;
-				?>
-				<?php
-				?>
-			</div>
+			<!--- @@ pnm begin -->
+			<?php
+			$html = "<div class='row news-sections'>";
+			$html .= "<div class='large-12'>";
+				$html .= "<h1>Nuestras Secciones</h1>";
+			$html .= "</div>";
+
+			$cat_args=array(
+				'orderby' => 'name',
+				'order' => 'ASC',
+				'include'=> array(11,33,30,29,28,25,26) 
+			);
+			$categories=get_categories($cat_args);
+			foreach($categories as $category) 
+			{ 
+
+				if($category->count > 0 )
+				{
+					$args=array(
+					'showposts' => 1,
+					'category__in' => array($category->term_id),
+					'caller_get_posts'=>1, 
+					'hide_empty'=>1,
+					);
+					//Testing the content of the post before it prints da HTML
+
+					$posts=get_posts($args)[0];
+
+					if($posts->post_content!='')
+					{
+						unset($posts);
+						$category_link= get_category_link( $category->term_id );
+						$title_link=sprintf( __( "View all posts in %s" ), $category->name );
+						$posts=get_posts($args);
+						foreach($posts as $post) 
+						{
+							setup_postdata($post); 
+							$html .= "
+							<div class='large-4 columns column-section'>
+								<!-- a href='${category_link}' title='${title_link}'>{$category->name}</a-->
+								<div class='section-actionable'><a href='".get_permalink()."'>".get_the_title()."</a> ea ea eaea</div>
+								<div class='section-image'>
+									<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>
+								</div>
+							</div>
+							";
+						} // foreach($posts)
+					} // post_content
+				} // count 
+			} // foreach($categories)
+			$html .= "</div>";
+			print("${html}");
+			
+			?>
+			<h1><hr><hr></h1>
+			<!-- @@ pnm end-->
 			<!-- Team Members -->
 			<div class="content-team">
 				<div id='content-teams'>
-					<!--- @@ pnm begin -->
-					<?php
-
-					$cat_args=array(
-						'orderby' => 'name',
-						'order' => 'ASC',
-						'include'=> array(33,30,28)
-					);
-					$categories=get_categories($cat_args);
-					foreach($categories as $category) 
-					{ 
-
-						if($category->count > 0 )
-						{
-							$args=array(
-							'showposts' => 1,
-							'category__in' => array($category->term_id),
-							'caller_get_posts'=>1, 
-							'hide_empty'=>1,
-							);
-							//Testing the content of the post before it prints da HTML
-
-							$posts=get_posts($args)[0];
-
-							if($posts->post_content!='')
-							{
-								unset($posts);
-								// echo '<p>Category: <a href="' .  . '" title="' .  . '" ' . '>' . $category->name.'</a> </p> ';
-								$category_link= get_category_link( $category->term_id );
-								$title_link=sprintf( __( "View all posts in %s" ), $category->name );
-								$html="<p>Category: <a href='${category_link}' title='${title_link}'>{$category->name}</a></p>";
-								print($html);
-								$posts=get_posts($args);
-								foreach($posts as $post) 
-								{
-									setup_postdata($post); 
-									if($contenido= the_content() != '')
-									{
-										print($contenido);
-									}
-								} // foreach($posts)
-
-							} // post_content
-						} // count 
-						print('<h1><hr><hr></h1>');
-					} // foreach($categories)
-
-					?>
-					<h1><hr><hr></h1>
 					<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
-					<h1><hr><hr></h1>
-					<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
-					<!-- @@ pnm end-->
 				</div>
 			</div>
 			<!-- End Team Members -->
+
+			<h1><hr><hr></h1>
+			<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
+
 			<div id="delimiter"></div>
 		</div>
 <?php get_footer();?>
