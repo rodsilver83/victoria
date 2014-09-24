@@ -55,20 +55,38 @@
 
 					  <section class="top-bar-section">
 					    <!-- Right Nav Section -->
-					    <ul class="right">
-					      <li class="active"><a href="#">Right Button Active</a></li>
+					    <!-- <ul class="right">
+					      <li><a href="#">Right Button Active</a></li>
+					    </ul> -->
+
+					    <!-- Left Nav Section -->
+					    <ul class="left">
+					      <li>
+					      	<a href="#">¿Quiénes somos?</a>
+					      </li>
 					      <li class="has-dropdown">
-					        <a href="#">Right Button Dropdown</a>
+					      	<a href="#">Emprendedora Victoria 147</a>
 					        <ul class="dropdown">
 					          <li><a href="#">First link in dropdown</a></li>
 					          <li class="active"><a href="#">Active link in dropdown</a></li>
 					        </ul>
 					      </li>
-					    </ul>
-
-					    <!-- Left Nav Section -->
-					    <ul class="left">
-					      <li><a href="#">Left Nav Button</a></li>
+					      <li>
+					      	<a href="#">Mujer Victoria 147</a>
+					      </li>
+					      <li>
+					      	<a href="#">Productos Victoria147</a>
+					      </li>
+					      <li>
+					      	<a href="#">Contáctanos</a>
+					      </li>
+					      <!-- <li class="has-dropdown">
+					        <a href="#">Right Button Dropdown</a>
+					        <ul class="dropdown">
+					          <li><a href="#">First link in dropdown</a></li>
+					          <li class="active"><a href="#">Active link in dropdown</a></li>
+					        </ul>
+					      </li> -->
 					    </ul>
 					  </section>
 				  </nav>
@@ -121,7 +139,7 @@
 					<a href="" class="column-name">Hello</a>
 					<a href="" class="the-post-link">
 						<p class="column-post-title">"Mumblecore semiotics 90's"</p>
-						<img src="<?php bloginfo('template_directory'); ?>/img/plus-sign.png" class="column-plus-sign" width="10%" height="auto">
+						<img src="<?=bloginfo('template_directory'); ?>/img/plus-sign.png" class="column-plus-sign" width="10%" height="auto">
 						<section class="section-actionable"></section>
 					</a>
 					<div class="section-image">
