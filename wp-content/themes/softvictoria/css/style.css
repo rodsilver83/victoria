@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: -110px;
 	width: 100%;
 	z-index: 0;
-	min-height: 800px;
+	min-height: 630px;
 	display: list-item;
 }
 #content{
