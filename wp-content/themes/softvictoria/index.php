@@ -45,9 +45,11 @@
 				<!-- On Scroll Menu -->
 				<div id="main-menu" class="transparent-h contain-to-grid sticky">
 				  <nav class="top-bar transparent-h" data-topbar role="navigation" data-options="sticky_on: large">
-				    <ul class="title-area">
-					    <li class="name hidden">
-					      <h1><a href="#">My Site</a></h1>
+				    <ul class="title-area hidden">
+					    <li class="name">
+					      <a href="#">
+					      	<img src="<?= bloginfo('template_directory'); ?>/img/victoria147-logo-sm.png" alt="Victoria 147">
+					      </a>
 					    </li>
 					     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 					    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -65,7 +67,7 @@
 					      	<a href="#">¿Quiénes somos?</a>
 					      </li>
 					      <li class="has-dropdown">
-					      	<a href="#">Emprendedora Victoria 147</a>
+					      	<a href="#" class="double-lined-menu">Emprendedora Victoria 147</a>
 					        <ul class="dropdown">
 					          <li><a href="#">First link in dropdown</a></li>
 					          <li><a href="#">Active link in dropdown</a></li>
@@ -75,7 +77,7 @@
 					      	<a href="#">Mujer Victoria 147</a>
 					      </li>
 					      <li>
-					      	<a href="#">Productos Victoria147</a>
+					      	<a href="#" class="double-lined-menu">Productos Victoria147</a>
 					      </li>
 					      <li>
 					      	<a href="#">Contáctanos</a>

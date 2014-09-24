@@ -30,6 +30,19 @@ $(document).ready(function(){
 	    scrollParalax();
 	});
   
+  //Playing with the Main Index Menu
+  $(function(){
+    $(window).scroll(function(){
+      var scrollTop = 23;
+      if($(window).scrollTop() >= scrollTop){
+        $(".title-area").removeClass("hidden");
+      }else{
+        $(".title-area").addClass("hidden"); 
+      }
+    });
+  });
+
+
   $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

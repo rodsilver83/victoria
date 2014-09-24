@@ -60,6 +60,13 @@ h1, h2, h3, h4, h5, h6 {
 	min-height: 50px;
 	display: block;
 }
+/* Container top bar */
+.contain-to-grid .top-bar {
+	min-width: 100%;
+}
+.top-bar .title-area{
+	padding: 12px 15px;
+}
 .top-bar-menu ul li {
 	margin-right: 5px;
 }
@@ -83,6 +90,18 @@ h1, h2, h3, h4, h5, h6 {
 	/* on hover */
   color: white;
 }
+.top-bar-menu .left li .dropdown {
+	left: -15px !important;
+}
+.double-lined-menu{
+	max-width: 145px;
+	line-height: 15px !important;
+	min-height: 49px;
+	padding-top: 8px !important;
+}
+/*
+Old Menu
+*/
 .top-menu-columns {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
