@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="eES">
+<html class="no-js" lang="ES">
 	<head>
 		<meta charset="utf-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_enclosed_foundicons.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_foundicons.css">
 		<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
 	</head>
 	<body>
@@ -82,39 +83,53 @@
 					<div class="large-12 columns intro-bottom">
 						<blockquote class="intro-quote">“Somos una organización que busca redefinir el concepto de la mujer actual.”</blockquote class="intro">
 							<br>
-						<a href="" class="intro-scroll">
+						<a href="#the_sections" class="intro-scroll">
 							<p class="text-center">SCROLL</p>
 							<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
 						</a>
 					</div>
 				</div>
 			</div>
-			<div class="row news-sections">
+			<!-- the news section -->
+			<div id="the_sections" class="row news-sections">
 				<div class="large-12 news-headliner">
 					<h1>Nuestras Secciones</h1>
 				</div>
 				<div class="large-4 columns column-section">
-					<a href="">Hello</a>
-					<div class="section-actionable"></div>
+					<a href="" class="column-name">Hello</a>
+					<a href="" class="the-post-link">
+						<p class="column-post-title">"Mumblecore semiotics 90's"</p>
+						<img src="<?php bloginfo('template_directory'); ?>/img/plus-sign.png" class="column-plus-sign" width="10%" height="auto">
+						<section class="section-actionable"></section>
+					</a>
 					<div class="section-image">
 						<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
 					</div>
 				</div>
 				<div class="large-4 columns column-section">
-					<a href="">Hello</a>
-					<div class="section-actionable"></div>
+					<a href="" class="column-name">Hello</a>
+					<a href="" class="the-post-link">
+						<p class="column-post-title">"Mumblecore semiotics 90's"</p>
+						<img src="<?php bloginfo('template_directory'); ?>/img/plus-sign.png" class="column-plus-sign" width="10%" height="auto">
+						<section class="section-actionable"></section>
+					</a>
 					<div class="section-image">
 						<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
 					</div>
 				</div>
 				<div class="large-4 columns column-section">
-					<a href="">Hello</a>
-					<div class="section-actionable"></div>
+					<a href="" class="column-name">Hello</a>
+					<a href="" class="the-post-link">
+						<p class="column-post-title">"Mumblecore semiotics 90's"</p>
+						<img src="<?php bloginfo('template_directory'); ?>/img/plus-sign.png" class="column-plus-sign" width="10%" height="auto">
+						<section class="section-actionable"></section>
+					</a>
 					<div class="section-image">
 						<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
 					</div>
 				</div>
 			</div>
+			<!-- end the news section -->
 			<div class="content-slider">
 				<ul class="example-orbit" data-orbit 
 				data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
@@ -213,4 +228,8 @@
 			<!-- End Team Members -->
 			<div id="delimiter"></div>
 		</div>
+		<!-- The Scrolling Script -->
+		<script>
+		
+		</script>
 <?php get_footer();?>

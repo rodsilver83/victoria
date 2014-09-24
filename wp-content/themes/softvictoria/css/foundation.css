@@ -382,7 +382,7 @@ select {
   .column.small-uncentered.opposite,
   .columns.small-uncentered.opposite {
     float: right; } }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .medium-push-0 {
     position: relative;
     left: 0%;
@@ -732,7 +732,7 @@ select {
     position: relative;
     right: 91.66667%;
     left: auto; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .large-push-0 {
     position: relative;
     left: 0%;
@@ -1222,7 +1222,7 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   button, .button {
     display: inline-block; } }
 meta.foundation-mq-topbar {
@@ -1526,7 +1526,7 @@ meta.foundation-mq-topbar {
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .top-bar {
     background: #333333;
     overflow: visible; }
@@ -1848,7 +1848,7 @@ meta.foundation-mq-topbar {
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.stack-for-small > li:first-child button, .button-group.stack-for-small > li:first-child .button {
       border-left: 0; }
-    @media only screen and (max-width: 40em) {
+    @media only screen {
       .button-group.stack-for-small > li {
         margin: 0 -2px;
         float: none;
@@ -1920,7 +1920,7 @@ meta.foundation-mq-topbar {
       -webkit-bottom-right-radius: 3px;
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .button-group.radius.stack-for-small > * {
       margin: 0 -2px;
       float: none;
@@ -1942,7 +1942,7 @@ meta.foundation-mq-topbar {
         -webkit-border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
         border-top-right-radius: 3px; } }
-  @media only screen and (max-width: 40em) {
+  @media only screen {
     .button-group.radius.stack-for-small > * {
       margin: 0 -2px;
       float: none;
@@ -2026,7 +2026,7 @@ meta.foundation-mq-topbar {
       -webkit-bottom-right-radius: 1rem;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .button-group.round.stack-for-small > * {
       margin: 0 -2px;
       float: none;
@@ -2048,7 +2048,7 @@ meta.foundation-mq-topbar {
         -webkit-border-top-right-radius: 1000px;
         border-bottom-right-radius: 1000px;
         border-top-right-radius: 1000px; } }
-  @media only screen and (max-width: 40em) {
+  @media only screen {
     .button-group.round.stack-for-small > * {
       margin: 0 -2px;
       float: none;
@@ -2586,13 +2586,13 @@ meta.foundation-mq-topbar {
 .touch .orbit-bullets {
   display: none; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .touch .orbit-container .orbit-prev,
   .touch .orbit-container .orbit-next {
     display: inherit; }
   .touch .orbit-bullets {
     display: block; } }
-@media only screen and (max-width: 40em) {
+@media only screen {
   .orbit-stack-on-small .orbit-slides-container {
     height: auto !important; }
   .orbit-stack-on-small .orbit-slides-container > * {
@@ -2662,7 +2662,7 @@ meta.foundation-mq-topbar {
       width: auto;
       margin: auto;
       float: none; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .icon-bar.medium-vertical {
       height: 100%;
       width: auto; }
@@ -2670,7 +2670,7 @@ meta.foundation-mq-topbar {
         width: auto;
         margin: auto;
         float: none; } }
-  @media only screen and (min-width: 64.063em) {
+  @media only screen {
     .icon-bar.large-vertical {
       height: 100%;
       width: auto; }
@@ -2699,50 +2699,50 @@ meta.foundation-mq-topbar {
   width: 50%; }
 .icon-bar.two-up.vertical .item, .icon-bar.two-up.small-vertical .item {
   width: auto; }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .icon-bar.two-up.medium-vertical .item {
     width: auto; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .icon-bar.two-up.large-vertical .item {
     width: auto; } }
 .icon-bar.three-up .item {
   width: 33.3333%; }
 .icon-bar.three-up.vertical .item, .icon-bar.three-up.small-vertical .item {
   width: auto; }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .icon-bar.three-up.medium-vertical .item {
     width: auto; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .icon-bar.three-up.large-vertical .item {
     width: auto; } }
 .icon-bar.four-up .item {
   width: 25%; }
 .icon-bar.four-up.vertical .item, .icon-bar.four-up.small-vertical .item {
   width: auto; }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .icon-bar.four-up.medium-vertical .item {
     width: auto; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .icon-bar.four-up.large-vertical .item {
     width: auto; } }
 .icon-bar.five-up .item {
   width: 20%; }
 .icon-bar.five-up.vertical .item, .icon-bar.five-up.small-vertical .item {
   width: auto; }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .icon-bar.five-up.medium-vertical .item {
     width: auto; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .icon-bar.five-up.large-vertical .item {
     width: auto; } }
 .icon-bar.six-up .item {
   width: 16.66667%; }
 .icon-bar.six-up.vertical .item, .icon-bar.six-up.small-vertical .item {
   width: auto; }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .icon-bar.six-up.medium-vertical .item {
     width: auto; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .icon-bar.six-up.large-vertical .item {
     width: auto; } }
 
@@ -2758,7 +2758,7 @@ meta.foundation-mq-topbar {
 .text-justify {
   text-align: justify !important; }
 
-@media only screen and (max-width: 40em) {
+@media only screen {
   .small-only-text-left {
     text-align: left !important; }
 
@@ -2782,7 +2782,7 @@ meta.foundation-mq-topbar {
 
   .small-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen {
   .medium-only-text-left {
     text-align: left !important; }
 
@@ -2794,7 +2794,7 @@ meta.foundation-mq-topbar {
 
   .medium-only-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .medium-text-left {
     text-align: left !important; }
 
@@ -2806,7 +2806,7 @@ meta.foundation-mq-topbar {
 
   .medium-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen {
   .large-only-text-left {
     text-align: left !important; }
 
@@ -2818,7 +2818,7 @@ meta.foundation-mq-topbar {
 
   .large-only-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .large-text-left {
     text-align: left !important; }
 
@@ -2830,7 +2830,7 @@ meta.foundation-mq-topbar {
 
   .large-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+@media only screen {
   .xlarge-only-text-left {
     text-align: left !important; }
 
@@ -2842,7 +2842,7 @@ meta.foundation-mq-topbar {
 
   .xlarge-only-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 90.063em) {
+@media only screen {
   .xlarge-text-left {
     text-align: left !important; }
 
@@ -2854,7 +2854,7 @@ meta.foundation-mq-topbar {
 
   .xlarge-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 120.063em) and (max-width: 99999999em) {
+@media only screen {
   .xxlarge-only-text-left {
     text-align: left !important; }
 
@@ -2866,7 +2866,7 @@ meta.foundation-mq-topbar {
 
   .xxlarge-only-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 120.063em) {
+@media only screen {
   .xxlarge-text-left {
     text-align: left !important; }
 
@@ -3107,7 +3107,7 @@ blockquote p {
   border: none;
   padding: 0 0.0625rem; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
 
@@ -3264,7 +3264,7 @@ blockquote p {
     .tabs-content.vertical > .content {
       padding: 0 0.9375rem; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .tabs.vertical {
     width: 20%;
     max-width: 20%;
@@ -3497,7 +3497,7 @@ ul.pagination {
   border: solid 1px #666666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   padding: 1.875rem; }
-  @media only screen and (max-width: 40em) {
+  @media only screen {
     .reveal-modal, dialog {
       min-height: 100vh; } }
   .reveal-modal .column, dialog .column,
@@ -3508,14 +3508,14 @@ ul.pagination {
     margin-top: 0; }
   .reveal-modal > :last-child, dialog > :last-child {
     margin-bottom: 0; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen@media only screen {
     .reveal-modal, dialog {
       width: 80%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen@media only screen {
     .reveal-modal, dialog {
       top: 6.25rem; } }
   .reveal-modal.radius, dialog.radius {
@@ -3524,35 +3524,35 @@ ul.pagination {
     border-radius: 1000px; }
   .reveal-modal.collapse, dialog.collapse {
     padding: 0; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen@media only screen {
     .reveal-modal.tiny, dialog.tiny {
       width: 30%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen@media only screen {
     .reveal-modal.small, dialog.small {
       width: 40%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .reveal-modal.medium, dialog.medium {
       width: 60%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .reveal-modal.large, dialog.large {
       width: 70%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .reveal-modal.xlarge, dialog.xlarge {
       width: 95%;
       max-width: 62.5rem;
@@ -3566,7 +3566,7 @@ ul.pagination {
     height: 100vh;
     min-height: 100vh;
     margin-left: 0 !important; }
-    @media only screen and (min-width: 40.063em) {
+    @media only screen {
       .reveal-modal.full, dialog.full {
         width: 100vw;
         max-width: 62.5rem;
@@ -3652,7 +3652,7 @@ dialog::backdrop {
   color: #777777;
   font-weight: normal; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen@media only screen@media only screen {
   .tooltip > .nub {
     border-color: transparent transparent #333333 transparent;
     top: -10px; }
@@ -3760,7 +3760,7 @@ dialog::backdrop {
   .clearing-feature li.clearing-featured-img {
     display: block; }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen@media only screen {
   .clearing-main-prev,
   .clearing-main-next {
     position: absolute;
@@ -4049,7 +4049,7 @@ dialog::backdrop {
   left: 0; }
 
 /* Styles for screens that are at least 768px; */
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .joyride-tip-guide {
     width: 300px;
     left: inherit; }
@@ -4167,7 +4167,7 @@ dialog::backdrop {
   text-align: center;
   height: 2.8125rem;
   top: 0; }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .tab-bar-section.left, .tab-bar-section.right {
       text-align: left; } }
   .tab-bar-section.left {
@@ -4291,7 +4291,7 @@ ul.off-canvas-list {
   right: 0;
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .move-right .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -4316,7 +4316,7 @@ ul.off-canvas-list {
   right: 0;
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .move-left .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -4341,7 +4341,7 @@ ul.off-canvas-list {
   right: 0;
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .offcanvas-overlap .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -4366,7 +4366,7 @@ ul.off-canvas-list {
   right: 0;
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .offcanvas-overlap-left .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -4391,7 +4391,7 @@ ul.off-canvas-list {
   right: 0;
   z-index: 1002;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  @media only screen and (min-width: 40.063em) {
+  @media only screen {
     .offcanvas-overlap-right .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -5384,7 +5384,7 @@ label.error {
       clear: none; }
     .small-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .medium-block-grid-1 > li {
     width: 100%;
     list-style: none; }
@@ -5480,7 +5480,7 @@ label.error {
       clear: none; }
     .medium-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .large-block-grid-1 > li {
     width: 100%;
     list-style: none; }
@@ -5732,7 +5732,7 @@ div.switch.round {
   th.show-for-small-only, td.show-for-small-only, th.show-for-small-up, td.show-for-small-up, th.show-for-small, td.show-for-small, th.show-for-small-down, td.show-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.hide-for-medium-up, td.hide-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.show-for-medium-down, td.show-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.hide-for-large-up, td.hide-for-large-up, th.hide-for-large, td.hide-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up {
     display: table-cell !important; } }
 /* medium displays */
-@media only screen and (min-width: 40.063em) {
+@media only screen {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important; }
 
@@ -5768,7 +5768,7 @@ div.switch.round {
   th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.show-for-medium-only, td.show-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.show-for-medium, td.show-for-medium, th.show-for-medium-down, td.show-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.hide-for-large-up, td.hide-for-large-up, th.hide-for-large, td.hide-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up {
     display: table-cell !important; } }
 /* large displays */
-@media only screen and (min-width: 64.063em) {
+@media only screen {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important; }
 
@@ -5804,7 +5804,7 @@ div.switch.round {
   th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.show-for-large-only, td.show-for-large-only, th.show-for-large-up, td.show-for-large-up, th.show-for-large, td.show-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up {
     display: table-cell !important; } }
 /* xlarge displays */
-@media only screen and (min-width: 90.063em) {
+@media only screen {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .hide-for-large-only, .show-for-large-up, .hide-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important; }
 
@@ -5840,7 +5840,7 @@ div.switch.round {
   th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.show-for-large-up, td.show-for-large-up, th.hide-for-large, td.hide-for-large, th.hide-for-large-down, td.hide-for-large-down, th.show-for-xlarge-only, td.show-for-xlarge-only, th.show-for-xlarge-up, td.show-for-xlarge-up, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up {
     display: table-cell !important; } }
 /* xxlarge displays */
-@media only screen and (min-width: 120.063em) {
+@media only screen {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .hide-for-large-only, .show-for-large-up, .hide-for-large, .hide-for-large-down, .hide-for-xlarge-only, .show-for-xlarge-up, .show-for-xxlarge-only, .show-for-xxlarge-up {
     display: inherit !important; }
 
@@ -5902,7 +5902,7 @@ th.hide-for-landscape,
 th.show-for-portrait {
   display: table-cell !important; }
 
-@media only screen and (orientation: landscape) {
+@media only screen {
   .show-for-landscape,
   .hide-for-portrait {
     display: inherit !important; }
@@ -5928,7 +5928,7 @@ th.show-for-portrait {
   th.show-for-landscape,
   th.hide-for-portrait {
     display: table-cell !important; } }
-@media only screen and (orientation: portrait) {
+@media only screen {
   .show-for-portrait,
   .hide-for-landscape {
     display: inherit !important; }
