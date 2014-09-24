@@ -144,15 +144,14 @@
 						foreach($posts as $post) 
 						{
 							setup_postdata($post); 
-							$html .= '
-							<div class="large-4 columns column-section">
-								<!-- a href="${category_link}" title="${title_link}" class="column-name">{$category->name}</a-->
-								<div class="section-actionable"><a href='".get_permalink()."'>".get_the_title()."</a> ea ea eaea</div>
-								<div class="section-image">
-									<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
+							$html .= "<div class='large-4 columns column-section'>
+								<!-- a href='${category_link}' title='${title_link}' class='column-name'>{$category->name}</a-->
+								<div class='section-actionable'><a href='".get_permalink()."'>'".get_the_title()."'</a> ea ea eaea</div>
+								<div class='section-image'>
+									<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>
 								</div>
 							</div>
-							';
+							";
 						} // foreach($posts)
 					} // post_content
 				} // count 
