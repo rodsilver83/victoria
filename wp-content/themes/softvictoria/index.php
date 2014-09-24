@@ -16,7 +16,7 @@
 		<div id='wrapper'>
 			<div id='header'>
 				<!-- Default Main Menu -->
-				<div id="main-menu" class="row">
+				<div id="main-menu" class="row hidden">
 		      <div class="large-2 columns top-menu-columns">
 		        <a href="#" class="small button top-menu-btn">¿Quiénes somos?</a>
 		      </div>
@@ -43,7 +43,7 @@
 		      </div>
 				</div>
 				<!-- On Scroll Menu -->
-				<div class="contain-to-grid sticky hidden">
+				<div id="main-menu" class="menu-container contain-to-grid sticky">
 				  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
 				    <ul class="title-area">
 					    <li class="name">
