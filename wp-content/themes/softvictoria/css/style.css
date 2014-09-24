@@ -168,6 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: -110px;
 	width: 100%;
 	z-index: 0;
+	margin: 0px 0px -35px 0px;
 	min-height: 630px;
 	display: list-item;
 }
@@ -211,7 +212,20 @@ blockquote.intro-quote{
 	margin-left: -15px;
 	margin-right: auto;
 	margin-top: 0;
+	height: 100%;
+	min-height: 445px;
 	margin-bottom: 0;
+}
+.news-headliner{
+	position: relative;
+	top: -35px;
+}
+.news-headliner h1{
+	border: 3px solid #333;
+	text-align: center;
+	max-width: 450px;
+	margin: 0 auto;
+	font-size: 26px;
 }
 .column-section{
 	
@@ -239,6 +253,7 @@ blockquote.intro-quote{
 	position: absolute;
 	z-index: 1;
 	display: block;
+	height: 100%;
 	min-height: 400px;
 }
 .section-image img {

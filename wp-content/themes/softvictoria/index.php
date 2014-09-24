@@ -90,7 +90,7 @@
 				</div>
 			</div>
 			<div class="row news-sections">
-				<div class="large-12">
+				<div class="large-12 news-headliner">
 					<h1>Nuestras Secciones</h1>
 				</div>
 				<div class="large-4 columns column-section">
@@ -114,6 +114,29 @@
 						<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
 					</div>
 				</div>
+			</div>
+			<div class="content-slider">
+				<ul class="example-orbit" data-orbit 
+				data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
+				  <li>
+				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 1" width="100%"/>
+				    <div class="orbit-caption">
+				      Caption One.
+				    </div>
+				  </li>
+				  <li class="active">
+				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 2" width="100%"/>
+				    <div class="orbit-caption">
+				      Caption Two.
+				    </div>
+				  </li>
+				  <li>
+				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 3" width="100%"/>
+				    <div class="orbit-caption">
+				      Caption Three.
+				    </div>
+				  </li>
+				</ul>
 			</div>
 			<div class="content-other">
 				<?php
