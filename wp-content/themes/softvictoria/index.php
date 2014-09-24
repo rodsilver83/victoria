@@ -43,21 +43,21 @@
 		      </div>
 				</div>
 				<!-- On Scroll Menu -->
-				<div id="main-menu" class="menu-container contain-to-grid sticky">
-				  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+				<div id="main-menu" class="transparent-h contain-to-grid sticky">
+				  <nav class="top-bar transparent-h" data-topbar role="navigation" data-options="sticky_on: large">
 				    <ul class="title-area">
-					    <li class="name">
+					    <li class="name hidden">
 					      <h1><a href="#">My Site</a></h1>
 					    </li>
 					     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 					    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 					  </ul>
 
-					  <section class="top-bar-section">
+					  <section class="top-bar-section top-bar-menu">
 					    <!-- Right Nav Section -->
-					    <!-- <ul class="right">
+					    <ul class="right">
 					      <li><a href="#">Right Button Active</a></li>
-					    </ul> -->
+					    </ul>
 
 					    <!-- Left Nav Section -->
 					    <ul class="left">
@@ -68,7 +68,7 @@
 					      	<a href="#">Emprendedora Victoria 147</a>
 					        <ul class="dropdown">
 					          <li><a href="#">First link in dropdown</a></li>
-					          <li class="active"><a href="#">Active link in dropdown</a></li>
+					          <li><a href="#">Active link in dropdown</a></li>
 					        </ul>
 					      </li>
 					      <li>
