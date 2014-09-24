@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="eES">
+<html class="no-js" lang="ES">
 	<head>
 		<meta charset="utf-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_enclosed_foundicons.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_foundicons.css">
 		<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
 	</head>
 	<body>
@@ -82,7 +83,7 @@
 					<div class="large-12 columns intro-bottom">
 						<blockquote class="intro-quote">“Somos una organización que busca redefinir el concepto de la mujer actual.”</blockquote class="intro">
 							<br>
-						<a href="" class="intro-scroll">
+						<a href="#the_sections" class="intro-scroll">
 							<p class="text-center">SCROLL</p>
 							<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
 						</a>
@@ -90,11 +91,28 @@
 				</div>
 			</div>
 			<!--- @@ pnm begin -->
-			<?php
-			$html = "<div class='row news-sections'>";
-			$html .= "<div class='large-12'>";
-				$html .= "<h1>Nuestras Secciones</h1>";
-			$html .= "</div>";
+			<div id="the_sections" class="row news-sections">
+				<div class='large-12'>
+					<h1>Nuestras Secciones</h1>
+				</div>
+				<?php
+				 if (have_posts()): while(have_posts()): the_post(); ?>
+					<h1><?php the_title();?></h1>
+					<h4>Posted on <?php the_time('F jS Y')?></h4>
+					<p><?php the_content(__('(more ...)'));?></p>
+					<hr/>
+				<?php endwhile; else:?>
+					<p><?php _e('Sorry, we couldn\'t find the post you are looking for...')?></p>
+				<?php endif;
+				?>
+				<?php
+				?>
+			</div>
+			<!-- Team Members -->
+			<div class="content-team">
+				<div id='content-teams'>
+					<!--- @@ pnm begin -->
+					<?php
 
 			$cat_args=array(
 				'orderby' => 'name',
@@ -126,15 +144,15 @@
 						foreach($posts as $post) 
 						{
 							setup_postdata($post); 
-							$html .= "
-							<div class='large-4 columns column-section'>
-								<!-- a href='${category_link}' title='${title_link}'>{$category->name}</a-->
-								<div class='section-actionable'><a href='".get_permalink()."'>".get_the_title()."</a> ea ea eaea</div>
-								<div class='section-image'>
-									<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>
+							$html .= '
+							<div class="large-4 columns column-section">
+								<!-- a href="${category_link}" title="${title_link}" class="column-name">{$category->name}</a-->
+								<div class="section-actionable"><a href='".get_permalink()."'>".get_the_title()."</a> ea ea eaea</div>
+								<div class="section-image">
+									<img src="http://placepuppy.it/500/500" class="the-squared-image" width="100%" height="auto">
 								</div>
 							</div>
-							";
+							';
 						} // foreach($posts)
 					} // post_content
 				} // count 
@@ -158,4 +176,8 @@
 
 			<div id="delimiter"></div>
 		</div>
+		<!-- The Scrolling Script -->
+		<script>
+		
+		</script>
 <?php get_footer();?>
