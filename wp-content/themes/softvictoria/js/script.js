@@ -26,6 +26,7 @@ $(document).ready(function(){
     }
   }
 
+
 	$(window).scroll(function(e){
 	    scrollParalax();
 	});
@@ -33,11 +34,29 @@ $(document).ready(function(){
   //Playing with the Main Index Menu
   $(function(){
     $(window).scroll(function(){
-      var scrollTop = 23;
+      var scrollTop = 22;
       if($(window).scrollTop() >= scrollTop){
         $(".title-area").removeClass("hidden");
+        $("#main-menu").removeClass("transparent-h");
+        $("#main-menu").addClass("non-transparent-h");
+        $(".top-bar").addClass("p-menu-fixed");
+        $(".the-menu-top").removeClass("bordered-menu");
+        $(".the-menu-top").addClass("menu-color");
+        $(".the-submenu-top").addClass("p-submenu-fixed");
+        $(".the-submenu-item").addClass("submenu-colored");
+        $(".the-submenu-item").removeClass("bordered-menu");
+        $(".the-submenu-item").addClass("bordered-submenu");
       }else{
-        $(".title-area").addClass("hidden"); 
+        $(".title-area").addClass("hidden");
+        $("#main-menu").addClass("transparent-h");
+        $("#main-menu").removeClass("non-transparent-h");
+        $(".top-bar").removeClass("p-menu-fixed");
+        $(".the-menu-top").addClass("bordered-menu");
+        $(".the-menu-top").removeClass("menu-color");
+        $(".the-submenu-top").removeClass("p-submenu-fixed");
+        $(".the-submenu-item").removeClass("submenu-colored");
+        $(".the-submenu-item").addClass("bordered-menu");
+        $(".the-submenu-item").removeClass("bordered-submenu");
       }
     });
   });

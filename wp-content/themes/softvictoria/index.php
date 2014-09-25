@@ -15,40 +15,13 @@
 	<body>
 		<div id='wrapper'>
 			<div id='header'>
-				<!-- Default Main Menu -->
-				<div id="main-menu" class="row hidden">
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button top-menu-btn">¿Quiénes somos?</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button double-lined-btn">Emprendedora Victoria 147</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button top-menu-btn">Mujer Victoria 147</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button double-lined-btn">Productos Victoria147</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button top-menu-btn">Contáctanos</a>
-		      </div>
-		      <div class="large-2 columns top-social-btns">
-		      	<div class="the-search">
-		      		<i class="foundicon-search"></i>
-		      	</div>
-		      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn fb-btn"></a>
-		      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn tw-btn"></a>
-		      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn insta-btn"></a>
-		      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn yt-btn"></a>
-		      </div>
-				</div>
-				<!-- On Scroll Menu -->
+				<!-- The Menu -->
 				<div id="main-menu" class="transparent-h contain-to-grid sticky">
 				  <nav class="top-bar transparent-h" data-topbar role="navigation" data-options="sticky_on: large">
 				    <ul class="title-area hidden">
 					    <li class="name">
 					      <a href="#">
-					      	<img src="<?= bloginfo('template_directory'); ?>/img/victoria147-logo-sm.png" alt="Victoria 147">
+					      	<img src="<?= bloginfo('template_directory'); ?>/img/victoria-logo-top.png" alt="Victoria 147">
 					      </a>
 					    </li>
 					     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -58,29 +31,37 @@
 					  <section class="top-bar-section top-bar-menu">
 					    <!-- Right Nav Section -->
 					    <ul class="right">
-					      <li><a href="#">Right Button Active</a></li>
+					      <div class="top-social-btns">
+					      	<div class="the-search">
+					      		<i class="foundicon-search"></i>
+					      	</div>
+					      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn fb-btn"></a>
+					      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn tw-btn"></a>
+					      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn insta-btn"></a>
+					      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn yt-btn"></a>
+					      </div>
 					    </ul>
 
 					    <!-- Left Nav Section -->
 					    <ul class="left">
 					      <li>
-					      	<a href="#">¿Quiénes somos?</a>
+					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
 					      </li>
 					      <li class="has-dropdown">
-					      	<a href="#" class="double-lined-menu">Emprendedora Victoria 147</a>
-					        <ul class="dropdown">
-					          <li><a href="#">First link in dropdown</a></li>
-					          <li><a href="#">Active link in dropdown</a></li>
+					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Emprendedora Victoria 147</a>
+					        <ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">First link in dropdown</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Active link in dropdown</a></li>
 					        </ul>
 					      </li>
 					      <li>
-					      	<a href="#">Mujer Victoria 147</a>
+					      	<a href="#" class="the-menu-top bordered-menu">Mujer Victoria 147</a>
 					      </li>
 					      <li>
-					      	<a href="#" class="double-lined-menu">Productos Victoria147</a>
+					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Productos Victoria147</a>
 					      </li>
 					      <li>
-					      	<a href="#">Contáctanos</a>
+					      	<a href="#" class="the-menu-top bordered-menu">Contáctanos</a>
 					      </li>
 					      <!-- <li class="has-dropdown">
 					        <a href="#">Right Button Dropdown</a>
