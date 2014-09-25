@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="eES">
+<html class="no-js" lang="ES">
 	<head>
 		<meta charset="utf-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
@@ -9,19 +9,21 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_enclosed_foundicons.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_foundicons.css">
 		<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
-<style type="text/css" media="screen">
-	/*Ejemplo para personalizar los estilos del team-manager*/
-	.team-title{
-		color: red;
-	}
-</style>>
+
+<style>
+.team-title{
+	color: red;
+	
+}
+</style>
 	</head>
 	<body>
 		<div id='wrapper'>
 			<div id='header'>
 				<!-- Default Main Menu -->
-				<div id="main-menu" class="row">
+				<div id="main-menu" class="row hidden">
 		      <div class="large-2 columns top-menu-columns">
 		        <a href="#" class="small button top-menu-btn">¿Quiénes somos?</a>
 		      </div>
@@ -48,7 +50,7 @@
 		      </div>
 				</div>
 				<!-- On Scroll Menu -->
-				<div class="contain-to-grid sticky hidden">
+				<div id="main-menu" class="menu-container contain-to-grid sticky">
 				  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
 				    <ul class="title-area">
 					    <li class="name">
@@ -60,20 +62,38 @@
 
 					  <section class="top-bar-section">
 					    <!-- Right Nav Section -->
-					    <ul class="right">
-					      <li class="active"><a href="#">Right Button Active</a></li>
+					    <!-- <ul class="right">
+					      <li><a href="#">Right Button Active</a></li>
+					    </ul> -->
+
+					    <!-- Left Nav Section -->
+					    <ul class="left">
+					      <li>
+					      	<a href="#">¿Quiénes somos?</a>
+					      </li>
 					      <li class="has-dropdown">
-					        <a href="#">Right Button Dropdown</a>
+					      	<a href="#">Emprendedora Victoria 147</a>
 					        <ul class="dropdown">
 					          <li><a href="#">First link in dropdown</a></li>
 					          <li class="active"><a href="#">Active link in dropdown</a></li>
 					        </ul>
 					      </li>
-					    </ul>
-
-					    <!-- Left Nav Section -->
-					    <ul class="left">
-					      <li><a href="#">Left Nav Button</a></li>
+					      <li>
+					      	<a href="#">Mujer Victoria 147</a>
+					      </li>
+					      <li>
+					      	<a href="#">Productos Victoria147</a>
+					      </li>
+					      <li>
+					      	<a href="#">Contáctanos</a>
+					      </li>
+					      <!-- <li class="has-dropdown">
+					        <a href="#">Right Button Dropdown</a>
+					        <ul class="dropdown">
+					          <li><a href="#">First link in dropdown</a></li>
+					          <li class="active"><a href="#">Active link in dropdown</a></li>
+					        </ul>
+					      </li> -->
 					    </ul>
 					  </section>
 				  </nav>
@@ -88,19 +108,26 @@
 					<div class="large-12 columns intro-bottom">
 						<blockquote class="intro-quote">“Somos una organización que busca redefinir el concepto de la mujer actual.”</blockquote class="intro">
 							<br>
-						<a href="" class="intro-scroll">
+						<a href="#the_sections" class="intro-scroll">
 							<p class="text-center">SCROLL</p>
 							<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
 						</a>
 					</div>
 				</div>
 			</div>
-			<!--- @@ pnm begin -->
-			<?php
-			$html = "<div class='row news-sections'>";
-			$html .= "<div class='large-12'>";
-				$html .= "<h1>Nuestras Secciones</h1>";
-			$html .= "</div>";
+			
+			
+			
+		
+			<!-- the news section -->
+			<div class="content-team">
+				<div id='content-teams'>
+					<!--- @@ pnm begin -->
+					<?php
+						$html = "<div class='row news-sections'>";
+						$html .= "<div class='large-12 news-headliner'>";
+							$html .= "<h1>Nuestras Secciones</h1>";
+						$html .= "</div>";
 
 			$cat_args=array(
 				'orderby' => 'name',
@@ -127,17 +154,36 @@
 					{
 						unset($posts);
 						$category_link= get_category_link( $category->term_id );
-						$title_link=sprintf( __( "View all posts in %s" ), $category->name );
+						$title_link=sprintf( __( "Ver todos los art&iacute;culos de %s" ), $category->name );
 						$posts=get_posts($args);
 						foreach($posts as $post) 
 						{
 							setup_postdata($post); 
+							
+							$post_link=post_permalink();
+							$post_title=get_the_title();
+							$template_directory=get_bloginfo('template_directory');
+							
+							$attr = array(
+								'class'=>'the-squared-image',
+								'alt'	=> trim( strip_tags( $post->post_excerpt ) ),
+								'title'	=> trim( strip_tags( $post->post_title ) ),
+							);
+							$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+							$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
 							$html .= "
 							<div class='large-4 columns column-section'>
-								<!-- a href='${category_link}' title='${title_link}'>{$category->name}</a-->
-								<div class='section-actionable'><a href='".get_permalink()."'>".get_the_title()."</a> ea ea eaea</div>
+								<a href='${category_link}' title='${title_link}' class='column-name'>{$category->name}</a>
+
+								<a href='${post_link}' class='the-post-link'>
+									<p class='column-post-title'>{$post_title}</p>
+									<img src='${template_directory}/img/plus-sign.png' class='column-plus-sign' width='10%' height='auto'>
+									<section class='section-actionable'></section>
+								</a>
+
 								<div class='section-image'>
-									<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>
+									
+									${post_thumbnail}
 								</div>
 							</div>
 							";
@@ -151,7 +197,31 @@
 			?>
 			<h1><hr><hr></h1>
 			<!-- @@ pnm end-->
-			<!-- Team Members -->
+			
+			<div class="content-slider">
+				<ul class="example-orbit" data-orbit 
+				data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
+				  <li>
+				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 1" width="100%"/>
+				    <div class="orbit-caption">
+				      Caption One.
+				    </div>
+				  </li>
+				  <li class="active">
+				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 2" width="100%"/>
+				    <div class="orbit-caption">
+				      Caption Two.
+				    </div>
+				  </li>
+				  <li>
+				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 3" width="100%"/>
+				    <div class="orbit-caption">
+				      Caption Three.
+				    </div>
+				  </li>
+				</ul>
+			</div>
+			<!-- end the news section -->
 			<div class="content-team">
 				<div id='content-teams'>
 					<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
@@ -164,4 +234,8 @@
 
 			<div id="delimiter"></div>
 		</div>
+		<!-- The Scrolling Script -->
+		<script>
+		
+		</script>
 <?php get_footer();?>
