@@ -1,0 +1,317 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Videogall\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-05 06:53-0600\n"
+"PO-Revision-Date: 2013-05-05 06:53-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: videogall.php:137
+msgid "Category: "
+msgstr ""
+
+#: admin/plugin-options.php:27
+#: admin/plugin-options.php:129
+msgid "Videogall Settings"
+msgstr ""
+
+#: admin/plugin-options.php:78
+msgid "Small"
+msgstr ""
+
+#: admin/plugin-options.php:79
+msgid "Medium"
+msgstr ""
+
+#: admin/plugin-options.php:80
+msgid "Large"
+msgstr ""
+
+#: admin/plugin-options.php:87
+msgid "1"
+msgstr ""
+
+#: admin/plugin-options.php:88
+msgid "2"
+msgstr ""
+
+#: admin/plugin-options.php:89
+msgid "3"
+msgstr ""
+
+#: admin/plugin-options.php:90
+msgid "4"
+msgstr ""
+
+#: admin/plugin-options.php:91
+msgid "5"
+msgstr ""
+
+#: admin/plugin-options.php:92
+msgid "6"
+msgstr ""
+
+#: admin/plugin-options.php:99
+msgid "New to Old"
+msgstr ""
+
+#: admin/plugin-options.php:100
+msgid "Old to New"
+msgstr ""
+
+#: admin/plugin-options.php:110
+msgid "My Videos"
+msgstr ""
+
+#: admin/plugin-options.php:111
+#: admin/plugin-options.php:233
+msgid "Add new video"
+msgstr ""
+
+#: admin/plugin-options.php:112
+msgid "Video categories"
+msgstr ""
+
+#: admin/plugin-options.php:113
+msgid "Additional Settings"
+msgstr ""
+
+#: admin/plugin-options.php:125
+msgid "Default settings restored"
+msgstr ""
+
+#: admin/plugin-options.php:158
+msgid "Edit"
+msgstr ""
+
+#: admin/plugin-options.php:159
+msgid "Delete"
+msgstr ""
+
+#: admin/plugin-options.php:165
+msgid "Video url *"
+msgstr ""
+
+#: admin/plugin-options.php:169
+msgid "Video thumbnail"
+msgstr ""
+
+#: admin/plugin-options.php:171
+#: admin/plugin-options.php:223
+msgid "Upload thumbnail"
+msgstr ""
+
+#: admin/plugin-options.php:174
+msgid "Video category"
+msgstr ""
+
+#: admin/plugin-options.php:176
+#: admin/plugin-options.php:211
+msgid "Uncategorized"
+msgstr ""
+
+#: admin/plugin-options.php:187
+msgid "Video caption"
+msgstr ""
+
+#: admin/plugin-options.php:191
+msgid "Video description"
+msgstr ""
+
+#: admin/plugin-options.php:194
+msgid "Save Video Changes"
+msgstr ""
+
+#: admin/plugin-options.php:205
+msgid "Add video url *"
+msgstr ""
+
+#: admin/plugin-options.php:209
+msgid "Select video category"
+msgstr ""
+
+#: admin/plugin-options.php:221
+msgid "Add video thumbnail"
+msgstr ""
+
+#: admin/plugin-options.php:226
+msgid "Add video caption"
+msgstr ""
+
+#: admin/plugin-options.php:230
+msgid "Add video description"
+msgstr ""
+
+#: admin/plugin-options.php:237
+msgid "Add category name *"
+msgstr ""
+
+#: admin/plugin-options.php:239
+msgid "Add new category"
+msgstr ""
+
+#: admin/plugin-options.php:242
+msgid "Update or Delete category"
+msgstr ""
+
+#: admin/plugin-options.php:244
+#: inc/videogall-widget.php:61
+msgid "Select category"
+msgstr ""
+
+#: admin/plugin-options.php:252
+msgid "Rename category"
+msgstr ""
+
+#: admin/plugin-options.php:253
+msgid "Delete category"
+msgstr ""
+
+#: admin/plugin-options.php:258
+msgid "Number of columns"
+msgstr ""
+
+#: admin/plugin-options.php:266
+msgid "Video Size"
+msgstr ""
+
+#: admin/plugin-options.php:274
+msgid "Enable Pagination ?"
+msgstr ""
+
+#: admin/plugin-options.php:278
+msgid "Videos Per Page"
+msgstr ""
+
+#: admin/plugin-options.php:282
+msgid "Show categories"
+msgstr ""
+
+#: admin/plugin-options.php:286
+msgid "Sort videos by category"
+msgstr ""
+
+#: admin/plugin-options.php:290
+msgid "Video Order"
+msgstr ""
+
+#: admin/plugin-options.php:298
+msgid "Show border around thumbnail"
+msgstr ""
+
+#: admin/plugin-options.php:302
+msgid "Border Color"
+msgstr ""
+
+#: admin/plugin-options.php:306
+msgid "Use shadowbox for images"
+msgstr ""
+
+#: admin/plugin-options.php:310
+msgid "Autoplay videos on launch ?"
+msgstr ""
+
+#: admin/plugin-options.php:322
+msgid "PayPal - The safer, easier way to pay online!"
+msgstr ""
+
+#: admin/plugin-options.php:326
+msgid "Reset Settings"
+msgstr ""
+
+#: admin/plugin-options.php:348
+msgid "Videos per page should be a number"
+msgstr ""
+
+#: admin/plugin-options.php:372
+msgid "Videos cannot be deleted"
+msgstr ""
+
+#: admin/plugin-options.php:373
+msgid "Videos deleted"
+msgstr ""
+
+#: admin/plugin-options.php:375
+msgid "No videos selected. Select/Unselect videos to delete by clicking on them"
+msgstr ""
+
+#: admin/plugin-options.php:392
+msgid "Video not updated"
+msgstr ""
+
+#: admin/plugin-options.php:393
+msgid "Video Updated"
+msgstr ""
+
+#: admin/plugin-options.php:395
+msgid "Name & URL are required"
+msgstr ""
+
+#: admin/plugin-options.php:412
+msgid "Video cannot be added"
+msgstr ""
+
+#: admin/plugin-options.php:413
+msgid "New Video Added"
+msgstr ""
+
+#: admin/plugin-options.php:415
+msgid "URL is required"
+msgstr ""
+
+#: admin/plugin-options.php:426
+msgid "Category cannot be updated"
+msgstr ""
+
+#: admin/plugin-options.php:427
+msgid "Category Updated"
+msgstr ""
+
+#: admin/plugin-options.php:430
+msgid "Select category from dropdown to update"
+msgstr ""
+
+#: admin/plugin-options.php:437
+msgid "Category cannot be deleted"
+msgstr ""
+
+#: admin/plugin-options.php:441
+msgid "Category deleted"
+msgstr ""
+
+#: admin/plugin-options.php:451
+msgid "Category cannot be added"
+msgstr ""
+
+#: admin/plugin-options.php:452
+msgid "New Category Added"
+msgstr ""
+
+#: admin/plugin-options.php:454
+msgid "Category name is required"
+msgstr ""
+
+#: inc/videogall-widget.php:5
+msgid "Display video gallery on sidebar"
+msgstr ""
+
+#: inc/videogall-widget.php:6
+msgid "Videogall"
+msgstr ""
+
+#: inc/videogall-widget.php:55
+msgid "Title (optional):"
+msgstr ""
+
+#: inc/videogall-widget.php:59
+msgid "Category:"
+msgstr ""
+
+#: inc/videogall-widget.php:71
+msgid "Number of videos:"
+msgstr ""
+

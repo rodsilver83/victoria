@@ -1,0 +1,134 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>VideoGall - v3.1</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Nischal Maniar">
+	<meta name="copyright" content="Nischal Maniar">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2013-04-19T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+	
+	
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#adding_videos">Adding Videos</a></li>
+			<li><a href="#adding_categories">Adding Categories</a></li>
+			<li><a href="#editing_videos">Editing Videos</a></li>
+			<li><a href="#usage">Usage</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Nischal Maniar 2013<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>VideoGall</h1><h2>v3.1</h2><hr><ul><li>Created: 02/16/2013</li><li>latest Update: 04/19/2013</li><li>By: Nischal Maniar</li><li><a href=""></a></li></ul></section><section id="installation">
+	<h3>Installation</h3><hr class="notop">
+<p>
+	&nbsp;</p>
+<ol>
+	<li>
+		Unzip the VideoGall plugin in the plugins folder in wp-content directory i.e &quot;wp-content/plugins&quot; or Go to Plugins section -&gt; Add New -&gt; Upload Plugin</li>
+	<li>
+		Go to your admin page and plugins section and activate the VideoGall plugin</li>
+</ol>
+</section>
+<section id="adding_videos">
+	<h3>Adding Videos</h3><hr class="notop">
+<ol>
+	<li>
+		Copy the URL of the video page from the browser</li>
+	<li>
+		Go to VideoGall Settings page</li>
+	<li>
+		Go to Add new Video section</li>
+	<li>
+		Paste the URL in the Add Video URL field</li>
+	<li>
+		VideoGall automatically fetches the thumbnail of the video. Incase you want to use your own custom thumbnail, use the upload button next to Add Video Thumbnail field to upload thumbnail</li>
+	<li>
+		To pick category for the video, you will have to add new categories first in the Video Categories section</li>
+	<li>
+		Hit Add New Video button</li>
+</ol>
+</section>
+<section id="adding_categories">
+	<h3>Adding Categories</h3><hr class="notop">
+<ol>
+	<li>
+		Go to Videogall Settings</li>
+	<li>
+		Go to Video Categories section</li>
+	<li>
+		Here you can add,update or remove categories</li>
+</ol>
+</section>
+<section id="editing_videos">
+	<h3>Editing Videos</h3><hr class="notop">
+<ol>
+	<li>
+		To edit Videos,</li>
+	<li>
+		Go to Videogall Settings Page</li>
+	<li>
+		Click edit for the video you want to edit</li>
+	<li>
+		Note: If you modified the URL of a video, it won&#39;t refresh the thumbnail automatically. You will have to remove the thumbnail URL and then save the video in order to get the new thumbnail for the new URL</li>
+</ol>
+</section>
+<section id="usage">
+	<h3>Usage</h3><hr class="notop">
+<ol>
+	<li>
+		Go to Post or Page Editor</li>
+	<li>
+		Use the Shortcode button for videogall and it will enter <strong>[myvideogall:all] . </strong>This will show all the videos<strong>.</strong></li>
+	<li>
+		In order to show videos from certain category, replace &quot;all&quot; with the name of category e.g.<strong> [myvideogall:movies]</strong>. Note: category name is case-insensitive</li>
+	<li>
+		To show videos from multiple categories, use comma separated categories. Eg. <strong>[myvideogall:movies,news]</strong></li>
+</ol>
+</section>
+
+	</div>
+</body>
+</html>

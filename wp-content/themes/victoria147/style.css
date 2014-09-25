@@ -1,0 +1,1788 @@
+/*
+Theme Name:     Victoria147
+Theme URI:      http://www.victoria147.org/
+Description:    SmartStart Adaptation for victoria147 
+Author:         Victoria147
+Author URI:     http://www.victoria147.org/
+Template:       smartstart
+Version:        1.08
+*/
+
+@import url("../smartstart/style.css");
+@import url("bloggers.css");
+
+#main-nav a:hover, #main-nav .hover > a,
+					#main-nav .current_page_item > a, #main-nav .current-menu-item > a,
+					#main-nav .current_page_parent > a,
+					#main-nav .current_page_ancestor > a, #main-nav .current-menu-ancestor > a {
+						border-bottom-color: #f15a23;
+						border-top-color: #FF1EA8;/*#f15a23;*/
+						color: #f15a23;
+					}
+
+ #main-nav ul ul { top: 96px; }
+/* css for fonts */
+
+@font-face { /* css for Source Sans Pro Regular font*/
+    font-family: 'source_sans_proregular';
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-regular-webfont.eot');
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face { /* Source Sans Pro Bold */
+    font-family: 'source_sans_probold';
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.eot');
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'source_sans_problack';
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.eot');
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.woff') format('woff'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.ttf') format('truetype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-black-webfont.svg#source_sans_problack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face { /* css for Source Pro Light Italic Font */
+    font-family: 'source_sans_prolight_italic';
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-lightit-webfont.eot');
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-lightit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-lightit-webfont.woff') format('woff'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-lightit-webfont.ttf') format('truetype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-lightit-webfont.svg#source_sans_prolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face { /* css for Source Pro Light Font*/
+    font-family: 'source_sans_prolight';
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-light-webfont.eot');
+    src: url('fonts/Source_Sans_Pro/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-light-webfont.woff') format('woff'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('fonts/Source_Sans_Pro/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+    font-weight: normal; 
+    font-style: normal;
+
+}
+
+
+/* css for top menu font*/
+.p-contact{ font-family: 'source_sans_prolight'; color:#3a3a3a; font-size: 14px; margin-bottom:7px;}
+.titles{ font-family:'source_sans_prolight'; font-size: 20px; color:#00b3a2; margin-bottom:20px; }
+
+label {  font-family:'source_sans_prolight';  font-size: 14px; }
+
+.one-half, .one-third, .two-third, .one-fourth, .three-fourth {
+    margin-right: 0; 
+}
+.two-third{
+    width:626px;
+}
+.one-half {
+    width: 460px;
+    margin: 5px; 
+}
+.one-half, .one-third, .two-third, .one-fourth, .three-fourth {
+    float: left;
+    margin-right: 0;
+}
+.slider_cat_blog{
+    width: 207px;
+    float: left;
+    margin: 5px !important;
+    
+}
+#main-nav a{
+    font-family: 'source_sans_proregular';
+    font-size: 15px;
+    font-style: normal;
+}
+
+#main-nav a:after{
+    font-size: 12px;
+}
+
+#main-nav ul ul a{
+    font-family: 'source_sans_prolight';
+    font-size: 12px !important;
+    font-style: normal;
+}
+
+#main-nav a {
+    padding: 26px 10px 41px;
+}
+
+.videogall-title{
+    font-family: 'source_sans_probold';
+    font-size: 16px;
+}
+.videogall-item {
+    width: 46% !important;
+}
+
+ul.one-column li { 
+    width: 199px;
+}
+/*#content ul.one-column-slider .entry-body {
+    width: 134px;
+    font-family: 'source_sans_prolight';
+    font-size: 14px;
+}*/
+
+/* css for title post */
+
+#post-tiles-container{
+    padding-top: 0px;
+}
+
+ul#post-tiles li a,ul#post-tiles li a:hover{
+    background: url('images/bg-tour.png') repeat 0 0;
+}
+
+ul#post-tiles li a div.see_more{
+    font-family: 'source_sans_proregular';    
+    position:absolute;
+    bottom: 0px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+ul#post-tiles li a  span.ico{
+    background: url('images/namebio-arrow.png') no-repeat 100% 100%;
+    width:9px;
+    height:14px;
+    display: inline-block;
+}
+
+ul#post-tiles li a div.see_more p{
+    clear: both;
+    font-size: 14px;
+    color: #fff;
+    line-height: 18px;
+    margin: 0;
+}
+ul#post-tiles img {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+/* css for title post blocks img */
+
+ul#post-tiles li a h4 {
+    font-family: 'source_sans_proregular'; 
+    font-size: 18px;
+    font-weight: lighter;
+    float:left;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 20px;
+    letter-spacing: 0;
+}
+
+.posttiles-pagination{
+    margin-left: 895px;
+}
+
+.posttiles-pagination a.page-numbers{
+    width: 19px;
+    height: 19px;
+    padding: 0;
+}
+
+.posttiles-pagination span.page-numbers{
+    width: 19px;
+    height: 19px;
+    padding: 0;
+    display: inline-block;
+}
+
+.posttiles-pagination .prev-page{
+    background: #ddd url(images/button-arrows.png) no-repeat 0 -19px;
+    border: none;
+}
+
+.posttiles-pagination a.prev-page:hover{
+    background: #00b3a2 url(images/button-arrows.png) no-repeat 0 -19px;
+}
+
+.posttiles-pagination .next-page{
+    background: #ddd url(images/button-arrows.png) no-repeat 0 0;
+    border: none;
+    margin: 0;
+}
+
+.posttiles-pagination a.next-page:hover{
+    background: #00b3a2 url(images/button-arrows.png) no-repeat 0 0;
+}
+
+/* background-color: #00b3a2; 
+
+*/
+
+/* css for last videos [Home Page] */
+
+.videogall-item p{
+    font-family: 'source_sans_proregular';
+}
+
+.videogall-item span {
+    font-family: 'source_sans_prolight_italic';
+}
+
+/* css for last blog post [Home Page] */
+
+.one-half h6.section-title, .home .one-fourth h6.section-title, .slider_cat_blog h6.section-title {
+    font-family: 'source_sans_probold';
+    font-size: 16px;
+    font-weight: normal;
+    color: #00b3a2;
+}
+
+
+.entry-body blockquote p {
+    background: #D8F5F1 url(images/quote_abrir.png) 10px 10px no-repeat;
+    color: #73D1C7;
+    font-family: 'source_sans_proregular';
+    font-size: 23px;
+    position: relative;
+    padding: 10px 0 10px 45px;
+}
+.entry-body blockquote .quote-close {
+    background: url(images/quote_cerrar.png) 0 0 no-repeat;
+    display: block;
+    height: 25px; width: 31px;
+    position: absolute;
+    bottom: 795px; 
+    right: 270px;
+
+}
+
+#content ul.one-column .entry-body{
+    width: 150px;
+    font-family: 'source_sans_proregular';
+    font-size: 14px;
+    color: #999;
+    line-height: 18px;
+}
+
+.post-carousel .entry-body .title{
+    font-family: 'source_sans_proregular';
+    font-size: 16px;
+    color: #00b3a2;
+}
+
+.entry-meta a, .entry-meta a time{
+    font-family: 'source_sans_proregular';
+    font-size: 10px;
+}
+
+/* css for section [Primera Generacion] */
+
+.container h3 {
+    background: url(../../uploads/2013/03/v147_ellas.png) no-repeat right top;
+    font-family: 'source_sans_prolight';
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 190px;
+    height: 125px;
+    margin: 0px;
+    display:block;	
+    clear:both;
+
+}
+
+.team-member .content {
+    height: 190px;
+}
+
+.team-member .social-links {
+    bottom: 0;
+    position: absolute;
+    margin-left: 25px;
+}
+
+.container .team-member:hover{
+    background-image: url( images/textura_gris.png );
+    background-repeat: repeat-y;
+}
+
+.container p.conent-cite {
+    overflow: hidden;
+    margin: 0 80px;
+}
+
+.container .text-qoute{
+    font-family: 'source_sans_prolight';
+    font-size: 24px;
+    line-height: 30px;
+    float: left;
+    width: 633px;
+}
+
+.container .quote-starting{
+    background-image: url( ../../uploads/2013/05/adornotxt_izq.png );
+    width: 75px;
+    height: 52px;
+    float: left;
+    text-indent: -9999px;
+    margin-top: 5px;
+}
+
+.container .quote-ending{
+    background-image: url( ../../uploads/2013/05/adornotxt_der.png );
+    width: 67px;
+    height: 46px;
+    float: left;
+    text-indent: -9999px;
+    margin: 5px 0 0 5px;
+}
+
+.container .text-qoute span{
+    color: #00b3a2;
+}
+
+.team-member .name{
+    font-family: 'source_sans_prolight';
+    font-size: 18px;
+    text-transform: none;
+    color: #414141;
+    margin: 0 0 5px 0;
+
+}
+
+.team-member .job-title{
+    font-family: 'source_sans_prolight';
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    margin: 0 0 10px;
+    color: #666666;
+}
+
+.team-member .generation{
+    font-family: 'source_sans_proregular';
+    font-size: 13px;
+}
+
+.team-member .phone{
+    font-family: 'source_sans_proregular';
+    font-size: 14px;
+    color: #F15A29;
+    display: block;
+    margin: -10px 0 0 0;
+}
+
+p.teams-pagination{
+    text-align: center;
+}
+
+p.teams-pagination .page-numbers{
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    padding: 0;
+    text-indent: -9999px;
+}
+
+p.teams-pagination .current{
+    cursor: pointer;
+}
+
+p.teams-pagination .prev-team{    
+    background: #ddd url(images/button-arrows.png) no-repeat 0 -19px;
+    border: none;
+    margin-right: 5px;
+}
+
+p.teams-pagination a.prev-team:hover{    
+    background: #00b3a2 url(images/button-arrows.png) no-repeat 0 -19px;
+}
+
+p.teams-pagination .next-team{
+    background: #ddd url(images/button-arrows.png) no-repeat 0 0;
+    border: none;
+}
+
+p.teams-pagination a.next-team:hover{
+    background: #00b3a2 url(images/button-arrows.png) no-repeat 0 0;
+}
+
+p a.team-paginator{
+    font-family: 'source_sans_prolight';
+    font-size: 12px;
+}
+
+/* css for form contact */
+
+#form-solicitud input[type="text"],
+.forms-application input[type="text"] {
+    height: 47px !important;
+    
+}
+
+#form-solicitud dd,
+.forms-application dd{
+    margin-bottom: 10px !important;
+}
+
+span.required{
+    color: #00b3a2;
+}
+
+dd.float-left , dt.float-left{
+    float: left;
+}
+
+.forms-application dd.float-left input[type="text"]{
+	margin-right: 10px;
+	width: 160px;
+}
+
+.forms-application dt.float-left{
+	padding: 15px 10px 0 0;
+}
+
+#box-name, #email-address, #address-box, #company-box,
+#appointment-box,
+.forms-application input[type="text"]{
+    width: 515px;
+}
+
+
+
+
+
+
+
+span.logo-facebook{
+    background: url( images/casilla_facebook.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+span.logo-twitter{
+    background: url( images/casilla_twitter.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+span.logo-linkedIn {
+background: url( images/casilla_linkedin.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+span.logo-instagram {
+background: url( images/casilla_instagram.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}								
+
+span.logo-interest {
+background: url( images/casilla_pinterest.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+span.logo-youTube {
+background: url( images/casilla_youtube.png );
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+
+#facebook-box, #twitter-box {
+    width: 145px;
+}
+
+.forms-application .clear-left{
+	clear: left;
+}
+
+.forms-application dt.float-left{
+	min-width: 60px
+}
+
+.forms-application .special{
+	text-align: right;
+	width: 102px !important
+}
+
+.forms-application .social-box{
+	width: 108px !important
+}
+
+.forms-application .text-medium{
+	height: 50px;
+}
+
+.forms-application .text-large{
+	height: 100px;
+}
+
+.forms-application a{
+	color: #00B3A2;
+	font-family: 'source_sans_prolight';
+	font-size: 14px;
+	text-decoration: underline;
+}
+/* css for [Unete a V147] section */
+
+.page-id-193 h4,
+.page-id-1154 h4{
+    background: url( 'images/logo_v147.png' ) no-repeat scroll 0 0;
+    height: 52px;
+    font-family: 'source_sans_proregular';
+    font-weight: normal;
+    font-size: 28px;
+    color: #00b3a2;
+    padding: 0 5px 0 65px;
+    line-height: 60px;
+}
+
+.page-id-193 h5,
+.page-id-1154 h5{
+    font-family: 'source_sans_proregular';
+    font-weight: normal;
+    font-size: 16px;
+    padding-left: 65px;
+}
+
+.page-id-193 h6,
+.page-id-1154 h6{
+    /*background: url( 'images/asterix.png' ) no-repeat scroll 65px 0; */
+    font-family: 'source_sans_prolight';
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 65px;
+}   
+
+#form-solicitud{
+    margin-left: 65px;
+}
+
+.page-id-193 dl dt,
+.forms-application dl dt{
+    font-family: 'source_sans_proregular';
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    color: #999999;
+    margin-bottom: 10px
+}
+
+dl.page-2 ,dl.page-3, dl.page-4{
+    display: none;
+}
+
+a.page-1{
+    background: url('http://www.victoria147.org/wp-content/uploads/2014/03/p1_v147.png') no-repeat scroll 0 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 0 5px;
+}
+
+a.page-2{
+    background: url('http://www.victoria147.org/wp-content/uploads/2014/03/p2_v147.png') no-repeat scroll 0 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 0 5px;
+}
+
+a.page-3{
+    background: url('http://www.victoria147.org/wp-content/uploads/2014/03/p3_v147.png') no-repeat scroll 0 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 0 5px;
+}
+a.page-4 {
+ background: url('http://www.victoria147.org/wp-content/uploads/2014/03/p4_V147.png') no-repeat scroll 0 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 0 5px;
+}
+
+span.wpcf7-list-item-label{
+    font-family: 'source_sans_prolight';
+    font-weight: normal;
+    font-size: 14px;
+    color: #414141;
+    margin-bottom: 10px
+}
+
+#employees-box input[type="radio"] {
+    margin: 0 7px;
+}
+
+/* css for footer */
+
+#footer-bottom li:first-child{
+    margin-right: 0;
+}
+
+#footer-bottom{
+    height: 180px;
+    padding: 0;
+}
+
+#footer-bottom .container{
+    background: url( 'images/textura_footer.png') repeat-x scroll 0 0 ;
+    width: 100%;
+    height: 180px;    
+}
+
+#footer-bottom .footer-menu{
+    width: 940px;
+    margin: 0 auto;
+    height: 140px;
+}
+
+#footer-bottom .footer-menu ul.menu-nav{
+    float: left;
+    width: 720px;
+}
+
+#footer-bottom .footer-menu ul.menu-nav li{
+    line-height: 55px;
+}
+
+#footer-bottom .footer-menu ul.menu-nav li a {
+    font-family: 'source_sans_proregular';
+    font-size: 13px;
+    font-style: normal;
+    display: inline;
+    text-transform: uppercase;
+}
+
+#footer-bottom .footer-menu ul.menu-nav li a:hover{
+    color: #00b3a2;
+}
+
+#footer-bottom .footer-menu hr{
+    background: #868686;
+    margin-bottom: 15px;
+}
+
+#footer-bottom .footer-menu h6{
+    float: left;
+    font-family: 'source_sans_proregular';
+    font-size: 13px;
+    font-style: normal;
+    line-height: 55px;
+    margin: 0;
+    padding: 0;
+    color: #868686;
+    text-transform: uppercase;
+}
+
+#footer-bottom .footer-menu ul.menu-address{
+    float: left;
+    width: 720px;
+    margin-top: 8px;
+}
+
+#footer-bottom .footer-menu ul.menu-address li{
+    font-family: 'source_sans_proregular';
+    font-size: 12px;
+    font-style: normal;
+    margin-right: 15px;
+}
+
+#footer-bottom ul li.address{
+    background: url( 'images/icon-address.png' ) no-repeat transparent scroll 0 0;
+    padding-left: 25px;
+}
+
+#footer-bottom ul li.phone{
+    background: url( 'images/icon-phone.png' ) no-repeat transparent scroll 0 0;
+    padding-left: 25px;
+}
+
+#footer-bottom ul li.email{
+    background: url( 'images/icon-email.png' ) no-repeat transparent scroll 0 0;
+    padding-left: 25px;
+}
+
+#footer-bottom ul.social-network{
+    float: left;
+}
+
+#footer-bottom ul.social-network li a{
+    border: none;
+    text-indent: -9999px;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+}
+
+#footer-bottom ul.social-network li a.facebook{
+    background: url( 'http://www.victoria147.org/wp-content/uploads/2013/08/sprite_social1.png' ) no-repeat scroll 0 0;   
+}
+
+#footer-bottom ul.social-network li a.twitter{
+    background: url( 'http://www.victoria147.org/wp-content/uploads/2013/08/sprite_social1.png' ) no-repeat scroll -50px 0;
+}
+
+#footer-bottom ul.social-network li a.youtube{
+    background: url( 'http://www.victoria147.org/wp-content/uploads/2013/08/sprite_social1.png' ) no-repeat scroll -100px 0;
+}
+
+#footer-bottom ul.social-network li a.facebook:hover{
+    background: url( 'http://www.victoria147.org/wp-content/uploads/2013/08/sprite_social1.png' ) no-repeat scroll 0 -25px;   
+}
+
+#footer-bottom ul.social-network li a.twitter:hover{
+    background: url( 'http://www.victoria147.org/wp-content/uploads/2013/08/sprite_social1.png' ) no-repeat scroll -50px -25px;
+}
+
+#footer-bottom ul.social-network li a.youtube:hover{
+    background: url( 'http://www.victoria147.org/wp-content/uploads/2013/08/sprite_social1.png' ) no-repeat scroll -100px -25px;
+}
+
+#footer-bottom ul.legals{
+    width: 940px;
+    margin: 0 auto;
+    display: block;
+    line-height: 40px;
+}
+
+#footer-bottom ul.legals li{
+    font-family: 'source_sans_proregular';
+    font-size: 11px;
+    font-style: normal;
+    margin-right: 20px;
+}
+
+
+.menunavs-01{
+width:100%;
+heigth:100;
+
+}
+.mantete-conect{
+width:100%;
+heigth:100;
+}
+.menu-address.01{
+width:100%;
+}
+
+/* css for [Donaciones] section */
+
+.page-id-735 .one-half, 
+.page-id-735 .one-third, 
+.page-id-735 .two-third, 
+.page-id-735 .one-fourth, 
+.page-id-735.three-fourth{
+    margin: 0px;
+    line-height: 0px;
+}
+
+.page-id-735 .two-third{
+    width: 613px;
+}
+
+.page-id-735 div.one-third,
+.page-id-735 div.one-third img{
+    margin: 0;
+}
+
+#form-donaciones{
+    height: 478px;
+    width: 100%;
+    background-color: #FF0000;
+}
+
+#form-donaciones dl{
+    font-family: 'source_sans_proregular';
+    font-size: 12px;
+    margin: 0 15px;
+    color: #fff;
+    line-height: 1;
+}
+
+#form-donaciones .title{
+    font-family: 'source_sans_proregular';
+    font-size: 25px;
+    line-height: 50px;
+    margin: 0px;
+}
+
+#form-donaciones .cite{
+    font-family: 'source_sans_proregular';
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0 85px 10px 85px;
+}
+
+#form-donaciones .hidden{
+    display: none;
+}
+
+#form-donaciones #donaciones-button{
+    float: right;
+}
+
+#form-donaciones dt{
+    font-family: 'source_sans_proregular';
+    font-size: 12px;
+}
+
+#form-donaciones dl dd,
+#form-donaciones dl dt {
+    margin-bottom: 10px;
+}
+
+#form-donaciones .row{
+    overflow: hidden;
+}
+
+#form-donaciones .col{
+    float: left;
+    width: 290px;
+}
+
+#form-donaciones input[type="text"],
+#form-donaciones input[type="email"],
+#form-donaciones input[type="tel"] {
+    width: 280px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+input.e-mailU{
+ width: 516px;
+height: 19px;
+}
+
+input.telOption{
+ width: 160px;
+height: 20px;
+}
+
+
+#form-donaciones #message-box{
+    width: 555px;
+    height: 70px;
+}
+
+/* ********************************************************************/
+/*************   Seccion Quienes Somos *******************************/
+
+
+.Seccion-1{
+	width: 960px;
+	height: 264px;
+	
+	
+}
+.Seccion-2{
+	width: 960px;
+	height: 414px;
+
+}
+.Seccion-3{
+	width: 960px;
+	height: 367px;
+}
+.title{
+	font-family: 'source_sans_proregular';
+	font-size: 12px;
+}
+.title-h1m{
+
+	font-family: 'source_sans_probold';
+     	font-size: 23px;
+	margin: 15px 0 10px 15px;
+    	color: #fff;
+
+}
+.texto {
+	font-family: 'source_sans_proregular';
+    	font-size: 16px;
+    	padding: 0 10px 0 10px;
+    	color: #fff;
+}
+.texto .ol-m {
+	margin: 0;
+	padding: 0 auto;
+    	list-style-position: inside;
+
+}
+
+.cont-01{
+	width: 627px;
+	background: url(http://www.victoria147.org/wp-content/uploads/2013/08/bkg_nosotros.png) ;
+	background-color: #3DCCB9;
+	float: left;
+	height: 264px;
+	line-height: 20px;
+
+}
+.cont-02{
+	width:313 ;
+	height:264px;
+	float: right;
+}
+.cont-03{
+	float: left;
+	width: 313px;
+	height: 367px
+}
+.cont-04{
+	float: right;
+	width: 647px;
+	height: 414px;
+	background: url(http://www.victoria147.org/wp-content/uploads/2013/08/bkg_quequeremos.png);
+	background-color: #ED3D3B;
+	line-height: 22px;
+}
+.cont-05{
+	background: url(http://www.victoria147.org/wp-content/uploads/2013/08/bkg_plataformav147.png);
+	background-color:#3DCCB9;
+	float: left;
+	width:627px ;
+	height:367px;
+ 	line-height: 22px;
+
+	
+}
+/* ********************************************************************/
+/************* END   Seccion Quienes Somos *******************************/
+
+
+/*seccion redes sociales*/
+.home .one-fourth .content-twitter-feed,
+.home .one-fourth .content-facebook-feed{
+    font-family: 'source_sans_proregular' !important;
+    font-size: 14px;
+    height: 215px;
+    overflow: auto;
+    line-height: 18px;
+ }
+.home .one-fourth .sstfeed{
+     
+    padding-left: 26px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+    line-height: 20px;
+    background: url( 'images/icon-twitter.png' ) no-repeat 0 5px;  
+}
+.home .one-fourth .sstfeed a {
+    color: #00B3A2;
+}
+
+.home .one-fourth .facebook a,.home .one-fourth .facebook > .lsSocialFeedItem_author {
+    color: #00B3A2;
+}
+.home .one-fourth .facebook > img{
+    float:left;
+    width: 35%;
+    margin: 10px;
+}
+.home .one-fourth .facebook > .lsSocialFeedItem_meta{
+    clear: both;   
+}
+.home .jcarousel-item{
+    font-family: 'source_sans_proregular';
+}
+
+.scroller-wrapper {
+    background: url(../../uploads/2013/03/v147_ellas.png) no-repeat right top;
+    height: 90px; 
+    width: 100%;
+    padding: 20px 0;
+}
+.scrollable {
+  font-size: 26px;
+  color: #003F76;
+  position:relative;
+  display: block;
+  overflow:hidden;
+  height:70px;
+  font-family: 'source_sans_prolight';
+  float: left;
+  width:25em;
+  margin-left: 100px;
+  
+}
+.scrollable .items {
+  /* this cannot be too large */
+  width:20000em;
+  position:absolute;
+  
+}
+.items li {
+  float:left;
+  list-style: none;
+  width: 25em;
+  margin: 0px;
+  text-align: center;
+}
+.items li span {
+  color: #00B3A2;
+}
+
+.one-third {
+    width: 313px;
+}
+
+/*******************************************************************************************************
+*******************************ESTILOS PARA LA SECCIÓN DE BIBLIOTECA************************************
+/******************************************************************************************************/
+.page-id-1320 h1{
+    display: none;
+}
+
+.page-id-1320 h4,
+.page-id-1320 .acordion-biblioteca span{
+    color: #03ac85;
+    font-family: 'source_sans_probold';
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.page-id-1320 .acordion-biblioteca span{
+    background: url(images/accordion-content-buttons.png) 0 18px no-repeat;
+    color: #03ac85;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    height: 38px;
+    margin: 0 0 0 10px;
+    padding: 20px 0 0 32px;
+    text-transform: none;
+}
+
+.page-id-1320 .acordion-biblioteca li:hover{
+    background: #eae8e9;
+}
+
+.page-id-1320 .acordion-biblioteca li:hover span{
+    color: #00B3A2;
+}
+
+.page-id-1320 .acordion-biblioteca li.actual span{
+     background-position: 0 -94px;
+}
+
+.page-id-1320 p,
+.page-id-1320 .acordion-biblioteca div{
+    color: #6b6b6b;
+    font-family: 'source_sans_prolight';
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.page-id-1320 .acordion-biblioteca div{
+    margin-bottom: 20px;
+    display: none;
+}
+
+.page-id-1320 .acordion-biblioteca li:first-child{
+    border-top: 1px dotted #00B3A2;
+}
+
+.page-id-1320 .acordion-biblioteca li{
+    border-bottom: 1px dotted #00B3A2;
+    list-style: none;
+    margin: 0;
+}
+
+.page-id-1320 .one-third h6{
+    font-family: 'source_sans_prolight';
+    font-style: italic;
+    font-size: 18px;
+    margin: 0 0 0 90px;
+}
+
+.page-id-1320 .one-third .submenu-biblioteca{
+    list-style: none;
+    margin: 20px 0 0 60px;
+}
+
+.page-id-1320 .one-third .submenu-biblioteca > li{
+    border-top: 1px solid #00B3A2;
+    padding: 6px 0;
+}
+
+.page-id-1320 .one-third .submenu-biblioteca > li:first-child{
+    border-top: none;
+}
+
+.page-id-1320 .one-third .submenu-biblioteca a{
+    font-family: 'source_sans_prolight';
+    font-size: 14px;
+    padding: 0 0 0 20px;
+}
+
+
+
+/*******************************************************************************************************
+*******************************ESTILOS PARA LA SECCIÓN DE VIDEOTECA*************************************
+/******************************************************************************************************/
+
+ .page-id-1375 .slogan,
+ .page-id-1397 .slogan,
+ .page-id-3840 .slogan,
+ .page-id-3847 .slogan,
+ .page-id-3849 .slogan {
+    border-bottom: 1px solid #00B3A2;
+    overflow: hidden;
+}
+
+ .page-id-1375 .slogan p,
+ .page-id-1397 .slogan p,
+ .page-id-3840 .slogan p,
+ .page-id-3847 .slogan p,
+ .page-id-3849 .slogan p {	 
+    color: #3A3A3A;
+    font-family: 'source_sans_prolight';
+    font-size: 30px;
+    font-style: italic;
+    line-height: 36px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    width: 600px;
+ }
+
+ .page-id-1375 .slogan p strong,
+ .page-id-1397 .slogan p strong,
+ .page-id-3840 .slogan p strong,
+ .page-id-3847 .slogan p strong,
+ .page-id-3849 .slogan p strong {
+    color: #00B3A2;
+    font-weight: bold;
+ }
+
+ .page-id-1375 .slogan h3,
+ .page-id-1397 .slogan h3,
+ .page-id-3840 .slogan h3,
+ .page-id-3847 .slogan h3,
+ .page-id-3849 .slogan h3 {
+    float: left;
+    height: auto;
+    line-height: 0;
+    margin: 20px 0 0 0;
+    width: auto;
+ }
+
+ .page-id-1375 .slogan dl,
+ .page-id-1397 .slogan dl,
+ .page-id-3840 .slogan dl, 
+ .page-id-3847 .slogan dl,
+ .page-id-3849 .slogan dl {
+    float: right;
+    margin: 0 0 20px 0;
+ }
+
+ .page-id-1375 .slogan dl dt,
+ .page-id-1397 .slogan dl dt,
+ .page-id-3840 .slogan dl dt,
+ .page-id-3847 .slogan dl dt,
+ .page-id-3849 .slogan dl dt,
+ .page-id-1375 .slogan dl dd,
+ .page-id-1397 .slogan dl dd,
+ .page-id-3840 .slogan dl dd,
+ .page-id-3847 .slogan dl dd,
+ .page-id-3849 .slogan dl dd {
+    float: left;
+ }
+
+  .page-id-1375 .slogan dl dt,
+  .page-id-1397 .slogan dl dt,
+  .page-id-3840 .slogan dl dt,
+  .page-id-3847 .slogan dl dt,
+  .page-id-3849 .slogan dl dt {
+    color: #3A3A3A;
+    font-family: 'source_sans_prolight';
+    font-size: 14px;
+    padding: 8px 8px 0 0;
+  }
+
+.page-id-1375 .slogan .categorias-videos > li,
+.page-id-1397 .slogan .categorias-videos > li,
+.page-id-3840 .slogan .categorias-videos > li,
+.page-id-3847 .slogan .categorias-videos > li,
+.page-id-3849 .slogan .categorias-videos > li {
+    float: left;
+    list-style: none;
+    margin: 0 2px;
+}
+
+.page-id-1375 .slogan .categorias-videos a,
+.page-id-1397 .slogan .categorias-videos a,
+.page-id-3840 .slogan .categorias-videos a, 
+.page-id-3847 .slogan .categorias-videos a,
+.page-id-3849 .slogan .categorias-videos a {
+    color: #FFFFFF;
+    background: #00B3A2;
+    font-family: 'source_sans_prolight';
+    font-size: 14px;
+    padding: 4px 6px;
+}
+
+.page-id-1375 .slogan .categorias-videos a:hover,
+.page-id-1397 .slogan .categorias-videos a:hover,
+.page-id-3840 .slogan .categorias-videos a:hover,
+.page-id-3847 .slogan .categorias-videos a:hover,
+.page-id-3849 .slogan .categorias-videos a:hover,
+.page-id-1375 .slogan .categorias-videos a.actual,
+.page-id-1397 .slogan .categorias-videos a.actual,
+.page-id-3840 .slogan .categorias-videos a.actual, 
+.page-id-3847 .slogan .categorias-videos a.actual,
+.page-id-3849 .slogan .categorias-videos a.actual {
+    background: #3A3A3A;
+}
+
+.page-id-1375 h3,
+.page-id-1397 h3,
+.page-id-3840 h3,
+.page-id-3847 h3,
+.page-id-3849 h3 {
+    background: url(../../uploads/2013/03/v147_ellas.png) no-repeat right top;
+}
+
+.page-id-1375 .videoteca,
+.page-id-1397 .egoteca,
+.page-id-3840 .egoteca,
+.page-id-3847 .egoteca,
+.page-id-3849 .egoteca {
+    clear: both;
+    overflow: hidden;
+}
+
+
+.page-id-1375 .videoteca li,
+.page-id-1397 .egoteca li,
+.page-id-3840 .egoteca li,
+.page-id-3847 .egoteca li,
+.page-id-3849 .egoteca li {
+    border-bottom: 1px #00B3A2 dotted;
+    float: left;
+    list-style: none;
+    margin: 0 16px 20px 0;
+    min-height: 240px;
+    width: 218px;
+}
+
+.page-id-1397 .egoteca li,
+.page-id-3840 .egoteca li,
+.page-id-3847 .egoteca li,
+.page-id-3849 .egoteca li {
+    min-height: 370px;
+    position: relative;
+}
+    
+    .page-id-1397 .egoteca li a,
+	.page-id-3840 .egoteca li a,
+    .page-id-3847 .egoteca li a,
+	.page-id-3849 .egoteca li a	{
+        background: url(images/zoom.png) no-repeat;
+        cursor: pointer;
+        display: none;
+        height: 58px;
+        left: 50%;
+        margin-left: -29px;
+        position: absolute;
+        text-indent: -9999px;
+        top: 138px;
+        width: 58px;
+        z-index: 2;
+    }
+
+    .page-id-1397 .egoteca li:hover a,
+	.page-id-3840 .egoteca li:hover a, 
+	.page-id-3847 .egoteca li:hover a,
+	.page-id-3849 .egoteca li:hover a {
+        display: block;
+    }
+
+
+.page-id-1375 .videoteca li:hover{
+  background: #eae8e9;
+}
+
+.page-id-1375 .videoteca li .titulo,
+.page-id-1397 .egoteca li .titulo,
+.page-id-3840 .egoteca li .titulo,
+.page-id-3847 .egoteca li .titulo,
+.page-id-3849 .egoteca li .titulo {
+    color: #666666;
+    font-family: 'source_sans_proregular';
+    font-size: 15px;
+    text-align: center;
+}
+
+.page-id-1375 .videoteca li .descripcion,
+.page-id-1397 .egoteca li .descripcion,
+.page-id-3840 .egoteca li .descripcion, 
+.page-id-3847 .egoteca li .descripcion,
+.page-id-3849 .egoteca li .descripcion {
+    color: #00B3A2;
+    font-family: 'source_sans_proregular';
+    font-size: 14px;
+    text-align: center;
+}
+
+.imagenes-articulos{
+    display: none;
+}
+
+
+
+
+/*  **************************  Donations Paypal  *************************************   */
+
+  #donationGeneral {
+    background-color: #EAEAEA;
+    height: 468px;
+    padding: 10px 7px 0;
+    width: 100%;
+}
+
+
+
+.titleDonation {
+    color: #999999;
+    font-family: 'source_sans_proregular';
+    font-size: 32px;
+    line-height: 31px;
+    padding: 17px 151px 50px;
+    text-align: rigth;
+    width: 580px;
+}
+
+.informationDonation {
+    color: #4F4F4F;
+    font-family: 'source_sans_prolight';
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 auto;
+    width: 580px;
+}
+
+.paypalDonation {
+    background: url("https://www.paypal.com/en_US/i/scr/pixel.gif") no-repeat scroll -125px -25px transparent;
+    margin: 92px 0 0;
+    text-align: center;
+}
+
+/************  End Donations Paypal *******************************/
+
+
+
+
+
+/*  **************************  Privacy Policy  *************************************   */
+.clean-text-format {
+    font-family: 'source_sans_prolight';
+     font-size: 14px;
+    line-height: 21px;
+    color:#3A3A3A;
+}
+.clean-text-format h2{
+    font-family: 'source_sans_proregular';
+    font-size: 21px;
+}
+.clean-text-format h3{
+    margin:20px 0 10px 0;
+    height: auto;
+    font-family: 'source_sans_probold';
+    font-size: 16px;
+    font-weight: normal;
+    line-height:1.3em;
+    background:none;
+}
+.clean-text-format strong{
+    font-family: 'source_sans_proregular'
+}
+
+.clean-text-format .center{
+    text-align: center
+}
+
+.imgClean{
+    margin:0 0 -6px;
+    padding:0;
+}
+
+.double_h{
+    padding-top: 1px;
+    width:100%;
+    height:800px
+}
+
+.double2_h{
+    padding-top: 1px;
+    width:100%;
+    height:480px
+}
+
+.bgColor-white{
+    background: #fff url( images/bkg_plataformav147.png )
+}
+.bgColor-red{
+    font-family: 'source_sans_proregular';
+    font-size:14px;
+    color:#fff;
+    background: #ee4035 url( images/bkg_quequeremos.png )
+}
+.bgColor-red.opaque{
+    background-image: none;
+}
+.bgColor-purple{
+    color:#fff;
+    background: #6D6DAA url( images/textura_morado.png )
+}
+.bgColor-red h3{
+    padding-left: 20px;
+    font-family: 'source_sans_proregular';
+    font-size:21px;
+    color:#fff;
+}
+.bgColor-red ul,
+.bgColor-red ol{
+ margin-left: 10px
+}
+.desc-list{
+    float:left;
+    padding:18px 0 0 16px;
+    width:295px;
+    list-style: none;
+    font-family: 'source_sans_proregular';
+    font-size: 14px;
+    line-height: 1.2em;
+}
+.desc-list > li{
+    margin:25px 0 0;
+}
+.desc-list > li:first-child{
+    margin-top: 0
+}
+.desc-list strong{
+    display: block;
+    margin-bottom:10px;
+    font-family: 'source_sans_probold';
+    font-weight: normal;
+}
+.desc-list a{
+    font-family: 'source_sans_prolight_italic';
+    text-decoration: none;
+    color:#fff;
+}
+.desc-list a:hover{
+    color:#00b3a2;
+}
+.circle-separator{
+    height:20px;
+    border:none;
+    background: transparent url( images/circulos_separador.png ) no-repeat center center
+}
+
+
+
+
+    /* ----------------------------COMIENZA ESTILOS THE LAB --------------------------------- */
+
+.content-section {
+	width: 940px;
+	height: 800px;
+	margin-top:38px;
+	}
+.content-txt {
+	width: 460px;
+	margin-right:20px;
+	float:left;
+	display:block;   
+	}
+.content-txt p {
+	color: #333333;
+ 	font-family: 'source_sans_proregular';
+	font-size: 14.5px;
+	line-height:21px;
+	}
+.content-video {
+	width: 460px;
+	float:right;
+	display:block;
+	margin-top: 40px;   
+	}
+.title-h1lab {
+    color: #666666;
+    font-family: 'source_sans_probold';
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+	}
+.banner-content {
+	width:940px;
+	height:170px;
+	display:block;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/04/banner_thelab-fondo2.png");
+	}
+.triangulos {
+	width:180px;
+	height:170px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/03/banner_thelab_triang.png");
+	float:left;
+	display:block;
+	}
+.logothelab {
+	width:432px;
+	height:132px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/04/banner_thelab_logo.png");
+	float:left;
+	display:block;
+	margin-left:20px;
+	margin-top:20px;
+	}
+#social {
+	width:200px;
+	float:right;
+	}	
+#social li  {
+	list-style:none;
+	list-style-position:outside;
+	list-style-type:none;
+	}
+#registro {
+	width:460px;
+	float:right;
+	}	
+#registro li  {
+	list-style:none;
+	list-style-position:outside;
+	list-style-type:none;
+	}
+#btn_facebook {
+	width:50px;
+	height:50px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/03/color_facebook_sprite.png");
+	float:right;
+	cursor:pointer;
+	}
+#btn_facebook:hover {
+	width:50px;
+	height:50px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/03/color_facebook_sprite.png");
+	background-attachment:scroll;
+	background-position:bottom;
+	float:right;
+	cursor:pointer;
+	}
+#btn_twitter {
+	width:50px;
+	height:50px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/03/color_twitter_sprite.png");
+	float:right;
+	cursor:pointer;
+	margin-left:5px;
+	}
+#btn_twitter:hover {
+	width:50px;
+	height:50px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/03/color_twitter_sprite.png");
+	background-attachment:scroll;
+	background-position:bottom;
+	float:right;
+	cursor:pointer;
+	margin-left:5px;
+	}
+#btn_youtube {
+	width:50px;
+	height:50px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/03/color_youtube_sprite.png");
+	float:right;
+	display:block;
+	cursor:pointer;
+	margin-left:5px;
+	}
+#btn_youtube:hover {
+	width:50px;
+	height:50px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/03/color_youtube_sprite.png");
+	background-attachment:scroll;
+	background-position:bottom;
+	float:right;
+	cursor:pointer;
+	margin-left:5px;
+	}	
+#btn_registro {
+	width:460px;
+	height:80px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/04/btn_microsoft_sprite.png");
+	float:right;
+	display:block;
+	cursor:pointer;
+	}
+ #btn_registro:hover {
+	width:460px;
+	height:80px;
+	background-image:url("http://www.victoria147.org/wp-content/uploads/2014/04/btn_microsoft_sprite.png");
+	background-attachment:scroll;
+	background-position:bottom;
+	float:right;
+	cursor:pointer;
+	}
+.slider_cat_gallery {
+	width: 460px;
+	display:block;
+	margin-right:20px;
+	float: left;
+	margin-top:25px;
+	}
+.slider_cat_testimony {
+	width: 460px;
+	display:block;
+        float: right;
+	margin-top:25px;
+	}
+.slider_cat_videos {
+	width: 460px;
+	display:block;
+        float: left;
+	margin-top:40px;
+	}
+
+#main-lab {
+    float: left;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 40px;
+    margin-top: 0;
+    width: 460px;
+}
+
+
+
+    /* ----------------------------COMIENZA ESTILOS FELLOWS--------------------------------- */
+
+.content-fellows {
+	display:block;
+	float:left;
+	height:200px;
+	margin-right:20px;
+	width:220px;
+	}
+.content-logofellow {
+	display:block;
+	float:left;
+	height:100%;
+	padding: 5px 0 0 5px;
+	width:100%;
+}
+.fellow {
+	border-color: #ccc;
+	border-radius: 5px;
+	border-style:solid;
+	border-width:1px;
+	display: block;
+	height: 200px;
+	margin: 0 7px;
+        margin-bottom: 20px;
+        width: 218px;
+}
+.fellow-img {
+	max-width: 100%;
+	position: absolute;
+	margin: 0 5px 0 15px;
+}
+/*.fellow-img {
+	max-width: 100%;
+        position: absolute;
+        margin-top: 5px;  
+}*/
+.fellow-img {
+	border: 0 none;
+	}
+/*.fellow div {
+	margin: 15px;
+	}*/
+.fellow-name {
+	color: #00B3A2;
+	font-family: 'source_sans_proregular';
+	font-size: 18px;
+	font-weight: normal;
+	margin: 90px 0 0 15px;
+	position: absolute;
+	width: 200px;
+}
+/*.fellow-name {
+    color: #00B3A2;
+    font-family: 'source_sans_proregular';
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+    position: absolute;
+}*/
+.fellow-puesto {
+	color: gray;
+	font-family: 'source_sans_proregular';
+	font-size: 13px;
+	font-weight: normal;
+	margin: 140px 0 0 15px;
+	position: absolute;
+	width: 200px;
+}
+/*.fellow-puesto	{
+	color: gray;
+	font-family: 'source_sans_proregular';
+	font-size: 13px;
+	font-weight:normal;
+	margin-top: 50px;
+	position: absolute;
+        width: 200px;
+}*/
+.nav-fellow {
+    clear: both;
+    display: inline;
+	}	
+.nav-fellow li {
+	float: left;
+	}
+#wrapper {
+	display:block;
+	width:940px;
+} 
