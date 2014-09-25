@@ -10,6 +10,12 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_foundicons.css">
 		<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
+<style type="text/css" media="screen">
+	/*Ejemplo para personalizar los estilos del team-manager*/
+	.team-title{
+		color: red;
+	}
+</style>>
 	</head>
 	<body>
 		<div id='wrapper'>
