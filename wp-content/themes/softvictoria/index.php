@@ -196,29 +196,52 @@
 			
 			?>
 			<h1><hr><hr></h1>
-			<!-- @@ pnm end-->
+			<!-- Begin post slider-->
 			
 			<div class="content-slider">
 				<ul class="example-orbit" data-orbit 
 				data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
-				  <li>
-				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 1" width="100%"/>
-				    <div class="orbit-caption">
-				      Caption One.
-				    </div>
-				  </li>
-				  <li class="active">
-				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 2" width="100%"/>
-				    <div class="orbit-caption">
-				      Caption Two.
-				    </div>
-				  </li>
-				  <li>
-				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 3" width="100%"/>
-				    <div class="orbit-caption">
-				      Caption Three.
-				    </div>
-				  </li>
+
+						<?php
+
+						$html='';
+						$cat_args=array(
+							'orderby' => 'name',
+							'order' => 'ASC',
+							'include'=> array(54 ) 
+						);
+						
+						$categories=get_categories($cat_args);
+						foreach($categories as $category) 
+						{ 
+							$args=array(
+							'showposts' => 3,
+							'category__in' => array($category->term_id),
+							'caller_get_posts'=>1, 
+							'hide_empty'=>1,
+							);
+							//Testing the content of the post before it prints da HTML
+							$posts=get_posts($args);
+							print("Los posts son: ". count($posts));
+							foreach($posts as $post) 
+							{
+								setup_postdata($post); 
+								$post_content = wordwrap($post->post_content, 20);
+								$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+								$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
+								$html  = "
+							  <li>
+
+								${post_thumbnail}
+						    <div class='orbit-caption'>
+						      {$post_content}
+						    </div>
+							  </li>
+						    ";
+							}						}
+						print ${'html'};
+						?>
+
 				</ul>
 			</div>
 			<!-- end the news section -->
@@ -227,7 +250,8 @@
 					<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
 				</div>
 			</div>
-			<!-- End Team Members -->
+			<!-- End post slider -->
+			<!-- @@ pnm end-->
 
 			<h1><hr><hr></h1>
 			<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
