@@ -289,11 +289,19 @@
 					<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
 				</div>
 			</div>
-			<!-- End post slider -->
-			<!-- @@ pnm end-->
 
-			<h1><hr><hr></h1>
+
+			<h1><hr>Formulario de contacto normal<hr></h1>
 			<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
+			<h1><hr>Formulario de contacto para emprendedoras<hr></h1>
+			<?php echo do_shortcode( '[contact-form-7 id="5370" title="___Contacto Emprendedoras"]' ); ?>
+
+			<h1><hr>Formulario para trabajar con nosotros<hr></h1>
+			<?php echo do_shortcode( '[contact-form-7 id="5371" title="___Trabaja con Nosotros"]' ); ?>
+
+			<h1><hr>Formulario de contacto para empresas<hr></h1>
+			<?php echo do_shortcode( '[contact-form-7 id="5372" title="___Contacto Empresas"]' ); ?>
+
 
 			<div id="delimiter"></div>
 		</div>
