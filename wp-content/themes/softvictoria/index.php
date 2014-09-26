@@ -22,78 +22,76 @@
 	<body>
 		<div id='wrapper'>
 			<div id='header'>
-				<!-- Default Main Menu -->
-				<div id="main-menu" class="row hidden">
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button top-menu-btn">¿Quiénes somos?</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button double-lined-btn">Emprendedora Victoria 147</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button top-menu-btn">Mujer Victoria 147</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button double-lined-btn">Productos Victoria147</a>
-		      </div>
-		      <div class="large-2 columns top-menu-columns">
-		        <a href="#" class="small button top-menu-btn">Contáctanos</a>
-		      </div>
-		      <div class="large-2 columns top-social-btns">
-		      	<div class="the-search">
-		      		<i class="foundicon-search"></i>
-		      	</div>
-		      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn fb-btn"></a>
-		      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn tw-btn"></a>
-		      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn insta-btn"></a>
-		      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn yt-btn"></a>
-		      </div>
-				</div>
-				<!-- On Scroll Menu -->
-				<div id="main-menu" class="menu-container contain-to-grid sticky">
-				  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
-				    <ul class="title-area">
+
+				<!-- The Menu -->
+				<div id="main-menu" class="transparent-h contain-to-grid sticky">
+				  <nav class="top-bar transparent-h" data-topbar role="navigation" data-options="sticky_on: large">
+				    <ul class="title-area hidden">
 					    <li class="name">
-					      <h1><a href="#">My Site</a></h1>
+					      <a href="#">
+					      	<img src="<?= bloginfo('template_directory'); ?>/img/victoria-logo-top.png" alt="Victoria 147">
+					      </a>
 					    </li>
 					     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 					    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 					  </ul>
 
-					  <section class="top-bar-section">
+
+
+						<section class="top-bar-section top-bar-menu">
 					    <!-- Right Nav Section -->
-					    <!-- <ul class="right">
-					      <li><a href="#">Right Button Active</a></li>
-					    </ul> -->
+					    <ul class="right">
+					      <div class="top-social-btns justify-social">
+					      	<div class="the-search">
+					      		<i class="foundicon-search"></i>
+					      	</div>
+					      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn social-sprite-w fb-btn"></a>
+					      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn social-sprite-w tw-btn"></a>
+					      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn social-sprite-w insta-btn"></a>
+					      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn social-sprite-w yt-btn"></a>
+					      </div>
+					    </ul>
 
 					    <!-- Left Nav Section -->
 					    <ul class="left">
-					      <li>
-					      	<a href="#">¿Quiénes somos?</a>
+					      <li class="has-dropdown">
+					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
+					      	 <ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Historia</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Staff</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Contáctanos</a></li>
+					        </ul>
 					      </li>
 					      <li class="has-dropdown">
-					      	<a href="#">Emprendedora Victoria 147</a>
-					        <ul class="dropdown">
-					          <li><a href="#">First link in dropdown</a></li>
-					          <li class="active"><a href="#">Active link in dropdown</a></li>
+					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Emprendedora Victoria147</a>
+					        <ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Únete y acelera tu negocio</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Academia Victoria147</a></li>
+					        </ul>
+					      </li>
+					      <li class="has-dropdown">
+					      	<a href="#" class="the-menu-top bordered-menu">Mujer Victoria147</a>
+					      	<ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Descargables</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Videos</a></li>
+					        </ul>
+					      </li>
+					      <li class="has-dropdown">
+					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Productos V147</a>
+					      	<ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Balance</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Performance</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Imagen</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Placer por placer</a></li>
 					        </ul>
 					      </li>
 					      <li>
-					      	<a href="#">Mujer Victoria 147</a>
+					      	<a href="#" class="the-menu-top bordered-menu">Contáctanos</a>
 					      </li>
-					      <li>
-					      	<a href="#">Productos Victoria147</a>
-					      </li>
-					      <li>
-					      	<a href="#">Contáctanos</a>
-					      </li>
-					      <!-- <li class="has-dropdown">
-					        <a href="#">Right Button Dropdown</a>
-					        <ul class="dropdown">
-					          <li><a href="#">First link in dropdown</a></li>
-					          <li class="active"><a href="#">Active link in dropdown</a></li>
-					        </ul>
-					      </li> -->
 					    </ul>
 					  </section>
 				  </nav>
@@ -116,15 +114,9 @@
 				</div>
 			</div>
 			
-			
-			
-		
-			<!-- the news section -->
-			<div class="content-team">
-				<div id='content-teams'>
 					<!--- @@ pnm begin -->
 					<?php
-						$html = "<div class='row news-sections'>";
+						$html = "<div id='the_sections' class='row news-sections'>";
 						$html .= "<div class='large-12 news-headliner'>";
 							$html .= "<h1>Nuestras Secciones</h1>";
 						$html .= "</div>";
@@ -195,52 +187,102 @@
 			print("${html}");
 			
 			?>
-			<h1><hr><hr></h1>
-			<!-- Begin post slider-->
-			
-			<div class="content-slider">
-				<ul class="example-orbit" data-orbit   data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
-						<?php
-						$html='';
-						$cat_args=array(
-							'orderby' => 'name',
-							'order' => 'ASC',
-							'include'=> array(54) 
-						);
-						
-						$categories=get_categories($cat_args);
-						foreach($categories as $category) 
-						{ 
-							$args=array(
-							'showposts' => 3,
-							'category__in' => array($category->term_id),
-							'caller_get_posts'=>1, 
-							'hide_empty'=>1,
-							);
-							//Testing the content of the post before it prints da HTML
-							$posts=get_posts($args);
-							foreach($posts as $post) 
-							{
-								setup_postdata($post); 
-								// $post_content = wordwrap($post_wrapped, 20);
-								$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
-								$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
-								$post_link=post_permalink();
-								$post_title=get_the_title();
-								$html  .= "<li>
-								${post_thumbnail}
-						    <div class='orbit-caption'>
-									<a href='${post_link}' class='the-post-link'>".get_the_title()."</a>
-						    </div>
-							  </li>
-						    ";
-							}						
-						}
-						print ${'html'};
-						?>
 
+			<div class="content-slider">
+				<ul class="example-orbit" data-orbit>
+				<?php
+				$html='';
+				$cat_args=array(
+					'orderby' => 'name',
+					'order' => 'ASC',
+					'include'=> array(54) 
+				);
+
+				$categories=get_categories($cat_args);
+				foreach($categories as $category) 
+				{ 
+					$args=array(
+					'showposts' => 3,
+					'category__in' => array($category->term_id),
+					'caller_get_posts'=>1, 
+					'hide_empty'=>1,
+					);
+					//Testing the content of the post before it prints da HTML
+					$posts=get_posts($args);
+					foreach($posts as $post) 
+					{
+						setup_postdata($post); 
+						// $post_content = wordwrap($post_wrapped, 20);
+						$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+						$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
+						$post_link=post_permalink();
+						$post_title=get_the_title();
+						$html  .= "<li>
+						${post_thumbnail}
+				    <div class='orbit-caption'>
+							<a href='${post_link}' class='the-post-link'>".get_the_title()."</a>
+				    </div>
+					  </li>
+				    ";
+					}
+				}
+				print ${'html'};
+				?>
 				</ul>
 			</div>
+
+			<div class="who-we-are">
+				<div class="row container-about">
+					<div class="who">
+						<div class="large-5 columns"></div>
+  					<div class="large-7 columns">
+  						<h1>¿Quiénes Somos?</h1>
+  						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache +1 Godard direct trade keffiyeh vinyl mlkshk.</p>
+  					</div>
+					</div>
+				</div>
+					<div class="row hist">
+						<div class="large-6 columns"></div>
+						<div class="large-6 columns">
+							<div class="about-titles">
+								<img src="<?=bloginfo('template_directory'); ?>/img/home-icon.png" width="8%" height="auto"> 
+								<h3>Historia</h3>
+							</div>
+							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr. Bespoke +1 put a bird on it, fixie vinyl readymade beard four loko blog tofu raw denim PBR&B gentrify.</p>
+						</div>
+					</div>
+					<div class="row mision">
+						<div class="large-6 columns"></div>
+						<div class="large-6 columns">
+							<div class="about-titles">
+								<img src="<?=bloginfo('template_directory'); ?>/img/star-icon.png" width="8%" height="auto"> 
+								<h3>Misión</h3>
+							</div>
+							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr. Bespoke +1 put a bird on it, fixie vinyl readymade beard four loko blog tofu raw denim PBR&B gentrify.</p>
+						</div>
+					</div>
+					<div class="row vision">
+						<div class="large-6 columns"></div>
+						<div class="large-6 columns">
+							<div class="about-titles">
+								<img src="<?=bloginfo('template_directory'); ?>/img/eye-icon.png" width="8%" height="auto"> 
+								<h3>Visión</h3>
+							</div>
+							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- What do we do -->
+			<div class="what">
+				<div class="row">
+					<div class="large-12">
+						<h1>¿Qué Hacemos?</h1>
+						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache</p>
+					</div>
+				</div>
+			</div>
+			
 			<!-- end the news section -->
 			<div class="content-team">
 				<div id='content-teams'>
@@ -256,7 +298,5 @@
 			<div id="delimiter"></div>
 		</div>
 		<!-- The Scrolling Script -->
-		<script>
 		
-		</script>
 <?php get_footer();?>
