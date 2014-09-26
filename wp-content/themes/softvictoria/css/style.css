@@ -69,6 +69,18 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 10px 0 0 0;
 	min-height: 50px;
 	display: block;
+	min-width: 1000px;
+}
+.who{
+	text-align: left;
+}
+.who h1 {
+	color: #333;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.who p{
+	color: #999;
 }
 /* Container top bar */
 .contain-to-grid .top-bar {
@@ -242,10 +254,15 @@ Old Menu
 		Main Index
 ------------------*/
 #main-intro {
-	background-image: url("../img/main-victoria.jpg");
+	/*background-image: url("../img/main-victoria.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	background-position: center top;
+	background-position: center top;*/
+	background: url("../img/main-victoria.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	position: relative;
 	color: #fff;
 	top: -110px;
@@ -284,6 +301,63 @@ blockquote.intro-quote{
 }
 .intro-scroll p{
 	margin: 0;
+}
+/* The slider */
+.orbit-next{
+	display: block !important;
+}
+.orbit-prev{
+	display: block !important;
+}
+.orbit-bullets{
+	display: block !important;
+}
+/*.the-slide-next{
+	display: block;
+	position: absolute;
+	top: 45%;
+	margin-top: -25px;
+	width: 36px;
+	height: 60px;
+	line-height: 50px;
+	color: white;
+	background-color: transparent;
+	text-indent: -9999px !important;
+	z-index: 10;	
+}
+.the-slider-prev{
+	display: block;
+	position: absolute;
+	top: 45%;
+	margin-top: -25px;
+	width: 36px;
+	height: 60px;
+	line-height: 50px;
+	color: white;
+	background-color: transparent;
+	text-indent: -9999px !important;
+	z-index: 10;
+}*/
+/* Who We are	*/
+.who-we-are{
+	/*background-image: url("../img/who-we-are.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;*/
+	background: url("../img/who-we-are.jpg") no-repeat center 25px fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	position: relative;
+	color: #fff;
+	top: 10px;
+	min-width: 1080px;
+	width: 100%;
+	z-index: 0;
+	margin: 0px;
+	min-height: 780px;
+	display: list-item;
 }
 /*-----------------
 	

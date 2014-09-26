@@ -151,27 +151,45 @@
 			</div>
 			<!-- end the news section -->
 			<div class="content-slider">
-				<ul class="example-orbit" data-orbit 
-				data-options="animation:slide;pause_on_hover:false;animation_speed:500;navigation_arrows:true;bullets:false;">
+				<ul class="example-orbit" data-orbit>
 				  <li>
-				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 1" width="100%"/>
+				    <img src="<?=bloginfo('template_directory'); ?>/img/1.jpg" alt="slide 1" width="100%"/>
 				    <div class="orbit-caption">
 				      Caption One.
 				    </div>
 				  </li>
 				  <li class="active">
-				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 2" width="100%"/>
+				    <img src="<?=bloginfo('template_directory'); ?>/img/2.jpg" alt="slide 2" width="100%"/>
 				    <div class="orbit-caption">
 				      Caption Two.
 				    </div>
 				  </li>
 				  <li>
-				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 3" width="100%"/>
+				    <img src="<?=bloginfo('template_directory'); ?>/img/3.jpg" alt="slide 3" width="100%"/>
 				    <div class="orbit-caption">
 				      Caption Three.
 				    </div>
 				  </li>
 				</ul>
+			</div>
+			<div class="who-we-are">
+				<div class="row container-about">
+					<div class="who">
+						<div class="large-5 columns"></div>
+  					<div class="large-7 columns">
+  						<h1>¿Quiénes Somos?</h1>
+  						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache +1 Godard direct trade keffiyeh vinyl mlkshk.</p>
+  					</div>
+					</div>
+					<div class="history">
+					</div>
+					<div class="mision">
+
+					</div>
+					<div class="vision">
+
+					</div>
+				</div>
 			</div>
 			<div class="content-other">
 				<?php
@@ -249,7 +267,5 @@
 			<div id="delimiter"></div>
 		</div>
 		<!-- The Scrolling Script -->
-		<script>
 		
-		</script>
 <?php get_footer();?>
