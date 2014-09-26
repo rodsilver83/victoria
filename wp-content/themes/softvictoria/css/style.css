@@ -71,48 +71,6 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	min-width: 1000px;
 }
-.who{
-	text-align: left;
-}
-.who h1 {
-	color: #333;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-.who p{
-	color: #999 !important;
-	margin-left:0px !important;
-}
-.about-titles{
-
-}
-.about-titles img{
-	float: left;
-	margin-right: 10px;
-}
-.about-titles h3{
-	color: #999;
-	text-align: left;
-	text-transform: uppercase;
-}
-.hist p{
-	color: #999;
-	text-align: left;
-	margin-left:35px;
-}
-.mision p{
-	color: #999;
-	text-align: left;
-	margin-left:35px;
-}
-.vision p{
-	color: #999;
-	text-align: left;
-	margin-left:35px;
-}
-.what{
-	
-}
 /* Container top bar */
 .contain-to-grid .top-bar {
 	min-width: 100%;
@@ -369,27 +327,6 @@ blockquote.intro-quote{
 	text-indent: -9999px !important;
 	z-index: 10;
 }*/
-/* Who We are	*/
-.who-we-are{
-	/*background-image: url("../img/who-we-are.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-position: center top;*/
-	background: url("../img/who-we-are.jpg") no-repeat center 25px fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	position: relative;
-	color: #fff;
-	top: 10px;
-	min-width: 1080px;
-	width: 100%;
-	z-index: 0;
-	margin: 0px;
-	min-height: 780px;
-	display: list-item;
-}
 /*-----------------
 	
 		News Section
@@ -503,6 +440,91 @@ blockquote.intro-quote{
 .section-image img {
 	position: relative;
 	z-index: 0;
+}
+/* Who We are	*/
+.who-we-are{
+	/*background-image: url("../img/who-we-are.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;*/
+	background: url("../img/we-are.jpg") no-repeat center 25px fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	position: relative;
+	color: #fff;
+	top: 10px;
+	min-width: 1080px;
+	width: 100%;
+	z-index: 0;
+	margin: 0px;
+	min-height: 780px;
+	display: list-item;
+	padding-bottom: 50px;
+}
+.who{
+	text-align: left;
+}
+.who h1 {
+	color: #333;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.who p{
+	color: #999 !important;
+	margin-left:0px !important;
+}
+.about-titles{
+
+}
+.about-titles img{
+	float: left;
+	margin-right: 10px;
+}
+.about-titles h3{
+	color: #999;
+	text-align: left;
+	text-transform: uppercase;
+}
+.hist p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+.mision p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+.vision{
+	padding-bottom: 20px;
+}
+.vision p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+/* What we do */
+.pleca{
+	position: relative;
+	top: -20px;
+	margin-bottom: -35px;
+}
+.what{
+	background-image: url("../img/pleca.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;
+	padding-top: 1px;
+}
+.what h1{
+	color: #333;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.what p{
+	color: #999;
 }
 /*-----------------
 	

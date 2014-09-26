@@ -215,6 +215,7 @@
 				</div>
 			</div>
 			<!-- What do we do -->
+			<img src="<?=bloginfo('template_directory'); ?>/img/pleca.png" class="pleca">
 			<div class="what">
 				<div class="row">
 					<div class="large-12">
@@ -222,8 +223,19 @@
 						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache</p>
 					</div>
 				</div>
+				<div class="row">
+					<a href="#the_sections" class="intro-scroll">
+						<p class="text-center">STAFF</p>
+						<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
+					</a>
+				</div>
 			</div>
 			<!-- What do we do -->
+			<!-- Staff -->
+			<div class="staff">
+
+			</div>
+			<!-- Staff -->
 			<div class="content-other">
 				<?php
 				 if (have_posts()): while(have_posts()): the_post(); ?>
