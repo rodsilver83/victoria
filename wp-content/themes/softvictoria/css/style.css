@@ -82,6 +82,22 @@ h1, h2, h3, h4, h5, h6 {
 .who p{
 	color: #999;
 }
+.about-titles{
+
+}
+.about-titles img{
+	float: left;
+	margin-right: 10px;
+}
+.about-titles h3{
+	color: #999;
+	text-align: left;
+	text-transform: uppercase;
+}
+.history p{
+	color: #999;
+	text-align: left;
+}
 /* Container top bar */
 .contain-to-grid .top-bar {
 	min-width: 100%;
