@@ -199,16 +199,13 @@
 			<!-- Begin post slider-->
 			
 			<div class="content-slider">
-				<ul class="example-orbit" data-orbit 
-				data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
-
+				<ul class="example-orbit" data-orbit   data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
 						<?php
-
 						$html='';
 						$cat_args=array(
 							'orderby' => 'name',
 							'order' => 'ASC',
-							'include'=> array(54 ) 
+							'include'=> array(54) 
 						);
 						
 						$categories=get_categories($cat_args);
@@ -222,23 +219,30 @@
 							);
 							//Testing the content of the post before it prints da HTML
 							$posts=get_posts($args);
-							print("Los posts son: ". count($posts));
+
 							foreach($posts as $post) 
 							{
 								setup_postdata($post); 
-								$post_content = wordwrap($post->post_content, 20);
+								// $post_content = wordwrap($post_wrapped, 20);
 								$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
 								$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
-								$html  = "
+								$post_link=post_permalink();
+								$post_title=get_the_title();
+								
+								$html  .= "
 							  <li>
-
 								${post_thumbnail}
 						    <div class='orbit-caption'>
-						      {$post_content}
+									<a href='${post_link}' class='the-post-link'>
+".get_the_title()."
+									</a>
+						
+						      
 						    </div>
 							  </li>
 						    ";
-							}						}
+							}						
+						}
 						print ${'html'};
 						?>
 
