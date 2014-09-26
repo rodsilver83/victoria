@@ -49,6 +49,7 @@ $(document).ready(function(){
         $(".the-search").addClass("menu-color");
         $(".social-btn").removeClass("social-sprite-w");
         $(".social-btn").addClass("social-sprite-blk");
+        $(".top-social-btns").removeClass("justify-social");
       }else{
         $(".title-area").addClass("hidden");
         $("#main-menu").addClass("transparent-h");
@@ -63,6 +64,7 @@ $(document).ready(function(){
         $(".the-search").removeClass("menu-color");
         $(".social-btn").removeClass("social-sprite-blk");
         $(".social-btn").addClass("social-sprite-w");
+        $(".top-social-btns").addClass("justify-social");
       }
     });
   });

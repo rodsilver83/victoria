@@ -31,7 +31,7 @@
 					  <section class="top-bar-section top-bar-menu">
 					    <!-- Right Nav Section -->
 					    <ul class="right">
-					      <div class="top-social-btns">
+					      <div class="top-social-btns justify-social">
 					      	<div class="the-search">
 					      		<i class="foundicon-search"></i>
 					      	</div>
@@ -44,21 +44,40 @@
 
 					    <!-- Left Nav Section -->
 					    <ul class="left">
-					      <li>
-					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
-					      </li>
 					      <li class="has-dropdown">
-					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Emprendedora Victoria 147</a>
-					        <ul class="dropdown the-submenu-top">
-					          <li><a href="#" class="the-submenu-item bordered-menu">First link in dropdown</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">Active link in dropdown</a></li>
+					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
+					      	 <ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Historia</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Staff</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Contáctanos</a></li>
 					        </ul>
 					      </li>
-					      <li>
-					      	<a href="#" class="the-menu-top bordered-menu">Mujer Victoria 147</a>
+					      <li class="has-dropdown">
+					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Emprendedora Victoria147</a>
+					        <ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Únete y acelera tu negocio</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Academia Victoria147</a></li>
+					        </ul>
 					      </li>
-					      <li>
-					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Productos Victoria147</a>
+					      <li class="has-dropdown">
+					      	<a href="#" class="the-menu-top bordered-menu">Mujer Victoria147</a>
+					      	<ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Descargables</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Videos</a></li>
+					        </ul>
+					      </li>
+					      <li class="has-dropdown">
+					      	<a href="#" class="the-menu-top bordered-menu double-lined-menu">Productos V147</a>
+					      	<ul class="dropdown the-submenu-top">
+					          <li><a href="#" class="the-submenu-item bordered-menu">Balance</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Performance</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Imagen</a></li>
+					          <li><a href="#" class="the-submenu-item bordered-menu">Placer por placer</a></li>
+					        </ul>
 					      </li>
 					      <li>
 					      	<a href="#" class="the-menu-top bordered-menu">Contáctanos</a>
@@ -133,7 +152,7 @@
 			<!-- end the news section -->
 			<div class="content-slider">
 				<ul class="example-orbit" data-orbit 
-				data-options="animation:slide;pause_on_hover:true;animation_speed:500;navigation_arrows:true;bullets:false;">
+				data-options="animation:slide;pause_on_hover:false;animation_speed:500;navigation_arrows:true;bullets:false;">
 				  <li>
 				    <img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 1" width="100%"/>
 				    <div class="orbit-caption">
