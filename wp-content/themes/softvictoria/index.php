@@ -219,7 +219,6 @@
 							);
 							//Testing the content of the post before it prints da HTML
 							$posts=get_posts($args);
-
 							foreach($posts as $post) 
 							{
 								setup_postdata($post); 
@@ -228,16 +227,10 @@
 								$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
 								$post_link=post_permalink();
 								$post_title=get_the_title();
-								
-								$html  .= "
-							  <li>
+								$html  .= "<li>
 								${post_thumbnail}
 						    <div class='orbit-caption'>
-									<a href='${post_link}' class='the-post-link'>
-".get_the_title()."
-									</a>
-						
-						      
+									<a href='${post_link}' class='the-post-link'>".get_the_title()."</a>
 						    </div>
 							  </li>
 						    ";
