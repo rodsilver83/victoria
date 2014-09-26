@@ -1361,7 +1361,7 @@ meta.foundation-mq-topbar {
     height: 1px;
     width: 100%; }
   .top-bar-section ul li {
-    background: #333333; }
+    /*background: #333333;*/}
     .top-bar-section ul li > a {
       display: block;
       width: 100%;
@@ -1443,8 +1443,8 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
           color: white; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color: #555555;
-      background: #272727;
+      /*background-color: #555555;
+      background: #272727;*/
       color: white; }
     .top-bar-section ul li.active > a {
       background: #008cba;
@@ -1573,10 +1573,10 @@ meta.foundation-mq-topbar {
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
-      background: #333333; }
+      /*background: #333333;*/ }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
-        background-color: #555555;
-        background: #272727; }
+        /*background-color: #555555;
+        background: #272727;*/ }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
@@ -1631,17 +1631,17 @@ meta.foundation-mq-topbar {
         line-height: 45px;
         white-space: nowrap;
         padding: 12px 15px;
-        background: #333333; }
+        /*background: #333333;*/ }
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
         color: white;
-        background: #333333; }
+        /*background: #333333;*/ }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
         color: white;
-        background-color: #555555;
-        background: #272727; }
+        /*background-color: #555555;
+        background: #272727;*/ }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
-        background: #333333; }
+        /*background: #333333;*/ }
       .top-bar-section .dropdown li .dropdown {
         left: 100%;
         top: 0; }

@@ -47,11 +47,130 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------
 		Main Menu
 ------------------*/
+.transparent-h {
+	background-color: none transparent !important;
+	background: none transparent !important;
+}
+.non-transparent-h {
+	background: #fff !important;
+	background-color: #fff !important;
+	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+	transition: border .25s linear, color .25s linear, background-color .25s linear;
+	border-bottom: 5px solid #32ccb9;
+}
+.p-menu-fixed{
+	padding-top: 10px;
+}
+.p-submenu-fixed{
+	padding-top: 20px !important;
+	left: 0px !important;
+}
 #main-menu {
-	padding: 10px 0 10px 0;
+	padding: 10px 0 0 0;
 	min-height: 50px;
 	display: block;
+	min-width: 1000px;
 }
+.who{
+	text-align: left;
+}
+.who h1 {
+	color: #333;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.who p{
+	color: #999 !important;
+	margin-left:0px !important;
+}
+.about-titles{
+
+}
+.about-titles img{
+	float: left;
+	margin-right: 10px;
+}
+.about-titles h3{
+	color: #999;
+	text-align: left;
+	text-transform: uppercase;
+}
+.hist p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+.mision p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+.vision p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+.what{
+	
+}
+/* Container top bar */
+.contain-to-grid .top-bar {
+	min-width: 100%;
+}
+.top-bar .title-area{
+	padding: 12px 15px;
+}
+.top-bar-menu ul li {
+	margin-right: 5px;
+}
+.bordered-menu{
+	border:2px solid #fff; 
+}
+.menu-color{
+	color: #333 !important
+}
+.bordered-submenu{
+	border: 2px solid #32ccb9;
+}
+.submenu-colored{
+	color: #333 !important;
+	background-color: #fff;
+}
+.submenu-colored:hover{
+	color: #32ccb9 !important;
+}
+/* Menu link */
+.top-bar-menu li:not(.has-form) a:not(.button){
+	/* regular */
+	text-transform: uppercase;
+}
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+	/* hover */
+}
+.top-bar-section .dropdown li{
+	margin-top: 5px;
+}
+/* Menu Link in Dropdown */
+.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+	/* regular */
+  color: white;
+}
+.top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
+	/* on hover */
+  color: white;
+}
+.top-bar-menu .left li .dropdown {
+	left: -15px !important;
+}
+.double-lined-menu{
+	max-width: 145px;
+	line-height: 15px !important;
+	min-height: 49px;
+	padding-top: 8px !important;
+}
+/*
+Old Menu
+*/
 .top-menu-columns {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -77,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: transparent;
 	color: #fff;
 	border: 2px solid #fff;
-	padding-top: 15px !important;
+	padding-top: 13px !important;
 	padding-right: 15px !important;
 	padding-bottom: 15px !important;
 	padding-left: 15px !important;
@@ -96,6 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-right: 10px;
 	float: left;
 	width: 35px;
+	margin-top: -10px;
 }
 .the-search:hover{
 	cursor: pointer;
@@ -104,8 +224,11 @@ h1, h2, h3, h4, h5, h6 {
 .top-social-btns{
 	width: 205px;
 	position: absolute;
-	top: 40px;
-	right: -5px;
+	right: -25px;
+	top: 10px;
+}
+.justify-social{
+	margin-right: -30px;
 }
 .social-btn{
 	float: left;
@@ -114,22 +237,24 @@ h1, h2, h3, h4, h5, h6 {
 	height: 28px;
 	margin-right: 3px;
 }
-.fb-btn{
+.social-sprite-w{
 	background-image: url('../img/social-sprite.png');
+}
+.social-sprite-blk{
+	background-image: url('../img/social-sprite-blk.png');
+}
+.fb-btn{
 	background-repeat: no-repeat;
 }
 .tw-btn{
-	background-image: url('../img/social-sprite.png');
 	background-repeat: no-repeat;
 	background-position: 20.3% 0%;
 }
 .insta-btn{
-	background-image: url('../img/social-sprite.png');
 	background-repeat: no-repeat;
 	background-position: 60.9% 0%;
 }
 .yt-btn{
-	background-image: url('../img/social-sprite.png');
 	background-repeat: no-repeat;
 	background-position: 100.6% 0%;
 }
@@ -160,17 +285,22 @@ h1, h2, h3, h4, h5, h6 {
 		Main Index
 ------------------*/
 #main-intro {
-	background-image: url("../img/main-victoria.jpg");
+	/*background-image: url("../img/main-victoria.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	background-position: center top;
+	background-position: center top;*/
+	background: url("../img/main-victoria.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	position: relative;
 	color: #fff;
 	top: -110px;
 	min-width: 1080px;
 	width: 100%;
 	z-index: 0;
-	margin: 0px 0px -55px 0px;
+	margin: 0px 0px -150px 0px;
 	min-height: 680px;
 	display: list-item;
 }
@@ -203,6 +333,63 @@ blockquote.intro-quote{
 .intro-scroll p{
 	margin: 0;
 }
+/* The slider */
+.orbit-next{
+	display: block !important;
+}
+.orbit-prev{
+	display: block !important;
+}
+.orbit-bullets{
+	display: block !important;
+}
+/*.the-slide-next{
+	display: block;
+	position: absolute;
+	top: 45%;
+	margin-top: -25px;
+	width: 36px;
+	height: 60px;
+	line-height: 50px;
+	color: white;
+	background-color: transparent;
+	text-indent: -9999px !important;
+	z-index: 10;	
+}
+.the-slider-prev{
+	display: block;
+	position: absolute;
+	top: 45%;
+	margin-top: -25px;
+	width: 36px;
+	height: 60px;
+	line-height: 50px;
+	color: white;
+	background-color: transparent;
+	text-indent: -9999px !important;
+	z-index: 10;
+}*/
+/* Who We are	*/
+.who-we-are{
+	/*background-image: url("../img/who-we-are.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;*/
+	background: url("../img/who-we-are.jpg") no-repeat center 25px fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	position: relative;
+	color: #fff;
+	top: 10px;
+	min-width: 1080px;
+	width: 100%;
+	z-index: 0;
+	margin: 0px;
+	min-height: 780px;
+	display: list-item;
+}
 /*-----------------
 	
 		News Section
@@ -215,6 +402,7 @@ blockquote.intro-quote{
 	height: 100%;
 	min-height: 445px;
 	margin-bottom: 0;
+	padding-top: 95px;
 }
 .news-headliner{
 	position: relative;
