@@ -42,8 +42,8 @@
 					    <!-- Right Nav Section -->
 					    <ul class="right">
 					      <div class="top-social-btns justify-social">
-					      	<div class="the-search">
-					      		<i class="foundicon-search"></i>
+					      	<div class="the-search search-w">
+					      		
 					      	</div>
 					      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn social-sprite-w fb-btn"></a>
 					      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn social-sprite-w tw-btn"></a>
@@ -274,6 +274,7 @@
 				</div>
 			</div>
 			<!-- What do we do -->
+			<img src="<?=bloginfo('template_directory'); ?>/img/pleca.png" class="pleca">
 			<div class="what">
 				<div class="row">
 					<div class="large-12">
@@ -281,9 +282,18 @@
 						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache</p>
 					</div>
 				</div>
+				<div class="row">
+					<a href="#content-teams" class="intro-scroll">
+						<p class="text-center">STAFF</p>
+						<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
+					</a>
+				</div>
 			</div>
-			
-			<!-- end the news section -->
+			<!-- What do we do -->
+			<!-- Staff -->
+			<div class="staff">
+
+			</div>
 			<div class="content-team">
 				<div id='content-teams'>
 					<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
