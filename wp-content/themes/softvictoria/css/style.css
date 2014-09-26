@@ -80,7 +80,8 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 .who p{
-	color: #999;
+	color: #999 !important;
+	margin-left:0px !important;
 }
 .about-titles{
 
@@ -97,6 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 .history p{
 	color: #999;
 	text-align: left;
+	margin-left:35px;
 }
 /* Container top bar */
 .contain-to-grid .top-bar {

@@ -186,7 +186,7 @@
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
-								<img src="<?=bloginfo('template_directory'); ?>/img/home-icon.png"> 
+								<img src="<?=bloginfo('template_directory'); ?>/img/home-icon.png" width="8%" height="auto"> 
 								<h3>Historia</h3>
 							</div>
 							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr. Bespoke +1 put a bird on it, fixie vinyl readymade beard four loko blog tofu raw denim PBR&B gentrify.</p>
@@ -196,7 +196,7 @@
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
-								<img src="<?=bloginfo('template_directory'); ?>/img/star-icon.png"> 
+								<img src="<?=bloginfo('template_directory'); ?>/img/star-icon.png" width="8%" height="auto"> 
 								<h3>Misión</h3>
 							</div>
 							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr. Bespoke +1 put a bird on it, fixie vinyl readymade beard four loko blog tofu raw denim PBR&B gentrify.</p>
@@ -206,7 +206,7 @@
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
-								<img src="<?=bloginfo('template_directory'); ?>/img/eye-icon.png"> 
+								<img src="<?=bloginfo('template_directory'); ?>/img/eye-icon.png" width="8%" height="auto"> 
 								<h3>Visión</h3>
 							</div>
 							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr.</p>
