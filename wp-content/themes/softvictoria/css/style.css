@@ -95,10 +95,23 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: left;
 	text-transform: uppercase;
 }
-.history p{
+.hist p{
 	color: #999;
 	text-align: left;
 	margin-left:35px;
+}
+.mision p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+.vision p{
+	color: #999;
+	text-align: left;
+	margin-left:35px;
+}
+.what{
+	
 }
 /* Container top bar */
 .contain-to-grid .top-bar {

@@ -182,7 +182,7 @@
   					</div>
 					</div>
 				</div>
-					<div class="row history">
+					<div class="row hist">
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
@@ -214,6 +214,16 @@
 					</div>
 				</div>
 			</div>
+			<!-- What do we do -->
+			<div class="what">
+				<div class="row">
+					<div class="large-12">
+						<h1>¿Qué Hacemos?</h1>
+						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache</p>
+					</div>
+				</div>
+			</div>
+			<!-- What do we do -->
 			<div class="content-other">
 				<?php
 				 if (have_posts()): while(have_posts()): the_post(); ?>
