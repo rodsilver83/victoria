@@ -32,8 +32,8 @@
 					    <!-- Right Nav Section -->
 					    <ul class="right">
 					      <div class="top-social-btns justify-social">
-					      	<div class="the-search">
-					      		<i class="foundicon-search"></i>
+					      	<div class="the-search search-w">
+					      		
 					      	</div>
 					      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn social-sprite-w fb-btn"></a>
 					      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn social-sprite-w tw-btn"></a>
@@ -224,7 +224,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<a href="#the_sections" class="intro-scroll">
+					<a href="#content-teams" class="intro-scroll">
 						<p class="text-center">STAFF</p>
 						<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
 					</a>
