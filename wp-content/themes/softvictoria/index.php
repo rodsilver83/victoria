@@ -35,10 +35,10 @@
 					      	<div class="the-search">
 					      		<i class="foundicon-search"></i>
 					      	</div>
-					      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn fb-btn"></a>
-					      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn tw-btn"></a>
-					      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn insta-btn"></a>
-					      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn yt-btn"></a>
+					      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn social-sprite-w fb-btn"></a>
+					      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn social-sprite-w tw-btn"></a>
+					      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn social-sprite-w insta-btn"></a>
+					      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn social-sprite-w yt-btn"></a>
 					      </div>
 					    </ul>
 

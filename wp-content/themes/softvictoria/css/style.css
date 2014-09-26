@@ -191,22 +191,24 @@ Old Menu
 	height: 28px;
 	margin-right: 3px;
 }
-.fb-btn{
+.social-sprite-w{
 	background-image: url('../img/social-sprite.png');
+}
+.social-sprite-blk{
+	background-image: url('../img/social-sprite-blk.png');
+}
+.fb-btn{
 	background-repeat: no-repeat;
 }
 .tw-btn{
-	background-image: url('../img/social-sprite.png');
 	background-repeat: no-repeat;
 	background-position: 20.3% 0%;
 }
 .insta-btn{
-	background-image: url('../img/social-sprite.png');
 	background-repeat: no-repeat;
 	background-position: 60.9% 0%;
 }
 .yt-btn{
-	background-image: url('../img/social-sprite.png');
 	background-repeat: no-repeat;
 	background-position: 100.6% 0%;
 }

@@ -46,6 +46,9 @@ $(document).ready(function(){
         $(".the-submenu-item").addClass("submenu-colored");
         $(".the-submenu-item").removeClass("bordered-menu");
         $(".the-submenu-item").addClass("bordered-submenu");
+        $(".the-search").addClass("menu-color");
+        $(".social-btn").removeClass("social-sprite-w");
+        $(".social-btn").addClass("social-sprite-blk");
       }else{
         $(".title-area").addClass("hidden");
         $("#main-menu").addClass("transparent-h");
@@ -57,6 +60,9 @@ $(document).ready(function(){
         $(".the-submenu-item").removeClass("submenu-colored");
         $(".the-submenu-item").addClass("bordered-menu");
         $(".the-submenu-item").removeClass("bordered-submenu");
+        $(".the-search").removeClass("menu-color");
+        $(".social-btn").removeClass("social-sprite-blk");
+        $(".social-btn").addClass("social-sprite-w");
       }
     });
   });
