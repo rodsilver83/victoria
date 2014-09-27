@@ -285,7 +285,7 @@
 				<div class="row">
 					<a href="#content-teams" class="intro-scroll">
 						<p class="text-center">STAFF</p>
-						<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
+						<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
 					</a>
 				</div>
 			</div>
