@@ -114,11 +114,11 @@ function team_manager_submenu_page_callback() {
     }
     
     //If there is no tm_custom_template then load default
-
+      //Modified the shortcode to call on the team member id -- jcgaal
     if (!$tm_custom_template) {
 
-      $tm_custom_template='<div class="%layout%">
-    <div class="team-member-info">
+      $tm_custom_template='<div class="%layout% grid-member member-%the-id%">
+    <div class="team-member-info transparent-team-photo">
     %image%
      %sociallinks%
     </div><div class="team-member-des">
@@ -286,9 +286,8 @@ function team_manager_submenu_page_callback() {
         }                                               
         $otherinfo .= '</ul>';
 
-
-        $find = array('/%layout%/i','/%title%/i', '/%content%/i', '/%image%/i','/%jobtitle%/i','/%otherinfo%/i','/%sociallinks%/i');
-        $replace = array($layout,$title, $content,$image,$job_title,$otherinfo,$sociallinks);
+        $find = array('/%layout%/i','/%title%/i', '/%content%/i', '/%image%/i','/%jobtitle%/i','/%otherinfo%/i','/%sociallinks%/i', '/%the-id%/i');
+        $replace = array($layout,$title, $content,$image,$job_title,$otherinfo,$sociallinks,$post_id);
         
         $output .= preg_replace($find, $replace, $tm_custom_template);
 

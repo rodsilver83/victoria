@@ -1,3 +1,6 @@
+/*! 
+  Script by http://jcgaal.com 
+*/
 $(document).ready(function(){
   var introHeight = $('.main-intro').outerHeight();
 	function parallax(){
@@ -51,6 +54,8 @@ $(document).ready(function(){
         $(".social-btn").removeClass("social-sprite-w");
         $(".social-btn").addClass("social-sprite-blk");
         $(".top-social-btns").removeClass("justify-social");
+        $("#search_submit").addClass("search-lg");
+        $("#search_submit").removeClass("search-sm");
       }else{
         $(".title-area").addClass("hidden");
         $("#main-menu").addClass("transparent-h");
@@ -67,28 +72,102 @@ $(document).ready(function(){
         $(".social-btn").removeClass("social-sprite-blk");
         $(".social-btn").addClass("social-sprite-w");
         $(".top-social-btns").addClass("justify-social");
+        $("#search_submit").removeClass("search-lg");
+        $("#search_submit").addClass("search-sm");
       }
     });
   });
   
   //The Search Bar
-  
+  var s;
+  ShowHideWidget = {
+      
+    settings : {
+     clickHere : document.getElementById('search'),
+     searchbar : document.getElementById('searchbar')
+    },
+    
+    init : function() {
+      //kick things off
+      s = this.settings;
+      this.bindUIActions();
+    },
+    
+    bindUIActions : function() {
+      //Attach handler to the onclick
+      /*
+      s.clickHere.onclick = function() {
+          ShowHideWidget.toggleVisibility(s.searchbar);
+          return false;
+      };
+      */
+      ShowHideWidget.addEvent(s.clickHere, 'click', function() {    
+          ShowHideWidget.toggleVisibility(s.searchbar);
+      });
+    },
+    
+    addEvent : function(element, evnt, funct) {
+      //addEventListener is not supported in <= IE8
+      if (element.attachEvent) {
+          return element.attachEvent('on'+evnt, funct);
+      } else {
+        return element.addEventListener(evnt, funct, false);
+      }
+    },
+        
+    toggleVisibility : function(id) {
+      if(id.style.display == 'block') {
+        id.style.display = 'none';
+      } else {
+        id.style.display = 'block';
+     };
+    }
+      
+  };
+  (function() {
+      ShowHideWidget.init();
+  })();
+
 
   //Scroll To #
   $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
             $('html,body').animate({
-              scrollTop: target.offset().top
+              scrollTop: target.offset().top - 90
             }, 500);
             return false;
           }
         }
       });
     });
+
+  //The Team Parallax
+  
+  //We define the ratio and offset for each team member
+  var stellar_ratio   = [0.8];
+  var stellar_offset  = [-100, -100, -100, -100, -100, -100];
+
+  //We Count the number of members in the team and assign it to numItems
+  var numItems = $('.grid-member').length;
+
+  //We run our little for to insert the ratio and offsets
+  for (numItems = 0; numItems < 10; numItems++) {
+    //We provide a random value to the stellar_ratio and the stellar_offset
+    the_ratio   = stellar_ratio[Math.floor(Math.random() * stellar_ratio.length)];
+    the_offset  = stellar_offset[Math.floor(Math.random() * stellar_offset.length)];
+
+    //We assign the random stellar_ratio to the grid-member class
+    $('.grid-member').attr('data-stellar-ratio', the_ratio);
+    $('.grid-member').attr('data-stellar-vertical-offset', the_offset);
+    //console.log("The members are " + numItems);
+    //console.log("The ratio is " + the_ratio);
+    numItems++;
+  }
+  //We initialize stellar.js after we assigned the ratios and offsets to the elements so errything works neato
+  $(window).stellar();
 
 });

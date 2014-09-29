@@ -11,13 +11,7 @@
 		<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
-
-<style>
-.team-title{
-	color: red;
-	
-}
-</style>
+		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.stellar.min.js"></script>
 	</head>
 	<body>
 		<div id='wrapper'>
@@ -36,14 +30,17 @@
 					    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 					  </ul>
 
-
-
 						<section class="top-bar-section top-bar-menu">
 					    <!-- Right Nav Section -->
+					    <div id="searchbar">
+					    	<form action="" autocomplete="on">
+							  	<input id="searchinput" name="search" type="text" placeholder="¿Qué estás buscando?">
+							  	<input id="search_submit" class="button search-sm" value="Encontrar" type="submit">
+							  </form>
+					    </div>
 					    <ul class="right">
 					      <div class="top-social-btns justify-social">
-					      	<div class="the-search search-w">
-					      		
+					      	<div id="search" class="the-search search-w">
 					      	</div>
 					      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn social-sprite-w fb-btn"></a>
 					      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn social-sprite-w tw-btn"></a>
@@ -57,10 +54,10 @@
 					      <li class="has-dropdown">
 					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
 					      	 <ul class="dropdown the-submenu-top">
-					          <li><a href="#" class="the-submenu-item bordered-menu">Historia</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
+					          <li><a href="#historia" class="the-submenu-item bordered-menu">Historia</a></li>
+					          <li><a href="#mision" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
 					          <li><a href="#" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">Staff</a></li>
+					          <li><a href="#the-staff" class="the-submenu-item bordered-menu">Staff</a></li>
 					          <li><a href="#" class="the-submenu-item bordered-menu">Contáctanos</a></li>
 					        </ul>
 					      </li>
@@ -241,7 +238,7 @@
   					</div>
 					</div>
 				</div>
-					<div class="row hist">
+					<div id="historia" class="row hist">
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
@@ -251,7 +248,7 @@
 							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr. Bespoke +1 put a bird on it, fixie vinyl readymade beard four loko blog tofu raw denim PBR&B gentrify.</p>
 						</div>
 					</div>
-					<div class="row mision">
+					<div id="mision" class="row mision">
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
@@ -280,24 +277,20 @@
 					<div class="large-12">
 						<h1>¿Qué Hacemos?</h1>
 						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache</p>
+						<iframe width="560" height="315" src="//www.youtube.com/embed/8raJMJoIHF8" frameborder="0" allowfullscreen></iframe>
 					</div>
-				</div>
-				<div class="row">
-					<a href="#content-teams" class="intro-scroll">
-						<p class="text-center">STAFF</p>
-						<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
-					</a>
 				</div>
 			</div>
 			<!-- What do we do -->
 			<!-- Staff -->
-			<div class="staff">
-
+			<div id="the-staff" class="content-team">
+				<div class="row staff-goto">
+				<a href="#the-staff" class="intro-scroll">
+					<p class="text-center staff">STAFF</p>
+					<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
+				</a>
 			</div>
-			<div class="content-team">
-				<div id='content-teams'>
-					<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
-				</div>
+				<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
 			</div>
 
 
