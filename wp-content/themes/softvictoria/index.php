@@ -33,10 +33,7 @@
 						<section class="top-bar-section top-bar-menu">
 					    <!-- Right Nav Section -->
 					    <div id="searchbar">
-					    	<form action="" autocomplete="on">
-							  	<input id="searchinput" name="search" type="text" placeholder="¿Qué estás buscando?">
-							  	<input id="search_submit" class="button search-sm" value="Encontrar" type="submit">
-							  </form>
+								<?=get_search_form()?>
 					    </div>
 					    <ul class="right">
 					      <div class="top-social-btns justify-social">
@@ -271,7 +268,7 @@
 				</div>
 			</div>
 			<!-- What do we do -->
-			<img src="<?=bloginfo('template_directory'); ?>/img/pleca.png" class="pleca">
+			<img src="<?=bloginfo('template_directory'); ?>/img/pleca.png" class="plecaeca">
 			<div class="what">
 				<div class="row">
 					<div class="large-12">
