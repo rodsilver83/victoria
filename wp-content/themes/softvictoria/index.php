@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-		<title>Victoria 147 | Bienvenido</title>
+		<title>Victoria 147 | Somos una organización que busca redefinir el concepto de la mujer actual.</title>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/foundation.css" />
 		<link rel='stylesheet' href="<?php bloginfo('template_directory'); ?>/css/style.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_enclosed_foundicons.css">
@@ -285,11 +285,22 @@
 			<!-- Staff -->
 			<div id="the-staff" class="content-team">
 				<div class="row staff-goto">
-				<a href="#the-staff" class="intro-scroll">
-					<p class="text-center staff">STAFF</p>
-					<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
-				</a>
-			</div>
+					<a href="#the-staff" class="intro-scroll">
+						<p class="text-center staff">STAFF</p>
+						<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
+					</a>
+				</div>
+				<!-- Rhombus -->
+				<div data-stellar-ratio="0.3" data-stellar-vertical-offset="-450" id="rhombus1"></div>
+				<div data-stellar-ratio="1.9" data-stellar-vertical-offset="-450" id="rhombus2"></div>
+				<div data-stellar-ratio="0.6" data-stellar-vertical-offset="-450" id="rhombus3"></div>
+				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus4"></div>
+				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus5"></div>
+				<div data-stellar-ratio="1.2" data-stellar-vertical-offset="-450" id="rhombus6"></div>
+				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus7"></div>
+				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus8"></div>
+
+				<!-- Team Members -->
 				<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
 			</div>
 
