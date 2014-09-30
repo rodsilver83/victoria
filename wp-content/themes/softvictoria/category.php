@@ -15,6 +15,7 @@ if ( have_posts() ) : ?>
 		<div role="main" id="the-category" class="large-9 columns">	
 			<div class="archive-header">
 				<div class="the-category-title">
+					<p>
 					<?php single_cat_title( '', false ); ?>
 					<?php
 					// Display optional category description
@@ -22,6 +23,7 @@ if ( have_posts() ) : ?>
 						?>
 					<?php echo category_description(); ?>
 					<?php endif; ?>
+					</p>
 				</div>
 			</div>
 

@@ -176,42 +176,42 @@ Old Menu
 	padding: 2px 15px 8px;
 }
 /* Style the Searchbar */
-#searchinput {
-  height: 50px;
-	font-size: 41px;
-	display: inline-block;
-	font-family: "Lato";
-	font-weight: 100;
-	border: none;
-	outline: none;
-	color: #333;
-	padding: 10px 3px 10px 10px;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 3;
-	/* transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000); */
-	cursor: pointer;
-	box-shadow: none;
+.inset-search > .the-search-form > #search_submit {
+	right: -70%;
 }
-#searchinput:focus{
+#searchform{
+	width: 58.5%;
+}
+.searchinput {
+  height: 50px !important;
+	font-size: 41px !important;
+	display: inline-block !important;
+	font-family: "Lato" !important;
+	font-weight: 100 !important;
+	border: none !important;
+	outline: none !important;
+	color: #333 !important;
+	padding: 10px 3px 10px 10px !important;
+	width: 100% !important;
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	z-index: 3 !important;
+	/* transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000); */
+	cursor: pointer !important;
+	box-shadow: none !important;
+}
+.searchinput:focus{
 
 }
 #search_submit{
-	position: relative;
-	right: -345px;
-	top: 2px;
-	z-index: 10000000;
-	height: 40px;
-	background-color: #32ccb9;
-}
-#search_submit{
-	position: relative;
-	top: 2px;
-	z-index: 10000000;
-	height: 40px;
-	background-color: rgba(50, 204, 185, 0.8);
+	position: relative !important;
+	top: 3px !important;
+	z-index: 10000000 !important;
+	height: 40px !important;
+	background-color: rgba(50, 204, 185, 0.8) !important;
+	display: block;
+	float: right;
 }
 .search-sm{
 	right: -345px;
@@ -999,6 +999,21 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	color: #32ccb9;
 	margin: 5px 0;
 	text-align: center;
+}
+.the-post-author{
+	margin-top: 15px;
+	padding: 5px 15px;
+}
+.the-post-author cite a{
+	color: #32ccb9 !important;
+	font-size: 16px;
+}
+.the-post-author cite a:hover {
+	color: black !important;
+	text-decoration: underline;
+}
+.the-post-author cite a:visited{
+	color: #32ccb9 !important;
 }
 /*-----------------
 	
