@@ -1,64 +1,73 @@
-
 <?php
-	get_header();
+    get_header();
 
 $tmp_search = new WP_Query('s=' . wp_specialchars($_GET['s'])."&show_posts=1");
+gettype($tmp_search);
 ?>
-	
+    
 
-	<div id="primary" class="row site-content">
-		<div id="content" role="main">
-		
-		<?php if ( have_posts() ) : ?>
+    <div id="primary" class="row site-content">
+        <div id="content" role="main">
+        
+        <?php if ( have_posts() ) : ?>
 
-		<div role="main" id="the-post" class="large-12 columns">
+        <div role="main" id="the-category" class="large-12 columns">
 
-			<div class="archive-header">
-				<div class="the-category-title">
-					<?php printf( __( 'Resultados con el término: %s', 'softvictoria' ), get_search_query() ); ?>
-				</div>
-			</div>
+            <div class="archive-header">
+                <div class="the-category-title">
+                    <p>
+                    <?php printf( __( 'Resultados con el término: %s', 'softvictoria' ), get_search_query() ); ?>
+                    </p>
+                </div>
+            </div>
 
-			<div class="category-post">
+            <div class="category-post">
 
-				<div class="the-category-entry">
-					<?php
-						global $wpdb;
-						$posts = $tmp_search->posts;
-						$html  = "";
-						$i=0;
-						foreach($posts as $post)
-						{
-							setup_postdata($post); 
-							// $post_content = wordwrap($post_wrapped, 20);
-							$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
-							$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
-							$post_link=post_permalink();
-							$post_title=get_the_title();
-							$html  .= "
-					    <div>
-								<a href='${post_link}' class='the-post-link'>".get_the_title()."</a>
-							".the_author()." 
-								".the_content()." <p>".the_date()."</p>
-								
-					    </div>
-					    ";
-							$i++;
-						}
-						print($html);
-						?>
+                <div class="the-category-entry">
+                  <?php
+                  $posts = $tmp_search->posts;
+                  $html  = "";
+                  $i=0;
+                  foreach($posts as $post)
+                  {
+                    setup_postdata($post); 
+                    /*
+                    // $post_content = wordwrap($post_wrapped, 20);
+                    $post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+                    $post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
+                    $post_link=post_permalink();
+                    $post_title=get_the_title();
+                    */
+                    
+                    $html .= "<div class='category-post'>";
+                    $html .= "<div class='category-post-title'><h2>";
+                    $html .= "<a href='".get_the_permalink()."' class='the-post-link'>".get_the_title()."</a></h2>";
+                    $html .= "<small>";
+                    $html .= " " . get_the_date();
+                    $html .= " " . get_the_time();
+                    $html .= " " . get_the_author();
+                    $html .= "</small></div>";
+                    $html .= "<p> " . get_the_excerpt();
+                    $html .= "</p></div>";
+                    $i++;
+                    if($i==5)
+                    {
+                        break;
+                    }
+                  }
+                  print($html);
+                  ?>
+                </div>
+            </div>
+            
 
-				 
-				</div>
-			</div>
-			
+        <?php else : ?>
+            <?php get_template_part( 'content', 'none' ); ?>
+        <?php endif; ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-		</div><!-- #content -->
-	</div>
-	</div><!-- #primary -->
+        </div><!-- #content -->
+    </div>
+    </div><!-- #primary -->
 
 
+<?php get_footer()?>

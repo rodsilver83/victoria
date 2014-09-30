@@ -1072,6 +1072,14 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 .the-category-entry {
 
 }
+.the-category-entry img {
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
 .the-category-entry p{
 	letter-spacing: 0.01rem;
 	font-weight: 400;

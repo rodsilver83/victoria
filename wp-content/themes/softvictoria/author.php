@@ -1,19 +1,17 @@
 <?php
 /**
- * The template for displaying Author archive pages
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
+ * The Template for displaying search results
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage softvictoria
+ * @since softvictoria 1.0
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
+<div id="primary" class="row site-content">
+	<div id="content" role="main">
+		<div role="main" id="the-category" class="large-9 columns">	
+			<div class="archive-header">
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -26,10 +24,11 @@ get_header(); ?>
 				 */
 				the_post();
 			?>
+			</div>
+		</div>
 
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'All posts by %s', 'softvictoria' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
-			</header><!-- .archive-header -->
+			<?php printf( __( 'All posts by %s', 'softvictoria' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?>
+			<!-- .archive-header -->
 
 			<?php
 				/*
@@ -49,14 +48,11 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php softvictoria_paging_nav(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
+	</div>
+</div>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
