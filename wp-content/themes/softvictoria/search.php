@@ -30,14 +30,6 @@ gettype($tmp_search);
 						foreach($posts as $post)
 						{
 							setup_postdata($post); 
-							/*
-							// $post_content = wordwrap($post_wrapped, 20);
-							$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
-							$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
-							$post_link=post_permalink();
-							$post_title=get_the_title();
-							*/
-							
 							$html .= "<div>";
 							$html .="<a href='".get_the_permalink()."' class='the-post-link'>".get_the_title()."</a>";
 							$html .= "<p> " . get_the_excerpt();
@@ -46,10 +38,6 @@ gettype($tmp_search);
 							$html .= " " . get_the_time();
 							$html .= "</p></div>";
 							$i++;
-							if($i==5)
-							{
-								break;
-							}
 						}
 						print($html);
 						?>

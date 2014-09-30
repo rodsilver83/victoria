@@ -10,11 +10,11 @@
  */
 
 get_header(); 
+// 
+// $post_id =  get_the_id();
+// $objPost = get_post($post_id); 
+// setup_postdata($objPost);
 
-$post_id =  get_the_id();
-$objPost = get_post($post_id); 
-setup_postdata($objPost);
-print_r($objPost);
 ?>
 
 	<div id="primary" class="content-area">
@@ -30,7 +30,7 @@ print_r($objPost);
 				 * We reset this later so we can run the loop
 				 * properly with a call to rewind_posts().
 				 */
-				the_post();
+				// the_post();
 			?>
 
 			<header class="archive-header">
@@ -55,7 +55,6 @@ print_r($objPost);
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php softvictoria_paging_nav(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
