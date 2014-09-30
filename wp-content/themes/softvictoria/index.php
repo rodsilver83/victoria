@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-		<title>Victoria 147 | Bienvenido</title>
+		<title>Victoria 147 | Somos una organización que busca redefinir el concepto de la mujer actual.</title>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/foundation.css" />
 		<link rel='stylesheet' href="<?php bloginfo('template_directory'); ?>/css/style.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_enclosed_foundicons.css">
@@ -53,9 +53,8 @@
 					      	 <ul class="dropdown the-submenu-top">
 					          <li><a href="#historia" class="the-submenu-item bordered-menu">Historia</a></li>
 					          <li><a href="#mision" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
+					          <li><a href="#what-do-we-do" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
 					          <li><a href="#the-staff" class="the-submenu-item bordered-menu">Staff</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">Contáctanos</a></li>
 					        </ul>
 					      </li>
 					      <li class="has-dropdown">
@@ -242,7 +241,11 @@
 								<img src="<?=bloginfo('template_directory'); ?>/img/home-icon.png" width="8%" height="auto"> 
 								<h3>Historia</h3>
 							</div>
-							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr. Bespoke +1 put a bird on it, fixie vinyl readymade beard four loko blog tofu raw denim PBR&B gentrify.</p>
+							<p><?php
+							$post = get_post(5377);
+							setup_postdata($post);
+							the_content();
+							?></p>
 						</div>
 					</div>
 					<div id="mision" class="row mision">
@@ -252,7 +255,11 @@
 								<img src="<?=bloginfo('template_directory'); ?>/img/star-icon.png" width="8%" height="auto"> 
 								<h3>Misión</h3>
 							</div>
-							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr. Bespoke +1 put a bird on it, fixie vinyl readymade beard four loko blog tofu raw denim PBR&B gentrify.</p>
+							<p><?php
+							$post = get_post(5381);
+							setup_postdata($post);
+							the_content();
+							?></p>
 						</div>
 					</div>
 					<div class="row vision">
@@ -262,19 +269,29 @@
 								<img src="<?=bloginfo('template_directory'); ?>/img/eye-icon.png" width="8%" height="auto"> 
 								<h3>Visión</h3>
 							</div>
-							<p>Keffiyeh umami banjo, food truck Carles bitters mixtape keytar chillwave tote bag meggings four loko. Pork belly Austin Echo Park typewriter quinoa Etsy kogi, sustainable Tonx locavore hashtag mlkshk cliche Tumblr.</p>
+							<p><?php
+								$post = get_post(5383);
+								setup_postdata($post);
+								the_content();
+							?></p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- What do we do -->
-			<img src="<?=bloginfo('template_directory'); ?>/img/pleca.png" class="plecaeca">
+			<img src="<?=bloginfo('template_directory'); ?>/img/pleca.png" id="what-do-we-do" class="pleca">
 			<div class="what">
 				<div class="row">
 					<div class="large-12">
 						<h1>¿Qué Hacemos?</h1>
-						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache</p>
-						<iframe width="560" height="315" src="//www.youtube.com/embed/8raJMJoIHF8" frameborder="0" allowfullscreen></iframe>
+						<p>
+							<?php
+								$post = get_post(5385);
+								setup_postdata($post);
+								the_content();
+							?>
+						</p>
+
 					</div>
 				</div>
 			</div>
@@ -282,29 +299,80 @@
 			<!-- Staff -->
 			<div id="the-staff" class="content-team">
 				<div class="row staff-goto">
-				<a href="#the-staff" class="intro-scroll">
-					<p class="text-center staff">STAFF</p>
-					<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
-				</a>
-			</div>
+					<a href="#the-staff" class="intro-scroll">
+						<p class="text-center staff">STAFF</p>
+						<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
+					</a>
+				</div>
+				<!-- Rhombus -->
+				<div data-stellar-ratio="0.3" data-stellar-vertical-offset="-450" id="rhombus1"></div>
+				<div data-stellar-ratio="1.9" data-stellar-vertical-offset="-450" id="rhombus2"></div>
+				<div data-stellar-ratio="0.6" data-stellar-vertical-offset="-450" id="rhombus3"></div>
+				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus4"></div>
+				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus5"></div>
+				<div data-stellar-ratio="1.2" data-stellar-vertical-offset="-450" id="rhombus6"></div>
+				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus7"></div>
+				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus8"></div>
+
+				<!-- Team Members -->
 				<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
 			</div>
 
+			<div id="contact-section">
 
-			<h1><hr>Formulario de contacto normal<hr></h1>
-			<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
-			<h1><hr>Formulario de contacto para emprendedoras<hr></h1>
-			<?php echo do_shortcode( '[contact-form-7 id="5370" title="___Contacto Emprendedoras"]' ); ?>
+				<h1><hr>Formulario de contacto normal<hr></h1>
+				<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
+				<h1><hr>Formulario de contacto para emprendedoras<hr></h1>
+				<?php echo do_shortcode( '[contact-form-7 id="5370" title="___Contacto Emprendedoras"]' ); ?>
 
-			<h1><hr>Formulario para trabajar con nosotros<hr></h1>
-			<?php echo do_shortcode( '[contact-form-7 id="5371" title="___Trabaja con Nosotros"]' ); ?>
+				<h1><hr>Formulario para trabajar con nosotros<hr></h1>
+				<?php echo do_shortcode( '[contact-form-7 id="5371" title="___Trabaja con Nosotros"]' ); ?>
 
-			<h1><hr>Formulario de contacto para empresas<hr></h1>
-			<?php echo do_shortcode( '[contact-form-7 id="5372" title="___Contacto Empresas"]' ); ?>
+				<h1><hr>Formulario de contacto para empresas<hr></h1>
+				<?php echo do_shortcode( '[contact-form-7 id="5372" title="___Contacto Empresas"]' ); ?>
 
+			</div>
 
 			<div id="delimiter"></div>
 		</div>
 		<!-- The Scrolling Script -->
 		
-<?php get_footer();?>
+	<div id='footer'>
+		<div class="row">
+			<div class="large-4 columns footer-logo">
+				<img src="<?=bloginfo('template_directory'); ?>/img/victoria147-logo-sm.png" alt="Victoria 147">
+			</div>
+			<div class="large-4 columns">
+
+			</div>
+			<div class="large-4 columns footer-copy">
+				<a href="" class="footer-links">Aviso de Privacidad</a>
+				<p><small>© Todos los Derechos Reservados</small></p>
+			</div>
+		</div>
+</div>
+
+		<?php wp_footer(); ?>
+
+		<script src="<?php bloginfo('template_directory'); ?>/js/foundation.min.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/foundation/foundation.orbit.js"></script>
+    <script>
+      $(document).foundation({
+      	orbit: {
+			    animation: 'slide',
+			    timer_speed: 1000,
+			    pause_on_hover: true,
+			    animation_speed: 500,
+			    navigation_arrows: true,
+			    bullets: true,
+			    slide_number: false,
+			    next_class: 'orbit-next',
+			    prev_class: 'orbit-prev',
+			    next_on_click: true,
+			    bullets_active_class: 'active'
+			  }
+      });
+    </script>
+	</body>
+</html>

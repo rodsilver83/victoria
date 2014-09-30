@@ -7,19 +7,27 @@
  * @since softvictoria 1.0
  */
 
-get_header(); ?>
+get_header(); 
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
-			<?php 
-			
-			$post_id =  get_the_id();
-			$objPost = get_post($post_id); 
-			// $content = get_the_content();
-			print($objPost->post_content);
-			?>
-		</div><!-- #content -->
-	</div><!-- #primary -->
+$post_id =  get_the_id();
+$objPost = get_post($post_id); 
+setup_postdata($objPost);
+// $content = get_the_content();
+// print($objPost->post_content);
 
-<?php // get_sidebar(); ?>
+?>
+<div id="primary" class="row site-content">
+<div role="main" id="the-post" class="large-9 columns">
+<div class="the-post-title">
+<h1><?php the_title();?></h1>
+</div>
+<?php the_content();?>
+<blockquote><cite><?php the_author_posts_link()?> | <?php the_date()?></cite></blockquote>
+<p>
+</p>
+</div><!-- #the-post -->
+<?php get_sidebar(); ?>
+</div><!-- #primary -->
+
+
 <?php get_footer(); ?>
