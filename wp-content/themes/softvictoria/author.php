@@ -5,11 +5,17 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage softvictoria
+ * @since softvictoria 1.0
  */
 
-get_header(); ?>
+get_header(); 
+
+$post_id =  get_the_id();
+$objPost = get_post($post_id); 
+setup_postdata($objPost);
+print_r($objPost);
+?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
