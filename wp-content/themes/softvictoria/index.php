@@ -230,7 +230,11 @@
 						<div class="large-5 columns"></div>
   					<div class="large-7 columns">
   						<h1>¿Quiénes Somos?</h1>
-  						<p>Mlkshk scenester Tumblr yr, sriracha PBR Shoreditch disrupt irony craft beer. Bushwick seitan shabby chic, bicycle rights fingerstache +1 Godard direct trade keffiyeh vinyl mlkshk.</p>
+  						<p><?php
+							$post = get_post(5377);
+							setup_postdata($post);
+							the_content();
+  						?></p>
   					</div>
 					</div>
 				</div>
