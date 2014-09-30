@@ -27,7 +27,7 @@ $tmp_search = new WP_Query('s=' . wp_specialchars($_GET['s'])."&show_posts=1");
 				$html  .= "
 		    <div class='orbit-caption'>
 					<a href='${post_link}' class='the-post-link'>".get_the_title()."</a>
-				".the_author()."</p>
+				".the_author()." 
 					".the_content()." <p>".the_date()."</p>
 					
 		    </div>
