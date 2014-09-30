@@ -14,17 +14,17 @@ if ( have_posts() ) : ?>
 
 		<div role="main" id="the-category" class="large-9 columns">	
 			<div class="archive-header">
+				<?php
+				// Display optional category description
+				 if ( category_description() ) : 
+				?>
 				<div class="the-category-title">
 					<p>
 					<?php single_cat_title( '', false ); ?>
-					<?php
-					// Display optional category description
-					 if ( category_description() ) : 
-						?>
 					<?php echo category_description(); ?>
-					<?php endif; ?>
 					</p>
 				</div>
+				<?php endif; ?>
 			</div>
 
 			<?php

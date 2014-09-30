@@ -23,7 +23,7 @@
 		?>
 	</div><!-- .author-avatar -->
 	<div class="author-description">
-		<h2 class="author-title"><?php printf( __( 'About %s', 'softvictoria' ), get_the_author() ); ?></h2>
+		<h2 class="author-title"><?php printf( __( 'Acerca de %s', 'softvictoria' ), get_the_author() ); ?></h2>
 		<p class="author-bio">
 			<?php the_author_meta( 'description' ); ?>
 			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
