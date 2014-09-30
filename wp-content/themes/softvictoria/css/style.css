@@ -99,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Menu link */
 .top-bar-menu li:not(.has-form) a:not(.button){
 	/* regular */
+	text-align: center;
 	text-transform: uppercase;
 }
 .top-bar-section li:not(.has-form) a:not(.button):hover {
@@ -448,7 +449,8 @@ blockquote.intro-quote{
 	font-weight: 300;
 	font-style: italic;
 	text-transform: uppercase;
-	width: 50%;
+	line-height: 18px;
+	width: 60%;
 	min-width: 265px;
 	position: absolute;
 	z-index: 2;
@@ -996,6 +998,80 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	text-transform: uppercase;
 	color: #32ccb9;
 	margin: 5px 0;
+	text-align: center;
+}
+/*-----------------
+	
+		THE CATEGORY POST
+
+-----------------*/
+.the-category{
+
+}
+.archive-header{
+	margin-bottom: 20px;
+}
+.the-category-title{
+	text-align: center;
+	border: 2px solid #32ccb9;
+}
+.the-category-title h6 {
+	font-family: 'Lato', sans-serif !important;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 26px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #222222;
+	text-rendering: optimizeLegibility;
+}
+.the-category-title p{
+	font-family: 'Oswald', sans-serif !important;
+	text-transform: uppercase;
+	font-size: 31px;
+	color: #32ccb9;
+	margin: 10px 0 5px 0;
+	text-align: center;
+}
+.category-post {
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+.category-post-title{
+	margin-bottom: 10px;
+}
+.category-post-title h2 {
+	margin-bottom: 0px;
+}
+.category-post-title small {
+	font-size: 14px;
+	color: #ccc;
+}
+.category-post-title > h2 > a {
+	font-family: 'Oswald', sans-serif !important;
+	text-transform: uppercase;
+	font-size: 31px;
+	color: #32ccb9;
+	margin: 10px 0 5px 0;
+}
+.the-category-entry {
+
+}
+.the-category-entry p{
+	letter-spacing: 0.01rem;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.5;
+	text-align: left;
+	margin-bottom: 20px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: rgba(0,0,0,0.8);
+}
+.the-category-entry p > strong {
+	font-size: 21px;
 }
 /*-----------------
 	
@@ -1012,6 +1088,19 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	text-transform: uppercase;
 	color: #32ccb9;
 	margin: 5px 0;
+}
+.cat-list{
+	padding: 10px 15px;
+}
+ul.cat-list > li {
+	padding: 3px 0;
+}
+ul.cat-list > li > a {
+	color: #333;
+}
+ul.cat-list > li > a:hover {
+	color: #32ccb9;
+	text-decoration: underline;
 }
 /*-----------------
 	
