@@ -27,7 +27,6 @@
 		<?php endif; // is_single() ?>
 
 		<div class="entry-meta">
-			<?php softvictoria_entry_meta(); ?>
 			<?php edit_post_link( __( 'Edit', 'softvictoria' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->

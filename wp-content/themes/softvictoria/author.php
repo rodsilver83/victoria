@@ -23,7 +23,7 @@ get_header(); ?>
 				 * We reset this later so we can run the loop
 				 * properly with a call to rewind_posts().
 				 */
-				// the_post();
+				the_post();
 			?>
 			</div>
 		</div>
@@ -37,17 +37,20 @@ get_header(); ?>
 				 * rewind the loop back to the beginning that way
 				 * we can run the loop properly, in full.
 				 */
-				rewind_posts();
+				 rewind_posts();
 			?>
 
-			<?php if ( get_the_author_meta( 'description' ) ) : ?>
-				<?php get_template_part( 'author-bio' ); ?>
+			<?php
+			 if ( get_the_author_meta( 'description' ) ) : ?>
+				<?php get_template_part( 'author-bio', get_post_format() ); ?>
 			<?php endif; ?>
 
 			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			
+			while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+			<?php endwhile;  ?>
 
 
 		<?php else : ?>

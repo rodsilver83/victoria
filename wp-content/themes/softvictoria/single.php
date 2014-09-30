@@ -12,9 +12,6 @@ get_header();
 $post_id =  get_the_id();
 $objPost = get_post($post_id); 
 setup_postdata($objPost);
-// $content = get_the_content();
-// print($objPost->post_content);
-
 ?>
 <div id="primary" class="row site-content">
 	<div role="main" id="the-post" class="large-9 columns">
