@@ -8,29 +8,30 @@
  */
 
 
-get_header(); ?>
+get_header(); 
+
+$post_id =  get_the_id();
+$objPost = get_post($post_id); 
+setup_postdata($objPost);
+?>
 <div id="primary" class="row site-content">
 	<div id="content" role="main">
 		<div role="main" id="the-category" class="large-9 columns">	
 			<div class="archive-header">
-		<?php if ( have_posts() ) : ?>
+				
+		    <?php
+		    $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+		    ?>
+Acerca de <?php echo $curauth->nickname; ?>
 
-			<?php
-				/*
-				 * Queue the first post, that way we know what author
-				 * we're dealing with (if that is the case).
-				 *
-				 * We reset this later so we can run the loop
-				 * properly with a call to rewind_posts().
-				 */
-				the_post();
-			?>
+<!-- dl>
+      <dt>Website</dt>
+      <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
+      <dt>Profile</dt>
+      <dd><?php echo $curauth->user_description; ?></dd>
+  </dl -->
 			</div>
 		</div>
-
-			<?php printf( __( 'All posts by %s', 'softvictoria' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?>
-			<!-- .archive-header -->
-
 			<?php
 				/*
 				 * Since we called the_post() above, we need to
@@ -38,24 +39,55 @@ get_header(); ?>
 				 * we can run the loop properly, in full.
 				 */
 				 rewind_posts();
-			?>
 
-			<?php
-			 if ( get_the_author_meta( 'description' ) ) : ?>
-				<?php get_template_part( 'author-bio', get_post_format() ); ?>
-			<?php endif; ?>
-
-			<?php /* The loop */ ?>
-			<?php
-			
-			while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile;  ?>
+				/* -- para la biografía del autor -- */
+			if ( get_the_author_meta( 'description' ) ) : 
+				get_template_part( 'author-bio', get_post_format() ); 
+			endif; 
+			/* -- para la biografía del autor -- */
 
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+			/* -- para el autor page -- */
+			$post_id =  get_the_id();
+			$objPost = get_post($post_id); 
+			setup_postdata($objPost);
+			the_post();
+ 			get_template_part( 'content', get_post_format() ); 
+			rewind_posts();
+			/* -- para el autor -- */
+
+			printf( __( 'All posts by %s', 'softvictoria' ), '<span class="vcard">' . get_the_author() . '</span>' ); 
+			$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+			// get his posts 'ASC'
+			 if ( have_posts() ) : 
+				while ( have_posts() ) : 
+
+					the_post(); ?>
+
+			<div class="category-post">
+				<div class="category-post-title">
+					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+				</div>
+
+				<div class="the-category-entry">
+					<?php the_content(); ?>
+
+				 <!--p class="postmetadata">
+				 	<?//php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed'); ?>
+				 </p-->
+				</div>
+			</div>
+
+
+	    <?php 
+				endwhile; 
+		else: ?>
+	        <p><?php _e('No posts by this author.'); ?></p>
+
+	    <?php endif; ?>
+	   
+			<?// php get_template_part( 'content', 'none' ); ?>
 	</div>
 </div>
 
