@@ -9,8 +9,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+	<div id="primary" class="row site-content">
+		<div role="main" id="the-post" class="large-9 columns">
+			<div class="the-post-title">
+				<h1>The Post Title</h1>
+			</div>
+			<img src="http://placehold.it/720x350&text=imagen" class="custom-thumbnail-class">
 			<?php 
 			
 			$post_id =  get_the_id();
@@ -19,7 +23,8 @@ get_header(); ?>
 			print($objPost->post_content);
 			?>
 		</div><!-- #content -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
-<?php // get_sidebar(); ?>
+
 <?php get_footer(); ?>

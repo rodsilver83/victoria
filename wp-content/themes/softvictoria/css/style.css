@@ -949,19 +949,60 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 }
 /*-----------------
 	
+		CONTACT SECTION
+
+-----------------*/
+#contact-section{
+	background-color: #fff;
+	position: relative;
+	z-index: 50;
+}
+/*-----------------
+	
+		THE SINGLE POST
+
+-----------------*/
+#the-post{
+	font-family: 'Lato', sans-serif !important;
+}
+.the-post-title {
+	border: 2px solid #32ccb9;
+}
+.the-post-title h1{
+	font-family: 'Oswald', sans-serif !important;
+	text-transform: uppercase;
+	color: #32ccb9;
+	margin: 5px 0;
+}
+/*-----------------
+	
+		THE FOOTER
+
+-----------------*/
+#footer{
+	background-color: #2c3e50;
+	color: #fff;
+	padding: 40px;
+}
+.footer-logo{
+	margin-top: 15px;
+}
+.footer-copy{
+	margin-top: 10px;
+}
+.footer-links{
+	color: #fff;
+}
+/*-----------------
+	
 		OTHER
 
 -----------------*/
 #sidebar{
-	width: 23%;
-	float: right;
 }
 
 #delimiter{
 	clear: both;
-}
-
-#footer{
 }
 
 .title{

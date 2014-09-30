@@ -1,12 +1,22 @@
-<div id='footer'>
-				<h1>This is the footer</h1>
+	<div id='footer'>
+		<div class="row">
+			<div class="large-4 columns footer-logo">
+				<img src="<?=bloginfo('template_directory'); ?>/img/victoria147-logo-sm.png" alt="Victoria 147">
+			</div>
+			<div class="large-4 columns">
+
+			</div>
+			<div class="large-4 columns footer-copy">
+				<a href="" class="footer-links">Aviso de Privacidad</a>
+				<p><small>© Todos los Derechos Reservados</small></p>
 			</div>
 		</div>
+</div>
 
 		<?php wp_footer(); ?>
 
 		<script src="<?php bloginfo('template_directory'); ?>/js/foundation.min.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/pages-script.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/foundation/foundation.orbit.js"></script>
     <script>
       $(document).foundation({
