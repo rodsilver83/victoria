@@ -22,7 +22,7 @@
  <nav class="top-bar transparent-h p-menu-fixed" data-topbar="" role="navigation" data-options="sticky_on: large">
    <ul class="title-area">
    <li class="name">
-     <a href="#">
+     <a href="/">
      	<img src="<?php bloginfo('template_directory'); ?>/img/victoria-logo-top.png" alt="Victoria 147">
      </a>
    </li>
@@ -32,11 +32,8 @@
 
  <section class="top-bar-section top-bar-menu">
    <!-- Right Nav Section -->
-   <div id="searchbar">
-   	<form action="" autocomplete="on">
- 	<input id="searchinput" name="search" type="text" placeholder="¿Qué estás buscando?">
- 	<input id="search_submit" class="button search-lg" value="Encontrar" type="submit">
- </form>
+   <div id="searchbar" class="inset-search">
+   	<?=get_search_form()?>
    </div>
    <ul class="right">
      <div class="top-social-btns">

@@ -17,16 +17,18 @@ setup_postdata($objPost);
 
 ?>
 <div id="primary" class="row site-content">
-<div role="main" id="the-post" class="large-9 columns">
-<div class="the-post-title">
-<h1><?php the_title();?></h1>
-</div>
-<?php the_content();?>
-<blockquote><cite><?php the_author_posts_link()?> | <?php the_date()?></cite></blockquote>
-<p>
-</p>
-</div><!-- #the-post -->
-<?php get_sidebar(); ?>
+	<div role="main" id="the-post" class="large-9 columns">
+		<div class="the-post-title">
+			<h1><?php the_title();?></h1>
+		</div>
+		<blockquote class="the-post-author">
+			<cite><?php the_author_posts_link()?> | <?php the_date()?></cite>
+		</blockquote>
+		<?php the_content();?>
+		<p>
+		</p>
+	</div><!-- #the-post -->
+	<?php get_sidebar(); ?>
 </div><!-- #primary -->
 
 
