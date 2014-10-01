@@ -92,7 +92,11 @@
 					wp_reset_postdata();
 					?>
 				</ul>
-		<?php if (!(current_user_can('level_0'))){ 
+		<?php 
+		print "Suscr&iacute;bete\n<br>" .do_shortcode('[wysija_form id="2"]');
+		
+		/*
+		if (!(current_user_can('level_0'))){ 
 			
 	    ?>
 		<i>Login</i>
@@ -112,7 +116,7 @@
 		<h2>Logout</h2>
 		<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">logout</a><br />
 		<a href="http://XXX/wp-admin/">admin</a>
-		<?php }?>
+		<?php }*/?>
 	</div>
 
 
