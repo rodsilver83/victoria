@@ -22,6 +22,7 @@ setup_postdata($objPost);
 		    <?php
 		    $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 		    ?>
+
 		    <div class="the-category-title">
 					<p>Acerca de <?php echo $curauth->nickname; ?></p>
 				</div>
@@ -34,6 +35,7 @@ setup_postdata($objPost);
       <dt>Profile</dt>
       <dd><?php echo $curauth->user_description; ?></dd>
   </dl -->
+
 			</div>
 			<div class="the-author-posts">
 				<h2>Todos sus posts</h2>
