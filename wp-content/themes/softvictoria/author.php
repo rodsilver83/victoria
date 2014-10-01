@@ -16,20 +16,27 @@ setup_postdata($objPost);
 ?>
 <div id="primary" class="row site-content">
 	<div id="content" role="main">
-		<div role="main" id="the-category" class="large-9 columns">	
+		<div role="main" id="the-category" class="large-12 columns">	
 			<div class="archive-header">
 				
 		    <?php
 		    $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 		    ?>
-Acerca de <?php echo $curauth->nickname; ?>
-
+		    <div class="the-category-title">
+					<p>Acerca de <?php echo $curauth->nickname; ?></p>
+				</div>
+				<p class="the-author-description">
+					<?php echo $curauth->user_description; ?>
+				</p>
 <!-- dl>
       <dt>Website</dt>
       <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
       <dt>Profile</dt>
       <dd><?php echo $curauth->user_description; ?></dd>
   </dl -->
+			</div>
+			<div class="the-author-posts">
+				<h2>Todos sus posts</h2>
 			</div>
 		</div>
 			<?php
