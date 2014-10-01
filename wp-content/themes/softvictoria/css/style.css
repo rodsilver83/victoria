@@ -598,6 +598,15 @@ blockquote.intro-quote{
 }
 /*-----------------
 	
+		SLIDER
+
+-----------------*/
+.orbit-container .orbit-slides-container > * .orbit-caption{
+	background-color: transparent;
+	font-size: 26px;
+}
+/*-----------------
+	
 		STAFF
 
 -----------------*/
@@ -1017,6 +1026,34 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 }
 /*-----------------
 	
+		THE AUTHOR PAGE
+
+-----------------*/
+.the-author-description{
+	letter-spacing: 0.01rem;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 22px;
+	line-height: 1.5;
+	text-align: left;
+	margin-bottom: 30px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: rgba(0,0,0,0.8);
+	margin-top: 20px;
+}
+.the-author-posts{
+
+}
+.the-author-posts h2 {
+	color: #32ccb9;
+	font-weight: 700;
+	border-top: 1px solid #eee;
+	padding-top: 15px;
+}
+/*-----------------
+	
 		THE CATEGORY POST
 
 -----------------*/
@@ -1127,6 +1164,135 @@ ul.cat-list > li > a:hover {
 }
 /*-----------------
 	
+		THE CONTACT FORMS
+
+-----------------*/
+#contact-section {
+	background: url("../img/contact.jpg") no-repeat center 25px fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	position: relative;
+	padding: 25px 0 25px 0;
+}
+.hidden-contact{
+	display: none;
+}
+.contact-header{
+	text-align: center;
+	padding: 10px 0 25px 0;
+}
+.contact-header h1{
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.contact-header p {
+	color: #fff;
+	font-size: 18px;
+}
+.contact-selector{
+	width: 33.333%;
+	text-align: center;
+	padding: 10px;
+}
+.active > .contact-button-selector {
+	background-color: #fff !important;
+	color: #333 !important;
+	border: 3px solid #333;
+}
+.contact-button-selector{
+	background-color: rgba(0,0,0,0.3) !important;
+	border: 3px solid #fff;
+	color: #fff !important;
+	font-size: 21px !important;
+	font-weight: 700;
+}
+.contact-button-selector:hover {
+	background-color: #fff !important;
+	color: #333 !important;
+	border: 3px solid #333;
+}
+.contact-wrapper{
+	padding: 45px 65px !important;
+	border: 7px solid #FFF;
+}
+.contact-wrapper h2{
+	font-family: 'Oswald', sans-serif !important;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+.wpcf7{
+
+}
+.wpcf7-form > p {
+	color: #fff;
+	font-size: 18px;
+}
+.wpcf7-form > p > span > input{
+	color: #fff;
+	font-size: 21px;
+	text-align: center;
+	background-color: transparent !important;
+	border: 3px solid #fff;
+	padding: 20px 20px 23px 20px;
+	text-shadow: 1px 1px 2px #333;
+}
+.wpcf7-form > p > span > input:focus{
+	border: 3px solid #fff;
+}
+.wpcf7-form > p > span > select{
+	color: #fff;
+	height: 50px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 21px;
+	background-color: transparent;
+	background-image: url("../img/scroll.png");
+	background-position: 98% center;
+	background-repeat: no-repeat;
+	border: 3px solid #fff;
+	text-shadow: 1px 1px 2px #333;
+}
+.wpcf7-form > p > span > textarea{
+	color: #fff;
+	font-size: 21px;
+	background-color: transparent !important;
+	border: 3px solid #fff;
+	padding: 15px 15px 15px 15px;
+	text-shadow: 1px 1px 2px #333;
+}
+.wpcf7-form > p > span > textarea:focus{
+	border: 3px solid #fff;
+}
+.wpcf7-submit{
+	width: 100%;
+	color: #fff;
+	background-color: transparent;
+	border: 3px solid #fff;
+	padding: 15px 5px;
+	font-size: 31px;
+	font-weight: 700;
+	transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+.wpcf7-submit:hover{
+	width: 100%;
+	color: #333;
+	background-color: #fff;
+	cursor: pointer;
+	transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+/*-----------------
+	
 		THE FOOTER
 
 -----------------*/
@@ -1134,6 +1300,8 @@ ul.cat-list > li > a:hover {
 	background-color: #2c3e50;
 	color: #fff;
 	padding: 40px;
+	position: relative;
+	z-index: 35;
 }
 .footer-logo{
 	text-align: center;

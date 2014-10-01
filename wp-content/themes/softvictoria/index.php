@@ -51,10 +51,10 @@
 					      <li class="has-dropdown">
 					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
 					      	 <ul class="dropdown the-submenu-top">
-					          <li><a href="#historia" class="the-submenu-item bordered-menu">Historia</a></li>
-					          <li><a href="#mision" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
-					          <li><a href="#what-do-we-do" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
-					          <li><a href="#the-staff" class="the-submenu-item bordered-menu">Staff</a></li>
+					          <li><a href="#" id="go_historia" class="the-submenu-item bordered-menu">Historia</a></li>
+					          <li><a href="#" id="go_mision" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
+					          <li><a href="#" id="go_wedo" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
+					          <li><a href="#" id="go_staff" class="the-submenu-item bordered-menu">Staff</a></li>
 					        </ul>
 					      </li>
 					      <li class="has-dropdown">
@@ -70,19 +70,18 @@
 									$rsRedEmprendedoras=get_categories($cat_args)[0];
 									$linkEmprendedoras= get_category_link( $rsRedEmprendedoras->term_id );
 									?>
-					          <li><a href="<?=$linkEmprendedoras?>" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
+			          <li><a href="<?=$linkEmprendedoras?>" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
 
 										<?php
-
+										
 										$cat_args=array(
 											'orderby' => 'name',
 											'order' => 'ASC',
-											'include'=> array(14) 
+											'include'=> array(56) 
 										);
-										print_r($cat_args);
 										$rsRedFellows=get_categories($cat_args)[0];
-										var_dump($rsRedFellows);
 										$linkFellows = get_category_link( $rsRedFellows->term_id );
+										
 										?>
 
 					          <li><a href="<?=$linkFellows?>" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
@@ -107,7 +106,7 @@
 					        </ul>
 					      </li>
 					      <li>
-					      	<a href="#" class="the-menu-top bordered-menu">Contáctanos</a>
+					      	<a href="#" id="go_contact" class="the-menu-top bordered-menu">Contáctanos</a>
 					      </li>
 					    </ul>
 					  </section>
@@ -123,7 +122,7 @@
 					<div class="large-12 columns intro-bottom">
 						<blockquote class="intro-quote">“Somos una organización que busca redefinir el concepto de la mujer actual.”</blockquote class="intro">
 							<br>
-						<a href="#the_sections" class="intro-scroll">
+						<a href="#" id="go_to_sections" class="intro-scroll">
 							<p class="text-center">SCROLL</p>
 							<img src="<?php bloginfo('template_directory'); ?>/img/scroll.png">
 						</a>
@@ -327,7 +326,7 @@
 			<!-- Staff -->
 			<div id="the-staff" class="content-team">
 				<div class="row staff-goto">
-					<a href="#the-staff" class="intro-scroll">
+					<a href="#" id="go_to_staff" class="intro-scroll">
 						<p class="text-center staff">STAFF</p>
 						<img src="<?php bloginfo('template_directory'); ?>/img/scroll-round.png" width="5%">
 					</a>
@@ -346,20 +345,47 @@
 				<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
 			</div>
 
-			<div id="contact-section">
+			<div id="contact-section" >
+				<!--div class="regular-contact">
+					<h1><hr>Formulario de contacto normal<hr></h1>
+					<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
+				</div-->
+				<div class="row">
+					<div class="large-12 columns contact-header">
+						<h1>Contacto</h1>
+						<p>Pónte en contacto con nosotras</p>
+					</div>
+					<!-- The Buttons -->
+					<ul class="tabs" data-tab role="tablist">
+					  <li class="tab-title contact-selector" role="presentational">
+					  	<a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1" class="contact-button-selector">Soy Emprendedora</a>
+					  </li>
+					  <li class="tab-title contact-selector" role="presentational">
+					  	<a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2" class="contact-button-selector">Empresas y Medios</a>
+					  </li>
+					  <li class="tab-title contact-selector" role="presentational">
+					  	<a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3" class="contact-button-selector">Trabaja con Nosotros</a>
+					  </li>
+					</ul>
+					<div class="tabs-content">
+					  <section role="tabpanel" aria-hidden="false" class="content contact-wrapper" id="panel2-1">
+					    <h2>Formulario de contacto para emprendedoras</h2>
+							<?php echo do_shortcode( '[contact-form-7 id="5370" title="___Contacto Emprendedoras"]' ); ?>
+					  </section>
+					  
+					  <section role="tabpanel" aria-hidden="true" class="content contact-wrapper" id="panel2-2">
+					    <h2>Formulario de contacto para empresas</h2>
+							<?php echo do_shortcode( '[contact-form-7 id="5372" title="___Contacto Empresas"]' ); ?>
+					  </section>
 
-				<h1><hr>Formulario de contacto normal<hr></h1>
-				<?php echo do_shortcode( '[contact-form-7 id="41" title="Formulario de Contacto"]' ); ?>
-				<h1><hr>Formulario de contacto para emprendedoras<hr></h1>
-				<?php echo do_shortcode( '[contact-form-7 id="5370" title="___Contacto Emprendedoras"]' ); ?>
+					  <section role="tabpanel" aria-hidden="true" class="content contact-wrapper" id="panel2-3">
+					    <h2>Formulario para trabajar con nosotros</h2>
+							<?php echo do_shortcode( '[contact-form-7 id="5371" title="___Trabaja con Nosotros"]' ); ?>
+					  </section>
+					</div><!-- /.tabs-content -->
 
-				<h1><hr>Formulario para trabajar con nosotros<hr></h1>
-				<?php echo do_shortcode( '[contact-form-7 id="5371" title="___Trabaja con Nosotros"]' ); ?>
-
-				<h1><hr>Formulario de contacto para empresas<hr></h1>
-				<?php echo do_shortcode( '[contact-form-7 id="5372" title="___Contacto Empresas"]' ); ?>
-
-			</div>
+				</div><!-- /.row -->
+			</div><!-- /#contact-section -->
 
 			<div id="delimiter"></div>
 		</div>
@@ -378,7 +404,7 @@
 				<p><small>© Todos los Derechos Reservados</small></p>
 			</div>
 		</div>
-</div>
+	</div>
 
 		<?php wp_footer(); ?>
 
