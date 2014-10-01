@@ -162,6 +162,7 @@ $(document).ready(function(){
   $('#go_mision').on("click", function(){ scrolling("mision"); });
   $('#go_wedo').on("click", function(){ scrolling("what-do-we-do"); });
   $('#go_staff').on("click", function(){ scrolling("the-staff"); });
+  $('#go_contact').on("click", function(){ scrolling("contact-section"); });
 
 
   //The Team Parallax

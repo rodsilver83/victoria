@@ -83,7 +83,7 @@
        </ul>
      </li>
      <li>
-     	<a href="#" class="the-menu-top menu-color">Contáctanos</a>
+     	<a href="/#contact-section" class="the-menu-top menu-color">Contáctanos</a>
      </li>
    </ul>
  </section></nav>
