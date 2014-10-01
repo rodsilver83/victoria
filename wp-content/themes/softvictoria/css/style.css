@@ -1307,6 +1307,21 @@ ul.cat-list > li > a:hover {
 	text-align: center;
 	margin-top: 15px;
 }
+.footer-social{
+
+}
+.social-btm {
+	width: 130px;
+	margin: 0 auto;
+}
+.social-btn-footer {
+	float: left;
+	display: inline;
+	width: 29px;
+	height: 28px;
+	margin-right: 3px;
+	margin-top: 15px;
+}
 .footer-copy{
 	text-align: center;
 	margin-top: 10px;
