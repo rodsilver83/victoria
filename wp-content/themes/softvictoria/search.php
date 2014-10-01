@@ -55,7 +55,20 @@ gettype($tmp_search);
             
 
         <?php else : ?>
-            <?php get_template_part( 'content', 'none' ); ?>
+            <?//php get_template_part( 'content', 'none' ); ?>
+          <div role="main" id="the-category" class="large-12 columns">
+            <div class="archive-header">
+                <div class="the-category-title">
+                    <p>
+                    No hemos encontrado nada, intenta buscar de nuevo.
+                    </p>
+                </div>
+            </div>
+            <div class="category-post empty">
+              <div class="the-category-entry">
+              </div>
+            </div>
+          </div>
         <?php endif; ?>
 
         </div><!-- #content -->

@@ -598,6 +598,15 @@ blockquote.intro-quote{
 }
 /*-----------------
 	
+		SLIDER
+
+-----------------*/
+.orbit-container .orbit-slides-container > * .orbit-caption{
+	background-color: transparent;
+	font-size: 26px;
+}
+/*-----------------
+	
 		STAFF
 
 -----------------*/
@@ -1014,6 +1023,34 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 }
 .the-post-author cite a:visited{
 	color: #32ccb9 !important;
+}
+/*-----------------
+	
+		THE AUTHOR PAGE
+
+-----------------*/
+.the-author-description{
+	letter-spacing: 0.01rem;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 22px;
+	line-height: 1.5;
+	text-align: left;
+	margin-bottom: 30px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: rgba(0,0,0,0.8);
+	margin-top: 20px;
+}
+.the-author-posts{
+
+}
+.the-author-posts h2 {
+	color: #32ccb9;
+	font-weight: 700;
+	border-top: 1px solid #eee;
+	padding-top: 15px;
 }
 /*-----------------
 	
