@@ -51,7 +51,7 @@
 					      <li class="has-dropdown">
 					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
 					      	 <ul class="dropdown the-submenu-top">
-					          <li><a href="#" id="go_mision" class="the-submenu-item bordered-menu">Historia</a></li>
+					          <li><a href="#" id="go_historia" class="the-submenu-item bordered-menu">Historia</a></li>
 					          <li><a href="#" id="go_mision" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
 					          <li><a href="#" id="go_wedo" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
 					          <li><a href="#" id="go_staff" class="the-submenu-item bordered-menu">Staff</a></li>
@@ -161,6 +161,7 @@
 					$args=array(
 					'showposts' => 1,
 					'category__in' => array($category->term_id),
+					'category'=>$category->term_id,
 					'caller_get_posts'=>1, 
 					'hide_empty'=>1,
 					);
@@ -279,7 +280,7 @@
 								<h3>Historia</h3>
 							</div>
 							<p><?php
-							$post = get_post(5413);
+							$post = get_post(5377);
 							setup_postdata($post);
 							the_content();
 							?></p>

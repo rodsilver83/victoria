@@ -22,6 +22,7 @@ setup_postdata($objPost);
 		<blockquote class="the-post-author">
 			<cite><?php the_author_posts_link()?> | <?php the_date()?></cite>
 		</blockquote>
+
 		<?php the_content();?>
 		<p>
 		</p>
