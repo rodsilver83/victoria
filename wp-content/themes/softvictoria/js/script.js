@@ -130,20 +130,39 @@ $(document).ready(function(){
 
 
   //Scroll To #
-  $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 90
-            }, 500);
-            return false;
-          }
-        }
-      });
-    });
+  // $(function() {
+  //     $('a[href*=#]:not([href=#])').click(function() {
+  //       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  //         var target = $(this.hash);
+  //         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  //         if (target.length) {
+  //           $('html,body').animate({
+  //             scrollTop: target.offset().top - 90
+  //           }, 500);
+  //           return false;
+  //         }
+  //       }
+  //     });
+  //   });
+  
+  //Scroller Sections
+  function scrolling(id){
+    var bodyRect = document.body.getBoundingClientRect(),
+      elemRect = document.getElementById(id).getBoundingClientRect(),
+      offset   = elemRect.top - bodyRect.top - 65;
+
+    $("html, body").animate({
+      scrollTop:offset}, 
+      '500', 'swing', function() {});
+  };
+
+  $('#go_to_sections').on("click", function(){ scrolling("the_sections"); });
+  $('#go_to_staff').on("click", function(){ scrolling("the-staff"); });
+  $('#go_historia').on("click", function(){ scrolling("historia"); });
+  $('#go_mision').on("click", function(){ scrolling("mision"); });
+  $('#go_wedo').on("click", function(){ scrolling("what-do-we-do"); });
+  $('#go_staff').on("click", function(){ scrolling("the-staff"); });
+
 
   //The Team Parallax
   
