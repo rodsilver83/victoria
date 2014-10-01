@@ -68,10 +68,24 @@
 										'include'=> array(55) 
 									);
 									$rsRedEmprendedoras=get_categories($cat_args)[0];
-									$category_link= get_category_link( $rsRedEmprendedoras->term_id );
+									$linkEmprendedoras= get_category_link( $rsRedEmprendedoras->term_id );
 									?>
-					          <li><a href="<?=$category_link?>" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
+					          <li><a href="<?=$linkEmprendedoras?>" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
+
+										<?php
+
+										$cat_args=array(
+											'orderby' => 'name',
+											'order' => 'ASC',
+											'include'=> array(14) 
+										);
+										print_r($cat_args);
+										$rsRedFellows=get_categories($cat_args)[0];
+										var_dump($rsRedFellows);
+										$linkFellows = get_category_link( $rsRedFellows->term_id );
+										?>
+
+					          <li><a href="<?=$linkFellows?>" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
 					          <li><a href="#" class="the-submenu-item bordered-menu">Únete y acelera tu negocio</a></li>
 					          <li><a href="#" class="the-submenu-item bordered-menu">Academia Victoria147</a></li>
 					        </ul>
