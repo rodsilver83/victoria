@@ -88,24 +88,36 @@
 
 					          <li><a href="<?=$linkFellows?>" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
 					          <li><a href="<?php echo site_url('unete-y-acelera-tu-negocio')?>" class="the-submenu-item bordered-menu">Únete y acelera tu negocio</a></li>
-					      
+
+					    			<li><a href="/academia-147" class="the-submenu-item bordered-menu">Academia Victoria147</a></li>
+					        </ul>
+					      </li>
+					      <li class="has-dropdown">
+									<a href="#" class="the-menu-top bordered-menu">Mujer Victoria147</a>
+									<ul class="dropdown the-submenu-top">
 										<?php
 										$cat_args=array(
 											'orderby' => 'name',
 											'order' => 'ASC',
-											'include'=> array(57) 
+											'include'=> array(65) 
 										);
-										$rsAcademia147=get_categories($cat_args)[0];
-										$linkAcademia147= get_category_link( $rsAcademia147->term_id );
+										$rsDescargables=get_categories($cat_args)[0];
+										$linkDescargables = get_category_link( $rsDescargables->term_id );
 										?>
-					    			<li><a href="<?=$linkAcademia147?>" class="the-submenu-item bordered-menu">Academia Victoria147</a></li>
-					        </ul>
-					      </li>
-					      <li class="has-dropdown">
-					      	<a href="#" class="the-menu-top bordered-menu">Mujer Victoria147</a>
-					      	<ul class="dropdown the-submenu-top">
-					          <li><a href="#" class="the-submenu-item bordered-menu">Descargables</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">Videos</a></li>
+					          <li><a href="<?=$linkDescargables?>" class="the-submenu-item bordered-menu">Descargas 147</a></li>
+										<?php
+										
+										$cat_args=array(
+											'orderby' => 'name',
+											'order' => 'ASC',
+											'include'=> array(66) 
+										);
+										$rsVideos=get_categories($cat_args)[0];
+										$linkVideos = get_category_link( $rsVideos->term_id );
+										
+										?>
+						
+					          <li><a href="<?=$linkVideos?>" class="the-submenu-item bordered-menu">Videos</a></li>
 					        </ul>
 					      </li>
 					      <li class="has-dropdown">

@@ -98,4 +98,12 @@ return;
 } // end function
 // Hook into Fast Secure Contact Form after email sent
 add_action('fsctf_mail_sent', 'my_process_fsctf_mail_sent');
+
+
+// ========= eaeaea eaeaea eaeaea 
+
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}	
 ?>

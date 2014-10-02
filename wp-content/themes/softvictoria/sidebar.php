@@ -1,126 +1,63 @@
-		<div id='sidebar' class="large-3 columns">
-			<div class='sidebartitle'>
-				<h2><?php _e('Categorías');?></h2>
-			</div>
-			<ul class="no-bullet cat-list">
-				<?php
-				/* $args = array(
-					'show_option_all'    => '',
-					'orderby'            => 'name',
-					'order'              => 'ASC',
-					'style'              => 'list',
-					'show_count'         => 0,
-					'hide_empty'         => 1,
-					'use_desc_for_title' => 0,
-					'child_of'           => 0,
-					'feed'               => '',
-					'title_li'					 => '',
-					'feed_type'          => '',
-					'feed_image'         => '',
-					'exclude'            => '',
-					'exclude_tree'       => '',
-					'include'            =>  array(11,33,30,29,28),
-					'hierarchical'       => 1,
-					'show_option_none'   => __( 'No categories' ),
-					'number'             => null,
-					'echo'               => 1,
-					'depth'              => 0,
-					'current_category'   => 1,
-					'pad_counts'         => 0,
-					'taxonomy'           => 'category',
-					'walker'             => null
-					);
-				 	wp_list_categories($args); */
+<div id='sidebar' class="large-3 columns">
+            <div class='sidebartitle'>
+                <h2><?php _e('Categorías');?></h2>
+            </div>
+            <ul class="no-bullet cat-list">
+                <?php
+                $cat_args=array(
+                    'orderby' => 'name',
+                    'order' => 'ASC',
+                    'include'=> array(62,59,58,60,61,63) 
+                );                $counter=0;
+                $categories=get_categories($cat_args);
+                if ($categories) 
+                {
+                    foreach($categories as $term) 
+                    {
+                      echo '<li><a href="' . get_category_link( $term->term_id ) . '" title="' . sprintf( __( "Ver todas las publicaciones en %s" ), $term->name ) . '" ' . '>' . $term->name.'</a></li> ';
+                    }
+                }
 
-					//display random sorted list of terms in a given taxonomy
-					$counter = 0;
-					$max = 5; //number of categories to display
-					$taxonomy = 'category';
-					$terms = get_terms($taxonomy);
-					shuffle ($terms);
-					//echo 'shuffled';
-					if ($terms) {
-						foreach($terms as $term) {
-							$counter++;
-							if ($counter <= $max) {
-						  	echo '<li><a href="' . get_category_link( $term->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $term->name ) . '" ' . '>' . $term->name.'</a></li> ';
-						 	}
-						}
-					}
-
-				?>
-			</ul>
-			
-			<div class='sidebartitle'>
-				<h2><?php _e('Te puede interesar');?></h2>
-			</div>
-				<ul class="no-bullet cat-list">
-					<?php
-					$html= '';
-					$post_id =  get_the_id();
-					$objPost = get_post($post_id); 
-					setup_postdata($objPost);
-					// print_r(get_the_category($post_id));
-					$cat=get_the_category($post_id);
-					$args=array(
-					'showposts' => 5,
-					'category__in' => $cat[0]->cat_ID,
-					'caller_get_posts'=>1, 
-					'hide_empty'=>1,
-					);
-					//Testing the content of the post before it prints da HTML
-					$posts=get_posts($args);
-					
-					
-					foreach($posts as $post) 
-					{
-						setup_postdata($post); 
-						// $post_content = wordwrap($post_wrapped, 20);
-						$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
-						$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
-						$post_link=post_permalink();
-						$post_title=get_the_title();
-
-						$html  .= "<li>
-				    <div class='orbit-caption'>
-							<a href='${post_link}' class='the-post-link'><i class='general foundicon-right-arrow'>".get_the_title()."</i></a>
-				    </div>
-					  </li>
-				    ";
-					}
-					print ${'html'};
-					wp_reset_postdata();
-					?>
-				</ul>
-				<iframe width="100%" scrolling="no" frameborder="0" src="<?= $_SERVER['SERVER_NAME']  ?>?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=1&external_site=1&wysijap=subscriptions" class="iframe-wysija" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none; height: 330px; left: 0pt; visibility: visible;" marginwidth="0" marginheight="0" allowtransparency="true" title="Subscription MailPoet"></iframe>
-		<?php 
-		//print "Suscr&iacute;bete\n<br>" .do_shortcode('[wysija_form id="1"]');
-		
-		/*
-		if (!(current_user_can('level_0'))){ 
-			
-	    ?>
-		<i>Login</i>
-		<form action="<?php echo get_option('home'); ?>/wp-login.php" method="post">
-		<input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
-		<input type="password" name="pwd" id="pwd" size="20" />
-		<input type="submit" name="submit" value="Send" class="button" />
-		    <p>
-		       <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Remember me</label>
-		       <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
-		    </p>
-		</form>
-		<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword">Recover password</a>
-		<?php wp_register('', ''); // Display "Site Admin" link.?>
-		
-		<?php } else { ?>
-		<h2>Logout</h2>
-		<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">logout</a><br />
-		<a href="http://XXX/wp-admin/">admin</a>
-		<?php }*/?>
-	</div>
-
-
-
-
-		
+                ?>
+            </ul>
+            
+            <div class='sidebartitle'>
+                <h2><?php _e('Te puede interesar');?></h2>
+            </div>
+                <ul class="no-bullet cat-list">
+                    <?php
+                    $html= '';
+                    $post_id =  get_the_id();
+                    $objPost = get_post($post_id); 
+                    setup_postdata($objPost);
+                    // print_r(get_the_category($post_id));
+                    $cat=get_the_category($post_id);
+                    $args=array(
+                    'showposts' => 5,
+                    'category__in' => $cat[0]->cat_ID,
+                    'caller_get_posts'=>1, 
+                    'hide_empty'=>1,
+                    );
+                    //Testing the content of the post before it prints da HTML
+                    $posts=get_posts($args);
+                    foreach($posts as $post) 
+                    {
+                        setup_postdata($post); 
+                        // $post_content = wordwrap($post_wrapped, 20);
+                        $post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+                        $post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
+                        $post_link=post_permalink();
+                        $post_title=get_the_title();
+                        $html  .= "<li>
+                    <div class='orbit-caption'>
+                            <a href='${post_link}' class='the-post-link'><i class='general foundicon-right-arrow'>".get_the_title()."</i></a>
+                    </div>
+                      </li>
+                    ";
+                    }
+                    print ${'html'};
+                    wp_reset_postdata();
+                    ?>
+                </ul>
+                <iframe width="100%" scrolling="no" frameborder="0" src="http://victoria147.local/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=1&external_site=1&wysijap=subscriptions" class="iframe-wysija" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none; height: 330px; left: 0pt; visibility: visible;" marginwidth="0" marginheight="0" allowtransparency="true" title="Subscription MailPoet"></iframe>
+    </div>
