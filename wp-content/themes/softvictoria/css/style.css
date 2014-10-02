@@ -1135,6 +1135,14 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 }
 /*-----------------
 	
+		THE GENERATIONS POST
+
+-----------------*/
+.generation-list {
+	text-align: center;
+}
+/*-----------------
+	
 		THE SIDEBAR
 
 -----------------*/
