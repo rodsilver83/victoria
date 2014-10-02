@@ -43,7 +43,7 @@
 						foreach($terms as $term) {
 							$counter++;
 							if ($counter <= $max) {
-						  	echo '<li><a href="' . get_category_link( $term->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $term->name ) . '" ' . '>' . $term->name.'</a></li> ';
+						  	echo '<li><a href="' . get_category_link( $term->term_id ) . '" title="' . sprintf( __( "Ver todas las publicaciones en %s" ), $term->name ) . '" ' . '>' . $term->name.'</a></li> ';
 						 	}
 						}
 					}
@@ -70,8 +70,6 @@
 					);
 					//Testing the content of the post before it prints da HTML
 					$posts=get_posts($args);
-					
-					
 					foreach($posts as $post) 
 					{
 						setup_postdata($post); 
@@ -80,7 +78,6 @@
 						$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
 						$post_link=post_permalink();
 						$post_title=get_the_title();
-
 						$html  .= "<li>
 				    <div class='orbit-caption'>
 							<a href='${post_link}' class='the-post-link'><i class='general foundicon-right-arrow'>".get_the_title()."</i></a>
@@ -93,31 +90,6 @@
 					?>
 				</ul>
 				<iframe width="100%" scrolling="no" frameborder="0" src="http://victoria147.local/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=1&external_site=1&wysijap=subscriptions" class="iframe-wysija" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none; height: 330px; left: 0pt; visibility: visible;" marginwidth="0" marginheight="0" allowtransparency="true" title="Subscription MailPoet"></iframe>
-		<?php 
-		//print "Suscr&iacute;bete\n<br>" .do_shortcode('[wysija_form id="1"]');
-		
-		/*
-		if (!(current_user_can('level_0'))){ 
-			
-	    ?>
-		<i>Login</i>
-		<form action="<?php echo get_option('home'); ?>/wp-login.php" method="post">
-		<input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
-		<input type="password" name="pwd" id="pwd" size="20" />
-		<input type="submit" name="submit" value="Send" class="button" />
-		    <p>
-		       <label for="rememberme"><input name="rememberme" id="rememberme" type="checkbox" checked="checked" value="forever" /> Remember me</label>
-		       <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
-		    </p>
-		</form>
-		<a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword">Recover password</a>
-		<?php wp_register('', ''); // Display "Site Admin" link.?>
-		
-		<?php } else { ?>
-		<h2>Logout</h2>
-		<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">logout</a><br />
-		<a href="http://XXX/wp-admin/">admin</a>
-		<?php }*/?>
 	</div>
 
 

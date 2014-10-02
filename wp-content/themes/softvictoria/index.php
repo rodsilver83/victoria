@@ -90,13 +90,7 @@
 					          <li><a href="<?php echo site_url('unete-y-acelera-tu-negocio')?>" class="the-submenu-item bordered-menu">Únete y acelera tu negocio</a></li>
 					      
 										<?php
-										$cat_args=array(
-											'orderby' => 'name',
-											'order' => 'ASC',
-											'include'=> array(57) 
-										);
-										$rsAcademia147=get_categories($cat_args)[0];
-										$linkAcademia147= get_category_link( $rsAcademia147->term_id );
+										
 										?>
 					    			<li><a href="<?=$linkAcademia147?>" class="the-submenu-item bordered-menu">Academia Victoria147</a></li>
 					        </ul>
@@ -104,8 +98,32 @@
 					      <li class="has-dropdown">
 					      	<a href="#" class="the-menu-top bordered-menu">Mujer Victoria147</a>
 					      	<ul class="dropdown the-submenu-top">
-					          <li><a href="#" class="the-submenu-item bordered-menu">Descargables</a></li>
-					          <li><a href="#" class="the-submenu-item bordered-menu">Videos</a></li>
+										<?php
+										
+										$cat_args=array(
+											'orderby' => 'name',
+											'order' => 'ASC',
+											'include'=> array(65) 
+										);
+										$rsMujer147=get_categories($cat_args)[0];
+										$linkMujer147 = get_category_link( $rsMujer147->term_id );
+										
+										?>
+						
+					          <li><a href="<?=$linkMujer147?>" class="the-submenu-item bordered-menu">Descargables</a></li>
+										<?php
+										
+										$cat_args=array(
+											'orderby' => 'name',
+											'order' => 'ASC',
+											'include'=> array(66) 
+										);
+										$rsVideos=get_categories($cat_args)[0];
+										$linkVideos = get_category_link( $rsVideos->term_id );
+										
+										?>
+						
+					          <li><a href="<?=$linkVideos?>" class="the-submenu-item bordered-menu">Videos</a></li>
 					        </ul>
 					      </li>
 					      <li class="has-dropdown">
