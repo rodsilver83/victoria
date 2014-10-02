@@ -13,7 +13,6 @@ $post_id =  get_the_id();
 $objPost = get_post($post_id); 
 setup_postdata($objPost);
 ?>
-<br/><br/><br/><br/>
 <div id="primary" class="row site-content">
 	<div role="main" id="the-post" class="large-9 columns">
 		<div class="the-post-title">

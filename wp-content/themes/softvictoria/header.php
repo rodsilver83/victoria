@@ -2,6 +2,7 @@
 <html class="no-js" lang="ES">
 <head>
 <meta charset="utf-8" />
+<?php wp_head()?>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 <title>Victoria 147 | Somos una organización que busca redefinir el concepto de la mujer actual.</title>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/foundation.css" />

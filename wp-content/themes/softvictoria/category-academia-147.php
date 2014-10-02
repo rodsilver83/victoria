@@ -38,7 +38,7 @@ if ( have_posts() ) : ?>
 					{
 						the_post_thumbnail();
 					}
-					the_content(); 
+					the_excerpt(); 
 					?>
 				</div>
 			</div>

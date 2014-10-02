@@ -13,6 +13,7 @@
 		</div>
 </div>
 
+<?php wp_footer();?>
 		<script src="<?php bloginfo('template_directory'); ?>/js/foundation.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/pages-script.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/foundation/foundation.orbit.js"></script>
@@ -32,6 +33,15 @@
 			    bullets_active_class: 'active'
 			  }
       });
+
+			$(document).ready(function(){
+				
+				var data = function(param)
+				{
+					console.log("param is:  ", param);
+				}
+				
+			});
     </script>
 	</body>
 </html>
