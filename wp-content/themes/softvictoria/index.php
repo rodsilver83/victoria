@@ -152,7 +152,7 @@
 			$cat_args=array(
 				'orderby' => 'name',
 				'order' => 'ASC',
-				'include'=> array(11,33,30,29,28,25,26) 
+				'include'=> array(62,59,58,60,61,63) 
 			);
 			$categories=get_categories($cat_args);
 			foreach($categories as $category) 
@@ -282,7 +282,7 @@
 								<h3>Historia</h3>
 							</div>
 							<p><?php
-							$post = get_post(5377);
+							$post = get_post(5413);
 							setup_postdata($post);
 							the_content();
 							?></p>
