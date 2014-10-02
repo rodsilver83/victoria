@@ -409,7 +409,8 @@ blockquote.intro-quote{
 	margin-bottom: 50px;
 }
 .news-headliner h1{
-	border: 3px solid #333;
+	color: #23275F;
+	border: 3px solid #23275F;
 	text-align: center;
 	max-width: 450px;
 	margin: 0 auto;
@@ -530,12 +531,12 @@ blockquote.intro-quote{
 	text-align: left;
 }
 .who h1 {
-	color: #333;
+	color: #23275F;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 .who p{
-	color: #999 !important;
+	color: #68696A !important;
 	margin-left:0px !important;
 }
 .about-titles{
@@ -546,17 +547,17 @@ blockquote.intro-quote{
 	margin-right: 10px;
 }
 .about-titles h3{
-	color: #999;
+	color: #259EBF;
 	text-align: left;
 	text-transform: uppercase;
 }
 .hist p{
-	color: #999;
+	color: #68696A;
 	text-align: left;
 	margin-left:35px;
 }
 .mision p{
-	color: #999;
+	color: #68696A;
 	text-align: left;
 	margin-left:35px;
 }
@@ -564,7 +565,7 @@ blockquote.intro-quote{
 	padding-bottom: 20px;
 }
 .vision p{
-	color: #999;
+	color: #68696A;
 	text-align: left;
 	margin-left:35px;
 }
@@ -589,12 +590,12 @@ blockquote.intro-quote{
 	text-align: center;
 }
 .what h1{
-	color: #333;
+	color: #23275F;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 .what p{
-	color: #999;
+	color: #68696A;
 }
 /*-----------------
 	
@@ -619,12 +620,13 @@ blockquote.intro-quote{
 	padding: 5px 0 35px 0;
 }
 .content-team{
-	background-image: url("../img/team-bg.png");
+	/*background-image: url("../img/team-bg.png");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	background-position: center bottom;
+	background-position: center bottom;*/
+	background-color: #fff;
 	height: 100%;
-	min-height: 2400px;
+	min-height: 2600px;
 	width:100%;
 	text-align: center;
 }
@@ -676,8 +678,8 @@ img.team-picture.rounded{
 /* First Child */
 div.team-list > div:first-child{
 	position: absolute;
-	top: 2850px;
-	left: 80px !important;
+	top: 2650px;
+	left: 180px !important;
 	z-index: 10;
 }
 div.team-list > div:first-child  > .transparent-team-photo{
@@ -710,8 +712,8 @@ div.team-list > div:first-child > .team-member-des:before{
 /* Second Child */
 div.team-list > div:first-child + div{
 	position: absolute;
-	top: 2950px;
-	right: 55px !important;
+	top: 2750px;
+	right: 280px !important;
 	padding-left: 50px;
 }
 div.team-list > div:first-child + div > .transparent-team-photo{
@@ -744,8 +746,8 @@ div.team-list > div:first-child + div > .team-member-des:before{
 /* Third Child */
 div.team-list > div:first-child + div + div {
 	position: absolute;
-	top: 3250px;
-	left: 150px !important;
+	top: 2980px;
+	left: 185px !important;
 	padding-left: 50px;
 }
 div.team-list > div:first-child + div + div > .transparent-team-photo{
@@ -778,7 +780,7 @@ div.team-list > div:first-child + div + div > .team-member-des:before{
 /* Fourth Child */
 div.team-list > div:first-child + div + div + div{
 	position: absolute;
-	top: 3500px;
+	top: 3100px;
 	right: 225px !important;
 	padding-left: 50px;
 }
@@ -812,8 +814,8 @@ div.team-list > div:first-child + div + div + div > .team-member-des:before{
 /* Fifth Child */
 div.team-list > div:first-child + div + div + div + div {
 	position: absolute;
-	top: 3660px;
-	left: 170px !important;
+	top: 3300px;
+	left: 300px !important;
 	padding-left: 50px;
 }
 div.team-list > div:first-child + div + div + div + div > .transparent-team-photo{
@@ -846,7 +848,7 @@ div.team-list > div:first-child + div + div + div + div > .team-member-des:befor
 /* Sixth Child */
 div.team-list > div:first-child + div + div + div + div + div{
 	position: absolute;
-	top: 4100px;
+	top: 3500px;
 	right: 365px !important;
 	padding-left: 50px;
 }
@@ -888,7 +890,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 }
 /* The Rhombus */
 #rhombus1{
-	background-image: url("../img/rhombus/green-big.png");
+	background-image: url("../img/rhombus/blk/green-big.png");
 	background-size: 100%;
 	width: 450px;
 	height: 450px;
@@ -897,7 +899,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	right: 50px;
 }
 #rhombus2{
-	background-image: url("../img/rhombus/blue-med.png");
+	background-image: url("../img/rhombus/blk/blue-med.png");
 	background-size: 100%;
 	width: 300px;
 	height: 300px;
@@ -906,7 +908,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	left: 50px;
 }
 #rhombus3{
-	background-image: url("../img/rhombus/pink-sm.png");
+	background-image: url("../img/rhombus/blk/pink-sm.png");
 	background-size: 100%;
 	width: 150px;
 	height: 150px;
@@ -915,7 +917,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	left: 30%;
 }
 #rhombus4{
-	background-image: url("../img/rhombus/pink-sm.png");
+	background-image: url("../img/rhombus/blk/pink-sm.png");
 	background-size: 100%;
 	width: 150px;
 	height: 150px;
@@ -924,7 +926,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	right: 50px;
 }
 #rhombus5{
-	background-image: url("../img/rhombus/double-green.png");
+	background-image: url("../img/rhombus/blk/double-green.png");
 	background-size: 100%;
 	width: 450px;
 	height: 450px;
@@ -933,7 +935,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	left: 25%;
 }
 #rhombus6{
-	background-image: url("../img/rhombus/green-med.png");
+	background-image: url("../img/rhombus/blk/green-med.png");
 	background-size: 100%;
 	width: 250px;
 	height: 250px;
@@ -943,7 +945,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	z-index: 5;
 }
 #rhombus7{
-	background-image: url("../img/rhombus/white-med.png");
+	background-image: url("../img/rhombus/blk/white-med.png");
 	background-size: 100%;
 	width: 300px;
 	height: 300px;
@@ -952,7 +954,7 @@ div.team-list > div:first-child + div + div + div + div + div + div{
 	left: 150px;
 }
 #rhombus8{
-	background-image: url("../img/rhombus/white-sm.png");
+	background-image: url("../img/rhombus/blk/white-sm.png");
 	background-size: 100%;
 	width: 150px;
 	height: 150px;
