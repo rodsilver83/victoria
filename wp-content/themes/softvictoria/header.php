@@ -2,14 +2,15 @@
 <html class="no-js" lang="ES">
 <head>
 <meta charset="utf-8" />
-<?php wp_head()?>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 <title>Victoria 147 | Somos una organización que busca redefinir el concepto de la mujer actual.</title>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/foundation.css" />
 <link rel='stylesheet' href="<?php bloginfo('template_directory'); ?>/css/style.css">
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_enclosed_foundicons.css">
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/general_foundicons.css">
-<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/wp-team-manager/css/tm-style.css" type="text/css" media="screen" title="no title">
+
+<?php wp_head()?>
 <script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.stellar.min.js"></script>
@@ -37,6 +38,7 @@
    	<?=get_search_form()?>
    </div>
    <ul class="right">
+		<li>
      <div class="top-social-btns">
      	<div id="search" class="the-search search-blk">
      	</div>
@@ -45,6 +47,7 @@
      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn insta-btn social-sprite-blk"></a>
      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn yt-btn social-sprite-blk"></a>
      </div>
+		</li>
    </ul>
 
    <!-- Left Nav Section -->

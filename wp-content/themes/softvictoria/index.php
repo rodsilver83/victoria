@@ -36,6 +36,7 @@
 								<?=get_search_form()?>
 					    </div>
 					    <ul class="right">
+								<li>
 					      <div class="top-social-btns justify-social">
 					      	<div id="search" class="the-search search-w">
 					      	</div>
@@ -44,6 +45,7 @@
 					      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn social-sprite-w insta-btn"></a>
 					      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn social-sprite-w yt-btn"></a>
 					      </div>
+								</li>
 					    </ul>
 
 					    <!-- Left Nav Section -->
