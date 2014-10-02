@@ -45,7 +45,7 @@ if ( ! defined( 'WPCF7_LOAD_JS' ) )
 	define( 'WPCF7_LOAD_JS', False );
 
 if ( ! defined( 'WPCF7_LOAD_CSS' ) )
-	define( 'WPCF7_LOAD_CSS', true );
+	define( 'WPCF7_LOAD_CSS', False );
 
 if ( ! defined( 'WPCF7_AUTOP' ) )
 	define( 'WPCF7_AUTOP', true );

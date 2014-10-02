@@ -25,6 +25,7 @@ if ( have_posts() ) : ?>
 			</div>
 			<?php
 			// The Loop
+			query_posts('p=');
 			while ( have_posts() ) : the_post();
 			?>
 			<div class="category-post">
@@ -51,3 +52,4 @@ if ( have_posts() ) : ?>
 	</div>
 </div>
 <?php get_footer(); ?>
+

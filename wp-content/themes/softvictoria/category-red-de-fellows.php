@@ -28,7 +28,6 @@ if ( have_posts() ) : ?>
 			</div>
 
 			<?php
-
 			// The Loop
 			while ( have_posts() ) : the_post();
 			?>
