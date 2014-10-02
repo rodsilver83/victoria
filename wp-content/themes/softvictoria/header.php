@@ -2,6 +2,7 @@
 <html class="no-js" lang="ES">
 <head>
 <meta charset="utf-8" />
+<?php wp_head()?>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 <title>Victoria 147 | Somos una organización que busca redefinir el concepto de la mujer actual.</title>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/foundation.css" />
@@ -60,10 +61,44 @@
      <li class="has-dropdown not-click">
      	<a href="#" class="the-menu-top double-lined-menu menu-color">Emprendedora Victoria147</a>
        <ul class="dropdown the-submenu-top p-submenu-fixed"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li><li class="parent-link show-for-small"><a class="parent-link js-generated" href="#">Emprendedora Victoria147</a></li>
-         <li><a href="#" class="the-submenu-item submenu-colored bordered-submenu">Red de Emprendedoras</a></li>
-         <li><a href="#" class="the-submenu-item submenu-colored bordered-submenu">Red de Fellows</a></li>
-         <li><a href="#" class="the-submenu-item submenu-colored bordered-submenu">Únete y acelera tu negocio</a></li>
-         <li><a href="#" class="the-submenu-item submenu-colored bordered-submenu">Academia Victoria147</a></li>
+
+						<?php
+						
+						$cat_args=array(
+							'orderby' => 'name',
+							'order' => 'ASC',
+							'include'=> array(55) 
+						);
+						$rsRedEmprendedoras=get_categories($cat_args)[0];
+						$linkEmprendedoras= get_category_link( $rsRedEmprendedoras->term_id );
+						?>
+         <li><a href="<?=$linkEmprendedoras?>" class="the-submenu-item submenu-colored bordered-submenu">Red de Emprendedoras</a></li>
+
+
+					<?php
+					
+					$cat_args=array(
+						'orderby' => 'name',
+						'order' => 'ASC',
+						'include'=> array(56) 
+					);
+					$rsRedFellows=get_categories($cat_args)[0];
+					$linkFellows = get_category_link( $rsRedFellows->term_id );
+					
+					?>
+         <li><a href="<?=$linkFellows?>" class="the-submenu-item submenu-colored bordered-submenu">Red de Fellows</a></li>
+         <li><a href="<?php echo site_url('unete-y-acelera-tu-negocio')?>" class="the-submenu-item submenu-colored bordered-submenu">Únete y acelera tu negocio</a></li>
+
+					<?php
+					$cat_args=array(
+						'orderby' => 'name',
+						'order' => 'ASC',
+						'include'=> array(57) 
+					);
+					$rsAcademia147=get_categories($cat_args)[0];
+					$linkAcademia147= get_category_link( $rsAcademia147->term_id );
+					?>
+         <li><a href="<?=$linkAcademia147?>" class="the-submenu-item submenu-colored bordered-submenu">Academia Victoria147</a></li>
        </ul>
      </li>
      <li class="has-dropdown not-click">

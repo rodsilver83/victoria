@@ -161,6 +161,7 @@
 					$args=array(
 					'showposts' => 1,
 					'category__in' => array($category->term_id),
+					'category'=>$category->term_id,
 					'caller_get_posts'=>1, 
 					'hide_empty'=>1,
 					);

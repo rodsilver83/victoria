@@ -92,8 +92,9 @@
 					wp_reset_postdata();
 					?>
 				</ul>
+<iframe width="100%" scrolling="no" frameborder="0" src="http://victoria147.local/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=1&external_site=1&wysijap=subscriptions" class="iframe-wysija" vspace="0" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none; height: 330px; left: 0pt; visibility: visible;" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true" title="Subscription MailPoet"></iframe>
 		<?php 
-		print "Suscr&iacute;bete\n<br>" .do_shortcode('[wysija_form id="2"]');
+		//print "Suscr&iacute;bete\n<br>" .do_shortcode('[wysija_form id="1"]');
 		
 		/*
 		if (!(current_user_can('level_0'))){ 

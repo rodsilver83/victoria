@@ -1,7 +1,6 @@
 <?php
 
 get_header(); ?> 
-
 <div id="primary" class="row site-content">
 	<div id="content" role="main">
 
@@ -52,6 +51,6 @@ $catid = get_query_var('cat');
 
 	</div>
 </div>
-
 <?php get_footer(); ?>
+
 
