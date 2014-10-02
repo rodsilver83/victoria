@@ -105,12 +105,12 @@
 											'order' => 'ASC',
 											'include'=> array(65) 
 										);
-										$rsMujer147=get_categories($cat_args)[0];
-										$linkMujer147 = get_category_link( $rsMujer147->term_id );
+										$rsDescargables=get_categories($cat_args)[0];
+										$linkDescargables = get_category_link( $rsDescargables->term_id );
 										
 										?>
 						
-					          <li><a href="<?=$linkMujer147?>" class="the-submenu-item bordered-menu">Descargables</a></li>
+					          <li><a href="<?=$linkDescargables?>" class="the-submenu-item bordered-menu">Descargas 147</a></li>
 										<?php
 										
 										$cat_args=array(

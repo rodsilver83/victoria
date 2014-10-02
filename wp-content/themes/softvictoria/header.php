@@ -107,8 +107,31 @@
      <li class="has-dropdown not-click">
      	<a href="#" class="the-menu-top menu-color">Mujer Victoria147</a>
      	<ul class="dropdown the-submenu-top p-submenu-fixed"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li><li class="parent-link show-for-small"><a class="parent-link js-generated" href="#">Mujer Victoria147</a></li>
-         <li><a href="#" class="the-submenu-item submenu-colored bordered-submenu">Descargables</a></li>
-         <li><a href="#" class="the-submenu-item submenu-colored bordered-submenu">Videos</a></li>
+				<?php
+				
+				$cat_args=array(
+					'orderby' => 'name',
+					'order' => 'ASC',
+					'include'=> array(65) 
+				);
+				$rsDescargables=get_categories($cat_args)[0];
+				$linkDescargables = get_category_link( $rsDescargables->term_id );
+				
+				?>
+         <li><a href="<?=$linkDescargables;?>" class="the-submenu-item submenu-colored bordered-submenu">Descargables</a></li>
+
+					<?php
+					
+					$cat_args=array(
+						'orderby' => 'name',
+						'order' => 'ASC',
+						'include'=> array(66) 
+					);
+					$rsVideos=get_categories($cat_args)[0];
+					$linkVideos = get_category_link( $rsVideos->term_id );
+					
+					?>
+         <li><a href="<?=$linkVideos?>" class="the-submenu-item submenu-colored bordered-submenu">Videos</a></li>
        </ul>
      </li>
      <li class="has-dropdown not-click">
