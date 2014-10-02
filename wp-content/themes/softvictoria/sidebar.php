@@ -4,49 +4,19 @@
 			</div>
 			<ul class="no-bullet cat-list">
 				<?php
-				/* $args = array(
-					'show_option_all'    => '',
-					'orderby'            => 'name',
-					'order'              => 'ASC',
-					'style'              => 'list',
-					'show_count'         => 0,
-					'hide_empty'         => 1,
-					'use_desc_for_title' => 0,
-					'child_of'           => 0,
-					'feed'               => '',
-					'title_li'					 => '',
-					'feed_type'          => '',
-					'feed_image'         => '',
-					'exclude'            => '',
-					'exclude_tree'       => '',
-					'include'            =>  array(11,33,30,29,28),
-					'hierarchical'       => 1,
-					'show_option_none'   => __( 'No categories' ),
-					'number'             => null,
-					'echo'               => 1,
-					'depth'              => 0,
-					'current_category'   => 1,
-					'pad_counts'         => 0,
-					'taxonomy'           => 'category',
-					'walker'             => null
-					);
-				 	wp_list_categories($args); */
-
-					//display random sorted list of terms in a given taxonomy
-					$counter = 0;
-					$max = 5; //number of categories to display
-					$taxonomy = 'category';
-					$terms = get_terms($taxonomy);
-					shuffle ($terms);
-					//echo 'shuffled';
-					if ($terms) {
-						foreach($terms as $term) {
-							$counter++;
-							if ($counter <= $max) {
-						  	echo '<li><a href="' . get_category_link( $term->term_id ) . '" title="' . sprintf( __( "Ver todas las publicaciones en %s" ), $term->name ) . '" ' . '>' . $term->name.'</a></li> ';
-						 	}
-						}
+				$cat_args=array(
+					'orderby' => 'name',
+					'order' => 'ASC',
+					'include'=> array(62,59,58,60,61,63) 
+				);				$counter=0;
+				$categories=get_categories($cat_args);
+				if ($categories) 
+				{
+					foreach($categories as $term) 
+					{
+				  	echo '<li><a href="' . get_category_link( $term->term_id ) . '" title="' . sprintf( __( "Ver todas las publicaciones en %s" ), $term->name ) . '" ' . '>' . $term->name.'</a></li> ';
 					}
+				}
 
 				?>
 			</ul>
