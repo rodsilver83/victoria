@@ -12,6 +12,11 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.stellar.min.js"></script>
+		<style>
+			.who-we-are{
+				background: url("../img/we-are.jpg") no-repeat center 25px fixed;
+			}
+		</style>
 	</head>
 	<body>
 		<div id='wrapper'>
@@ -230,7 +235,13 @@
 			?>
 
 			<div class="content-slider">
-				<ul class="example-orbit" data-orbit>
+				<ul class="example-orbit" data-orbit
+			    data-options="animation:slide;
+	        pause_on_hover:true;
+	        animation_speed:1000;
+	        navigation_arrows:true;
+	        pause_on_hover: true;
+	        bullets:false;">
 				<?php
 				$html='';
 				$cat_args=array(
@@ -259,9 +270,11 @@
 						$post_link=post_permalink();
 						$post_title=get_the_title();
 						$html  .= "<li>
-						${post_thumbnail}
+						<a href='${post_link}' title='".get_the_title()."'>
+							${post_thumbnail}
+						</a>
 				    <div class='orbit-caption'>
-							<a href='${post_link}' class='the-post-link'>".get_the_title()."</a>
+							<a href='${post_link}' class='the-post-link'>".get_the_title()."<br> <span>Ver más</spa></a>
 				    </div>
 					  </li>
 				    ";
@@ -367,6 +380,9 @@
 				<div data-stellar-ratio="1.2" data-stellar-vertical-offset="-450" id="rhombus6"></div>
 				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus7"></div>
 				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus8"></div>
+				<div data-stellar-ratio="0.7" data-stellar-vertical-offset="-450" id="rhombus9"></div>
+				<div data-stellar-ratio="0.3" data-stellar-vertical-offset="-450" id="rhombus10"></div>
+				<div data-stellar-ratio="1.9" data-stellar-vertical-offset="-450" id="rhombus11"></div>
 
 				<!-- Team Members -->
 				<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
