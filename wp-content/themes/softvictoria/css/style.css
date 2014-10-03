@@ -375,7 +375,7 @@ blockquote.intro-quote{
 	width: 191px !important;
 	height: 191px !important;
 	display: block !important;
-	top: 62.5% !important;
+	top: initial !important;
 	bottom: 0% !important;
 	margin-top: 0px !important;
 }
@@ -578,6 +578,7 @@ blockquote.intro-quote{
 }
 .section-image img {
 	position: relative;
+	width:100%;
 	z-index: 0;
 }
 /* Who We are	*/
@@ -692,6 +693,8 @@ blockquote.intro-quote{
 	background-position: center bottom;*/
 	background-color: #fff;
 	height: 100%;
+	max-width: 980px;
+	margin: 0 auto;
 	min-height: 2600px;
 	width:100%;
 	text-align: center;
@@ -699,6 +702,9 @@ blockquote.intro-quote{
 /*.grid-member > .team-member-des {
 	display: none;
 }*/
+.team-list {
+	max-width: 980px;
+}
 img.team-picture.rounded{
 	width: 275px !important;
 	height: auto;
