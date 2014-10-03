@@ -281,6 +281,8 @@
   						<p><?php
 							$post = get_post(5377);
 							setup_postdata($post);
+							print $featured_image=get_the_post_thumbnail( $post->ID); 
+							
 							the_content();
   						?></p>
   					</div>
