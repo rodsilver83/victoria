@@ -16,7 +16,7 @@ setup_postdata($objPost);
 ?>
 <div id="primary" class="row site-content">
 	<div id="content" role="main">
-		<div role="main" id="the-category" class="large-12 columns">	
+		<div role="main" id="the-category" class="large-12 columns">
 			<div class="archive-header">
 				
 		    <?php
