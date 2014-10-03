@@ -50,7 +50,7 @@
                         $post_title=get_the_title();
                         $html  .= "<li>
                     <div class='orbit-caption'>
-                            <a href='${post_link}' class='the-post-link'><i class='general foundicon-right-arrow'>".get_the_title()."</i></a>
+                            <a href='${post_link}' class='the-post-link'><i class='general foundicon-right-arrow'> ".get_the_title()."</i></a>
                     </div>
                       </li>
                     ";
