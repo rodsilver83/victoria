@@ -183,6 +183,7 @@ $(document).ready(function(){
     //We assign the random stellar_ratio to the grid-member class
     $('.grid-member').attr('data-stellar-ratio', the_ratio);
     $('.grid-member').attr('data-stellar-vertical-offset', the_offset);
+    $('.grid-member').attr('data-stellar-offset-parent', 'true');
     //console.log("The members are " + numItems);
     //console.log("The ratio is " + the_ratio);
     numItems++;

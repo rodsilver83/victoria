@@ -699,11 +699,15 @@ blockquote.intro-quote{
 	width:100%;
 	text-align: center;
 }
+.team-list{
+	position: relative;
+}
 /*.grid-member > .team-member-des {
 	display: none;
 }*/
 .team-list {
 	max-width: 980px;
+	height: 100%;
 }
 img.team-picture.rounded{
 	width: 275px !important;
@@ -749,8 +753,8 @@ img.team-picture.rounded{
 }
 /* First Child */
 div.team-list > div:first-child{
-	position: absolute;
-	top: 3150px;
+	position: relative;
+	top: 420% !important;
 	left: 180px !important;
 	z-index: 10;
 }
@@ -765,7 +769,7 @@ div.team-list > div:first-child > .team-member-des{
 	width: 385px;
 	position: relative;
 	top: -345px;
-	left: 80%;
+	left: 30%;
 	z-index: 9;
 	padding: 0px 40px 25px;
 }
