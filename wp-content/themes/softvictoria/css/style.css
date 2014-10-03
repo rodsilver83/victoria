@@ -1323,6 +1323,9 @@ div.team-list > div:first-child + div + div + div + div + div + div + div > .tea
 	color: #23275F;
 	margin: 5px 0;
 }
+.sidebar-description{
+
+}
 .cat-list{
 	padding: 10px 15px;
 }
@@ -1335,6 +1338,17 @@ ul.cat-list > li > a {
 ul.cat-list > li > a:hover {
 	color: #4C6ECB;
 	text-decoration: underline;
+}
+/* Subscription */
+.subscribe-form{
+	height: 100px;
+	height: 125px;
+}
+.wysija-paragraph input {
+	background-color: red !important;
+}
+.formError {
+	display: none !important;
 }
 /*-----------------
 	

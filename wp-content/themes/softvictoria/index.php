@@ -12,6 +12,11 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.stellar.min.js"></script>
+		<style>
+			.who-we-are{
+				background: url("../img/we-are.jpg") no-repeat center 25px fixed;
+			}
+		</style>
 	</head>
 	<body>
 		<div id='wrapper'>
