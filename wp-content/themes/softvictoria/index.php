@@ -14,7 +14,13 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.stellar.min.js"></script>
 		<style>
 			.who-we-are{
-				background: url("../img/we-are.jpg") no-repeat center 25px fixed;
+				<?php
+				$post = get_post(5377);
+				setup_postdata($post);
+				$url= wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+				
+				?>
+				background: url("<?=$url?>") no-repeat center 25px fixed;
 			}
 		</style>
 	</head>
@@ -294,8 +300,7 @@
   						<p><?php
 							$post = get_post(5377);
 							setup_postdata($post);
-							print $featured_image=get_the_post_thumbnail( $post->ID); 
-							
+							print("ajajajajajj");
 							the_content();
   						?></p>
   					</div>
