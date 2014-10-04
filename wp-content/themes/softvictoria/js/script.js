@@ -182,13 +182,19 @@ $(document).ready(function(){
 
     //We assign the random stellar_ratio to the grid-member class
     $('.grid-member').attr('data-stellar-ratio', the_ratio);
-    $('.grid-member').attr('data-stellar-vertical-offset', the_offset);
-    $('.grid-member').attr('data-stellar-offset-parent', 'true');
+    //$('.grid-member').attr('data-stellar-vertical-offset', the_offset);
+    //$('.grid-member').attr('data-stellar-offset-parent', 'true');
     //console.log("The members are " + numItems);
     //console.log("The ratio is " + the_ratio);
     numItems++;
   }
   //We initialize stellar.js after we assigned the ratios and offsets to the elements so errything works neato
-  $(window).stellar();
+  $(window).stellar({
+    horizontalScrolling: false,
+    verticalOffset: 0,
+    horizontalOffset: 0,
+    hideDistantElements: false, //Elemente sollen nicht verschwinden, 
+                                //wenn sie aus dem Viewport rauslaufen.
+  })
 
 });

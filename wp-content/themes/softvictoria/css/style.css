@@ -701,14 +701,13 @@ blockquote.intro-quote{
 }
 .team-list{
 	position: relative;
+	top: 300px;
+	max-width: 980px;
+	height: 100%;
 }
 /*.grid-member > .team-member-des {
 	display: none;
 }*/
-.team-list {
-	max-width: 980px;
-	height: 100%;
-}
 img.team-picture.rounded{
 	width: 275px !important;
 	height: auto;
@@ -753,10 +752,15 @@ img.team-picture.rounded{
 }
 /* First Child */
 div.team-list > div:first-child{
-	position: relative;
+	/*position: relative;
 	top: 420% !important;
 	left: 180px !important;
-	z-index: 10;
+	z-index: 10;*/
+	position: absolute;
+	left: 5%;
+	margin-top: -35%;
+	width: 310px;
+	z-index: 0;
 }
 div.team-list > div:first-child  > .transparent-team-photo{
 	width: 275px;
@@ -767,10 +771,10 @@ div.team-list > div:first-child > .team-member-des{
 	background-color: #32ccb9;
 	display: none;
 	width: 385px;
-	position: relative;
-	top: -345px;
-	left: 30%;
-	z-index: 9;
+	position: absolute;
+	top: 0;
+	left: 95%;
+	z-index: 26;
 	padding: 0px 40px 25px;
 }
 div.team-list > div:first-child:hover > .team-member-des {
@@ -787,10 +791,15 @@ div.team-list > div:first-child > .team-member-des:before{
 }
 /* Second Child */
 div.team-list > div:first-child + div{
-	position: absolute;
+	/*position: absolute;
 	top: 3250px;
 	right: 280px !important;
-	padding-left: 50px;
+	padding-left: 50px;*/
+	position: absolute;
+	margin-top: -18%;
+	left: 55% !important;
+	width: 310px;
+	z-index: 0;
 }
 div.team-list > div:first-child + div > .transparent-team-photo{
 	width: 275px;
@@ -815,16 +824,21 @@ div.team-list > div:first-child + div:hover > .team-member-des {
 }
 div.team-list > div:first-child + div > .team-member-des:before{
 	content:url("../img/bubble/form2.png");
-	position: relative;
+	position: absolute;
 	left: 345px;
 	top: 150px;
 }
 /* Third Child */
 div.team-list > div:first-child + div + div {
-	position: absolute;
+	/*position: absolute;
 	top: 3460px;
 	left: 185px !important;
-	padding-left: 50px;
+	padding-left: 50px;*/
+	position: absolute;
+	margin-top: 0%;
+	left: 10% !important;
+	width: 310px;
+	z-index: 0;
 }
 div.team-list > div:first-child + div + div > .transparent-team-photo{
 	width: 275px;
@@ -855,10 +869,15 @@ div.team-list > div:first-child + div + div > .team-member-des:before{
 }
 /* Fourth Child */
 div.team-list > div:first-child + div + div + div{
-	position: absolute;
+	/*position: absolute;
 	top: 3600px;
 	right: 225px !important;
-	padding-left: 50px;
+	padding-left: 50px;*/
+	position: absolute;
+	margin-top: 15%;
+	left: 44% !important;
+	width: 310px;
+	z-index: 0;
 }
 div.team-list > div:first-child + div + div + div > .transparent-team-photo{
 	width: 275px;
@@ -889,10 +908,15 @@ div.team-list > div:first-child + div + div + div > .team-member-des:before{
 }
 /* Fifth Child */
 div.team-list > div:first-child + div + div + div + div {
-	position: absolute;
+	/*position: absolute;
 	top: 3800px;
 	left: 300px !important;
-	padding-left: 50px;
+	padding-left: 50px;*/
+	position: absolute;
+	margin-top: 33%;
+	left: 13% !important;
+	width: 310px;
+	z-index: 0;
 }
 div.team-list > div:first-child + div + div + div + div > .transparent-team-photo{
 	width: 275px;
@@ -923,10 +947,15 @@ div.team-list > div:first-child + div + div + div + div > .team-member-des:befor
 }
 /* Sixth Child */
 div.team-list > div:first-child + div + div + div + div + div{
-	position: absolute;
+	/*position: absolute;
 	top: 3950px;
 	right: 265px !important;
-	padding-left: 50px;
+	padding-left: 50px;*/
+	position: absolute;
+	margin-top: 25%;
+	right: -7% !important;
+	width: 310px;
+	z-index: 0;
 }
 div.team-list > div:first-child + div + div + div + div + div > .transparent-team-photo{
 	width: 275px;
