@@ -218,14 +218,14 @@ function team_manager_submenu_page_callback() {
         if (is_array($_wp_additional_image_sizes) && array_key_exists($image_size, $_wp_additional_image_sizes)){
           $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), $image_size );   
         }else{
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );   
+          $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' );   
         }          
         $width = $image[1];
 
         if (isset($image[0])) {
           $image = "<img class='team-picture ".$image_layout."' src='".$image[0]."' width='".$width."' title='".$title."' />";
         }else{
-          $image = "<img class='team-picture ".$image_layout."' src='".plugins_url( 'img/demo.gif',__FILE__)."' width='150' title='".$title."' />";
+          $image = "<img class='team-picture ".$image_layout."' src='".plugins_url( 'img/demo.gif',__FILE__)."' width='275' title='".$title."' />";
         }
 
         $job_title = get_post_meta($post_id,'tm_jtitle',true);
