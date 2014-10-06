@@ -3,8 +3,13 @@
 			<div class="large-4 columns footer-logo">
 				<img src="<?=bloginfo('template_directory'); ?>/img/victoria147-logo-sm.png" alt="Victoria 147">
 			</div>
-			<div class="large-4 columns">
-
+			<div class="large-4 columns footer-social">
+				<div class="social-btm">
+	      	<a href="https://www.facebook.com/pages/Victoria147/475358795836280" target="_blank" class="social-btn-footer fb-btn social-sprite-w"></a>
+	      	<a href="https://twitter.com/V147_org" target="_blank" class="social-btn-footer tw-btn social-sprite-w"></a>
+	      	<a href="http://instagram.com/victoria147org" target="_blank" class="social-btn-footer insta-btn social-sprite-w"></a>
+	      	<a href="https://www.youtube.com/user/CanalV147" target="_blank" class="social-btn-footer yt-btn social-sprite-w"></a>
+	      </div>
 			</div>
 			<div class="large-4 columns footer-copy">
 				<a href="" class="footer-links">Aviso de Privacidad</a>
