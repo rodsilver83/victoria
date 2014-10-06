@@ -65,6 +65,6 @@
       <iframe width="100%" height="100%" scrolling="no" frameborder="0" src="<?= $_SERVER['SERVER_NAME']  ?>/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=1&external_site=1&wysijap=subscriptions" class="iframe-wysija" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none; height: 330px; left: 0pt; visibility: visible;" marginwidth="0" marginheight="0" allowtransparency="true" title="Subscription MailPoet"></iframe>
     </div> 
     <div class="sidebar-description">
-      Suscríbete a nuestro Newsletter y recibe las noticias más importantes directamente en tu correo
+      Suscríbete a nuestro Newsletter y recibe las noticias más relevantes
     </div> 
   </div>

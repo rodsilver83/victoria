@@ -1634,7 +1634,6 @@ div.team-list > div:first-child + div + div + div + div + div + div + div + div 
 	position: absolute;
 	top: 4875px;
 	left: 150px;
-	z-index: 5;
 }
 #rhombus8{
 	background-image: url("../img/rhombus/blk/white-sm.png");
@@ -1661,7 +1660,7 @@ div.team-list > div:first-child + div + div + div + div + div + div + div + div 
 	width: 450px;
 	height: 450px;
 	position: absolute;
-	top: 2650px;
+	top: 2450px;
 	left: 2%;
 }
 #rhombus11{
@@ -1670,7 +1669,7 @@ div.team-list > div:first-child + div + div + div + div + div + div + div + div 
 	width: 300px;
 	height: 300px;
 	position: absolute;
-	top: 10000px;
+	top: 9800px;
 	left: 45%;
 }
 /*-----------------
@@ -1713,12 +1712,12 @@ div.team-list > div:first-child + div + div + div + div + div + div + div + div 
 	color: rgba(0,0,0,0.8);
 }
 .the-post-title {
-	border: 2px solid #32ccb9;
+	border: 2px solid #23275F;
 }
 .the-post-title h1{
 	font-family: 'Oswald', sans-serif !important;
 	text-transform: uppercase;
-	color: #32ccb9;
+	color: #23275F;
 	margin: 5px 0;
 	text-align: center;
 }
@@ -1727,7 +1726,7 @@ div.team-list > div:first-child + div + div + div + div + div + div + div + div 
 	padding: 5px 15px;
 }
 .the-post-author cite a{
-	color: #32ccb9 !important;
+	color: #23275F !important;
 	font-size: 16px;
 }
 .the-post-author cite a:hover {
@@ -1735,7 +1734,7 @@ div.team-list > div:first-child + div + div + div + div + div + div + div + div 
 	text-decoration: underline;
 }
 .the-post-author cite a:visited{
-	color: #32ccb9 !important;
+	color: #23275F !important;
 }
 /*-----------------
 	

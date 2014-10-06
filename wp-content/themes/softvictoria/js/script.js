@@ -149,7 +149,7 @@ $(document).ready(function(){
   function scrolling(id){
     var bodyRect = document.body.getBoundingClientRect(),
       elemRect = document.getElementById(id).getBoundingClientRect(),
-      offset   = elemRect.top - bodyRect.top - 65;
+      offset   = elemRect.top - bodyRect.top - 85;
 
     $("html, body").animate({
       scrollTop:offset}, 
