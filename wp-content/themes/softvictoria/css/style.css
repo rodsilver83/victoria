@@ -29,6 +29,7 @@ Version:        1.00
                                   \/____/                  \/____/                  \/____/ 
 
 	STAY FLY, SON!
+
 */
 /*  THE FONTS  */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
@@ -1856,6 +1857,76 @@ div.team-list > div:first-child + div + div + div + div + div + div + div + div 
 }
 .the-category-entry p > strong {
 	font-size: 21px;
+}
+/*-----------------
+	
+		THE ACADEMIA PAGE
+
+-----------------*/
+.academia-page{
+
+}
+.academia-program{
+	border-top: 1px solid #eee;
+	margin-top: 25px;
+	padding: 20px 25px;
+}
+.academia-program h4 {
+	font-family: 'Oswald', sans-serif !important;
+	font-size: 10em;
+	text-transform: uppercase;
+	color: #F9A923;
+	margin: 5px 0;
+	text-align: center;
+}
+.academia-program > h4 > a {
+	color: #F9A923;
+}
+.academia-program > .entry {
+	background-color: #fff;
+	margin-top: -52px;
+}
+.the-post-title > h1 > span {
+	font-family: Times, "Times New Roman", Serif;
+	font-size: 60px;
+	margin-top: -9px;
+	padding: 35px;
+}
+.screen-reader-response {
+	color: #c7254e;
+	background-color: #f9f2f4;
+	padding: 20px 30px;
+	text-align: center;
+	font-size: 18px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.screen-reader-response  > ul {
+	display: none;
+	list-style: none;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.wpcf7-not-valid-tip{
+	color: #c7254e;
+	background-color: #f9f2f4;
+	padding: 20px 30px;
+	text-align: left;
+	font-size: 18px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.wpcf7-response-output.wpcf7-validation-errors{
+	color: #c7254e;
+	background-color: #f9f2f4;
+	padding: 20px 30px;
+	text-align: center;
+	font-size: 18px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 /*-----------------
 	

@@ -14,15 +14,12 @@ $objPost = get_post($post_id);
 setup_postdata($objPost);
 ?>
 <div id="primary" class="row site-content">
-	<div role="main" id="the-post" class="large-9 columns">
+	<div role="main" id="the-post" class="large-12 columns">
 		<div class="the-post-title">
-			<h1><?php the_title();?></h1>
+			<h1><span>{</span><?php the_title();?><span>}</span></h1>
 		</div>
-		<blockquote class="the-post-author">
-			<cite><?php the_author_posts_link()?> | <?php the_date()?></cite>
-		</blockquote>
 
-		<div class="page">
+		<div class="academia-page">
 			<?php
 			$pageChildren = $wpdb->get_results("
 				SELECT *
@@ -36,25 +33,25 @@ setup_postdata($objPost);
 				foreach ( $pageChildren as $pageChild ) :
 					setup_postdata( $pageChild );
 					?>
-
-				<h4><?php print '<a href="' . get_permalink( $pageChild->ID ) . '">' . get_the_title( $pageChild->ID ) . '</a>'; ?></h4>
-				<div class="entry">
-					<?php the_excerpt(); ?>
+				<div class="academia-program">
+					<h4><?php print '<a href="' . get_permalink( $pageChild->ID ) . '">' . get_the_title( $pageChild->ID ) . '</a>'; ?></h4>
+					<div class="entry">
+						<?php the_content(); ?>
+					</div>
 				</div>
-
 				<?php
 				endforeach;
 			endif;
 			?>
+			<hr>
 		</div>
-		<p>
-			
-			<?php echo do_shortcode( '[contact-form-7 id="41" title="Contact Form"]' ); ?>
-			
-		</p>
 	</div><!-- #the-post -->
-	<?php get_sidebar(); ?>
 </div><!-- #primary -->
-
+<div id="contact-section" >
+	<div class="contact-wrapper">
+		<h2>Formulario de contacto para emprendedoras</h2>
+		<?php echo do_shortcode( '[contact-form-7 id="5370" title="___Contacto Emprendedoras"]' ); ?>
+	</div>
+</div><!-- /#contact-section -->
 
 <?php get_footer(); ?>
