@@ -10,8 +10,12 @@ get_header(); ?>
 <?php 
 // Check if there are any posts to display
 if ( have_posts() ) : ?>
-
+	
+		<?php if (!is_category(array(19,20,29,42,53)) && !is_home()) : ?>
 		<div role="main" id="the-category" class="large-9 columns">	
+		<?php else : ?>
+		<div role="main" id="the-category" class="large-12 columns">
+		<?php endif; ?>
 			<div class="archive-header">
 				<?php single_cat_title( '', false ); ?>
 				<?php

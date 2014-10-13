@@ -12,43 +12,40 @@ get_header(); ?>
 // Check if there are any posts to display
 if ( have_posts() ) : ?>
 
-		<div role="main" id="the-category" class="large-9 columns">	
+		<div role="main" id="the-category" class="large-12 columns">	
 			<div class="archive-header">
-				<?php
-				// Display optional category description
-				 if ( category_description() ) : 
-				?>
 				<div class="the-category-title">
 					<p>
-					<?php single_cat_title( '', false ); ?>
-					<?php echo category_description(); ?>
+					Red de Fellows
 					</p>
 				</div>
-				<?php endif; ?>
 			</div>
 
+			<div class="row">
 			<?php
 			// The Loop
 			while ( have_posts() ) : the_post();
 			?>
-			<div class="category-post">
-				<div class="category-post-title">
-					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-					<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+				<div class="large-3 columns category-post the-fellow">
+					<!--div class="category-post-title">
+						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+						<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+					</div-->
+					<div class="the-fellow-logo">
+						<?php 
+						$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+						print$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
+						?>
+					</div>
+					<div class="the-fellow-entry">
+						<?php the_content(); ?>
+					</div>
 				</div>
 
-				<div class="the-category-entry">
-					<?php the_content(); ?>
+			<?php endwhile; ?>
+			</div><!-- End row -->
 
-				 <!--p class="postmetadata">
-				 	<?//php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed'); ?>
-				 </p-->
-				</div>
-			</div>
-
-			<?php endwhile; 
-
-				else: ?>
+			<?php	else: ?>
 
 			<p>Sorry, no posts matched your criteria.</p>
 

@@ -62,10 +62,10 @@
 					    <!-- Left Nav Section -->
 					    <ul class="left">
 					      <li class="has-dropdown">
-					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
+					      	<a href="#" id="go_who" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
 					      	 <ul class="dropdown the-submenu-top">
 					          <li><a href="#" id="go_historia" class="the-submenu-item bordered-menu">Historia</a></li>
-					          <li><a href="#" id="go_mision" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
+					          <li><a href="#" id="go_mision" class="the-submenu-item bordered-menu">Misión e Impacto</a></li>
 					          <li><a href="#" id="go_wedo" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
 					          <li><a href="#" id="go_staff" class="the-submenu-item bordered-menu">Staff</a></li>
 					        </ul>
@@ -295,12 +295,12 @@
 				<div class="row container-about">
 					<div class="who">
 						<div class="large-5 columns"></div>
-  					<div class="large-7 columns">
+  					<div id="who-full" class="large-7 columns">
   						<h1>¿Quiénes Somos?</h1>
   						<p><?php
 							$post = get_post(5377);
 							setup_postdata($post);
-							print("ajajajajajj");
+							//print("ajajajajajj");
 							the_content();
   						?></p>
   					</div>
@@ -314,7 +314,7 @@
 								<h3>Historia</h3>
 							</div>
 							<p><?php
-							$post = get_post(5413);
+							$post = get_post(5559);
 							setup_postdata($post);
 							the_content();
 							?></p>
@@ -339,7 +339,7 @@
 						<div class="large-6 columns">
 							<div class="about-titles">
 								<img src="<?=bloginfo('template_directory'); ?>/img/eye-icon.png" width="8%" height="auto"> 
-								<h3>Visión</h3>
+								<h3>Impacto</h3>
 							</div>
 							<p><?php
 								$post = get_post(5383);

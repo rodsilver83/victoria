@@ -163,6 +163,7 @@ $(document).ready(function(){
   $('#go_wedo').on("click", function(){ scrolling("what-do-we-do"); });
   $('#go_staff').on("click", function(){ scrolling("the-staff"); });
   $('#go_contact').on("click", function(){ scrolling("contact-section"); });
+  $('#go_who').on("click", function(){ scrolling("who-full"); });
 
 
   //The Team Parallax
