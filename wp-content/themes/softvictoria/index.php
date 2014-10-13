@@ -253,7 +253,7 @@
 				$cat_args=array(
 					'orderby' => 'name',
 					'order' => 'ASC',
-					'include'=> array(54) 
+					'include'=> array(54,68) 
 				);
 
 				$categories=get_categories($cat_args);
