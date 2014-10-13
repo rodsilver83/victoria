@@ -10,7 +10,17 @@ get_header(); ?>
 
 <?php 
 // Check if there are any posts to display
-if ( have_posts() ) : ?>
+$args=array(
+    'category__in' => 56,
+    
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'orderby'=> 'title',
+    'order' => 'asc',
+  );
+    $my_query = null;
+      $my_query = new WP_Query($args);
+?>
 
 		<div role="main" id="the-category" class="large-12 columns">	
 			<div class="archive-header">
@@ -23,10 +33,10 @@ if ( have_posts() ) : ?>
 
 			<div class="row">
 			<?php
-			// The Loop
-			while ( have_posts() ) : the_post();
+			if( $my_query->have_posts() ) {
+        while ($my_query->have_posts()) : $my_query->the_post(); 
 			?>
-				<div class="large-3 columns category-post the-fellow">
+				<div class="large-4 columns category-post the-fellow">
 					<!--div class="category-post-title">
 						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
@@ -42,15 +52,11 @@ if ( have_posts() ) : ?>
 					</div>
 				</div>
 
-			<?php endwhile; ?>
+			<?php endwhile; 
+         }    
+        ?>
 			</div><!-- End row -->
 
-			<?php	else: ?>
-
-			<p>Sorry, no posts matched your criteria.</p>
-
-
-		<?php endif; ?>
 		</div>
 
 	</div>
