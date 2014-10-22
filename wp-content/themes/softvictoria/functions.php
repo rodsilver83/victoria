@@ -19,7 +19,7 @@ function restrict_admin()
                 wp_redirect( site_url() );
 	}
 }
-add_action( 'admin_init', 'restrict_admin', 1 );
+//add_action( 'admin_init', 'restrict_admin', 1 );
 
 // ====== funciones para el plugin de contact form 7
 
@@ -100,6 +100,53 @@ return;
 add_action('fsctf_mail_sent', 'my_process_fsctf_mail_sent');
 
 
+// add a favicon to your
+// function blog_favicon() {
+// echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'http://cdn3.wpbeginner.com/favicon.ico" />';
+// }
+// add_action('wp_head', 'blog_favicon');
+
+//Remove the Wordpress Version
+function wpbeginner_remove_version() {
+return '';
+}
+add_filter('the_generator', 'wpbeginner_remove_version');
+
+//Customized Gravatar for comments
+add_filter( 'avatar_defaults', 'newgravatar' );
+function newgravatar ($avatar_defaults) {
+	$myavatar = get_bloginfo('template_directory') . '/images/gravatar.gif';
+	$avatar_defaults[$myavatar] = "Victoria147";
+	return $avatar_defaults;
+}
+
+function victoria_scripts_styles() {
+	/*
+	 * Adds JavaScript to pages with the comment form to support
+	 * sites with threaded comments (when in use).
+	 */
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+		wp_enqueue_script( 'comment-reply' );
+}
+
+//Testing Disqus
+function disqus_embed($disqus_shortname) {
+    global $post;
+    wp_enqueue_script('disqus_embed','http://'.$disqus_shortname.'.disqus.com/embed.js');
+    echo '<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = "'.$disqus_shortname.'";
+        var disqus_title = "'.$post->post_title.'";
+        var disqus_url = "'.get_permalink($post->ID).'";
+        var disqus_identifier = "'.$disqus_shortname.'-'.$post->ID.'";
+    </script>';
+}
+
+
+function the_avatars(){
+	if ( !defined( 'USER_AVATAR_FULL_WIDTH' ) ) define( 'USER_AVATAR_FULL_WIDTH', 250 );
+	if ( !defined( 'USER_AVATAR_FULL_HEIGHT' ) ) define( 'USER_AVATAR_FULL_HEIGHT', 250 );
+}
 // ========= eaeaea eaeaea eaeaea 
 
 add_action( 'init', 'my_add_excerpts_to_pages' );

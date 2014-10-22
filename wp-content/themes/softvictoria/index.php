@@ -17,10 +17,19 @@
 				<?php
 				$post = get_post(5377);
 				setup_postdata($post);
-				$url= wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+				$url_who = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 				
 				?>
-				background: url("<?=$url?>") no-repeat center 25px fixed;
+				background: url("<?php echo $url_who?>") no-repeat center 25px fixed;
+			}
+			.intro-bg{
+				<?php
+				$post = get_post(5763);
+				setup_postdata($post);
+				$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+				
+				?>
+				background: url("<?php echo $url?>") no-repeat center center fixed;
 			}
 		</style>
 	</head>
@@ -34,7 +43,7 @@
 				    <ul class="title-area hidden">
 					    <li class="name">
 					      <a href="#">
-					      	<img src="<?= bloginfo('template_directory'); ?>/img/victoria-logo-top.png" alt="Victoria 147">
+					      	<img src="<?php echo  bloginfo('template_directory'); ?>/img/victoria-logo-top.png" alt="Victoria 147">
 					      </a>
 					    </li>
 					     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -44,7 +53,7 @@
 						<section class="top-bar-section top-bar-menu">
 					    <!-- Right Nav Section -->
 					    <div id="searchbar">
-								<?=get_search_form()?>
+								<?php echo get_search_form()?>
 					    </div>
 					    <ul class="right">
 								<li>
@@ -62,10 +71,10 @@
 					    <!-- Left Nav Section -->
 					    <ul class="left">
 					      <li class="has-dropdown">
-					      	<a href="#" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
+					      	<a href="#" id="go_who" class="the-menu-top bordered-menu">¿Quiénes somos?</a>
 					      	 <ul class="dropdown the-submenu-top">
 					          <li><a href="#" id="go_historia" class="the-submenu-item bordered-menu">Historia</a></li>
-					          <li><a href="#" id="go_mision" class="the-submenu-item bordered-menu">Misión y Visión</a></li>
+					          <li><a href="#" id="go_mision" class="the-submenu-item bordered-menu">Misión e Impacto</a></li>
 					          <li><a href="#" id="go_wedo" class="the-submenu-item bordered-menu">¿Qué hacemos?</a></li>
 					          <li><a href="#" id="go_staff" class="the-submenu-item bordered-menu">Staff</a></li>
 					        </ul>
@@ -80,10 +89,11 @@
 										'order' => 'ASC',
 										'include'=> array(55) 
 									);
-									$rsRedEmprendedoras=get_categories($cat_args)[0];
-									$linkEmprendedoras= get_category_link( $rsRedEmprendedoras->term_id );
+									$rsRedEmprendedoras=get_categories($cat_args);
+									$linkEmprendedoras= get_category_link( $rsRedEmprendedoras[0]->term_id );
 									?>
-			          <li><a href="<?=$linkEmprendedoras?>" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
+
+			          <li><a href="<?php /* print $linkEmprendedoras*/ print("/category/red-de-emprendedoras")?>" class="the-submenu-item bordered-menu">Red de Emprendedoras</a></li>
 
 										<?php
 										
@@ -92,12 +102,12 @@
 											'order' => 'ASC',
 											'include'=> array(56) 
 										);
-										$rsRedFellows=get_categories($cat_args)[0];
-										$linkFellows = get_category_link( $rsRedFellows->term_id );
+										$rsRedFellows=get_categories($cat_args);
+										$linkFellows = get_category_link( $rsRedFellows[0]->term_id );
 										
 										?>
 
-					          <li><a href="<?=$linkFellows?>" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
+					          <li><a href="<?php echo $linkFellows?>" class="the-submenu-item bordered-menu">Red de Fellows</a></li>
 					          <li><a href="<?php echo site_url('unete-y-acelera-tu-negocio')?>" class="the-submenu-item bordered-menu">Únete y acelera tu negocio</a></li>
 
 					    			<li><a href="/academia-147" class="the-submenu-item bordered-menu">Academia Victoria147</a></li>
@@ -112,10 +122,10 @@
 											'order' => 'ASC',
 											'include'=> array(65) 
 										);
-										$rsDescargables=get_categories($cat_args)[0];
-										$linkDescargables = get_category_link( $rsDescargables->term_id );
+										$rsDescargables=get_categories($cat_args);
+										$linkDescargables = get_category_link( $rsDescargables[0]->term_id );
 										?>
-					          <li><a href="<?=$linkDescargables?>" class="the-submenu-item bordered-menu">Descargas 147</a></li>
+					          <li><a href="<?php echo $linkDescargables?>" class="the-submenu-item bordered-menu">Descargas 147</a></li>
 										<?php
 										
 										$cat_args=array(
@@ -123,12 +133,12 @@
 											'order' => 'ASC',
 											'include'=> array(66) 
 										);
-										$rsVideos=get_categories($cat_args)[0];
-										$linkVideos = get_category_link( $rsVideos->term_id );
+										$rsVideos=get_categories($cat_args);
+										$linkVideos = get_category_link( $rsVideos[0]->term_id );
 										
 										?>
 						
-					          <li><a href="<?=$linkVideos?>" class="the-submenu-item bordered-menu">Videos</a></li>
+					          <li><a href="<?php echo $linkVideos?>" class="the-submenu-item bordered-menu">Videos</a></li>
 					        </ul>
 					      </li>
 					      <li class="has-dropdown">
@@ -148,7 +158,7 @@
 				  </nav>
 				</div>
 			</div>
-			<div id="main-intro">
+			<div id="main-intro" class="intro-bg">
 				<div class="intro-spacer"></div>
 				<div id="content" class="row">
 					<div class="large-12 columns">
@@ -192,9 +202,9 @@
 					);
 					//Testing the content of the post before it prints da HTML
 
-					$posts=get_posts($args)[0];
+					$posts=get_posts($args);
 
-					if($posts->post_content!='')
+					if($posts[0]->post_content!='')
 					{
 						unset($posts);
 						$category_link= get_category_link( $category->term_id );
@@ -244,7 +254,8 @@
 				<ul class="example-orbit" data-orbit
 			    data-options="animation:slide;
 	        pause_on_hover:true;
-	        animation_speed:1000;
+	        animation_speed:800;
+	        timer_speed: 10000;
 	        navigation_arrows:true;
 	        pause_on_hover: true;
 	        bullets:false;">
@@ -253,7 +264,7 @@
 				$cat_args=array(
 					'orderby' => 'name',
 					'order' => 'ASC',
-					'include'=> array(54) 
+					'include'=> array(54,68) 
 				);
 
 				$categories=get_categories($cat_args);
@@ -271,7 +282,7 @@
 					{
 						setup_postdata($post); 
 						// $post_content = wordwrap($post_wrapped, 20);
-						$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+						$post_thumbnail =  get_the_post_thumbnail( $post->ID, array(1920,750)); 
 						$post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
 						$post_link=post_permalink();
 						$post_title=get_the_title();
@@ -280,7 +291,7 @@
 							${post_thumbnail}
 						</a>
 				    <div class='orbit-caption'>
-							<a href='${post_link}' class='the-post-link'>".get_the_title()."<br> <span>Ver más</spa></a>
+							<a href='${post_link}' class='the-post-link'>".get_the_title()." <span>Ver más</spa></a>
 				    </div>
 					  </li>
 				    ";
@@ -295,12 +306,12 @@
 				<div class="row container-about">
 					<div class="who">
 						<div class="large-5 columns"></div>
-  					<div class="large-7 columns">
+  					<div id="who-full" class="large-7 columns">
   						<h1>¿Quiénes Somos?</h1>
   						<p><?php
 							$post = get_post(5377);
 							setup_postdata($post);
-							print("ajajajajajj");
+							//print("ajajajajajj");
 							the_content();
   						?></p>
   					</div>
@@ -310,11 +321,11 @@
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
-								<img src="<?=bloginfo('template_directory'); ?>/img/home-icon.png" width="8%" height="auto"> 
+								<img src="<?php echo bloginfo('template_directory'); ?>/img/home-icon.png" width="8%" height="auto"> 
 								<h3>Historia</h3>
 							</div>
 							<p><?php
-							$post = get_post(5413);
+							$post = get_post(5559);
 							setup_postdata($post);
 							the_content();
 							?></p>
@@ -324,7 +335,7 @@
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
-								<img src="<?=bloginfo('template_directory'); ?>/img/star-icon.png" width="8%" height="auto"> 
+								<img src="<?php echo bloginfo('template_directory'); ?>/img/star-icon.png" width="8%" height="auto"> 
 								<h3>Misión</h3>
 							</div>
 							<p><?php
@@ -338,8 +349,8 @@
 						<div class="large-6 columns"></div>
 						<div class="large-6 columns">
 							<div class="about-titles">
-								<img src="<?=bloginfo('template_directory'); ?>/img/eye-icon.png" width="8%" height="auto"> 
-								<h3>Visión</h3>
+								<img src="<?php echo bloginfo('template_directory'); ?>/img/eye-icon.png" width="8%" height="auto"> 
+								<h3>Impacto</h3>
 							</div>
 							<p><?php
 								$post = get_post(5383);
@@ -351,7 +362,7 @@
 				</div>
 			</div>
 			<!-- What do we do -->
-			<img src="<?=bloginfo('template_directory'); ?>/img/pleca.png" id="what-do-we-do" class="pleca">
+			<img src="<?php echo bloginfo('template_directory'); ?>/img/pleca.png" id="what-do-we-do" class="pleca">
 			<div class="what">
 				<div class="row">
 					<div class="large-12">
@@ -377,17 +388,17 @@
 					</a>
 				</div>
 				<!-- Rhombus -->
-				<div data-stellar-ratio="0.3" data-stellar-vertical-offset="-450" id="rhombus1"></div>
-				<div data-stellar-ratio="1.9" data-stellar-vertical-offset="-450" id="rhombus2"></div>
-				<div data-stellar-ratio="0.6" data-stellar-vertical-offset="-450" id="rhombus3"></div>
-				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus4"></div>
-				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus5"></div>
-				<div data-stellar-ratio="1.2" data-stellar-vertical-offset="-450" id="rhombus6"></div>
-				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus7"></div>
-				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus8"></div>
-				<div data-stellar-ratio="0.7" data-stellar-vertical-offset="-450" id="rhombus9"></div>
-				<div data-stellar-ratio="0.3" data-stellar-vertical-offset="-450" id="rhombus10"></div>
-				<div data-stellar-ratio="1.9" data-stellar-vertical-offset="-450" id="rhombus11"></div>
+				<div data-stellar-ratio="0.3" data-stellar-vertical-offset="-450" id="rhombus1" class="v-rhombus"></div>
+				<div data-stellar-ratio="1.9" data-stellar-vertical-offset="-450" id="rhombus2" class="v-rhombus"></div>
+				<div data-stellar-ratio="0.6" data-stellar-vertical-offset="-450" id="rhombus3" class="v-rhombus"></div>
+				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus4" class="v-rhombus"></div>
+				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus5" class="v-rhombus"></div>
+				<div data-stellar-ratio="1.2" data-stellar-vertical-offset="-450" id="rhombus6" class="v-rhombus"></div>
+				<div data-stellar-ratio="0.9" data-stellar-vertical-offset="-450" id="rhombus7" class="v-rhombus"></div>
+				<div data-stellar-ratio="0.4" data-stellar-vertical-offset="-450" id="rhombus8" class="v-rhombus"></div>
+				<div data-stellar-ratio="0.7" data-stellar-vertical-offset="-450" id="rhombus9" class="v-rhombus"></div>
+				<div data-stellar-ratio="0.3" data-stellar-vertical-offset="-450" id="rhombus10" class="v-rhombus"></div>
+				<div data-stellar-ratio="1.9" data-stellar-vertical-offset="-450" id="rhombus11" class="v-rhombus"></div>
 
 				<!-- Team Members -->
 				<?php echo do_shortcode("[team_manager category='0' orderby='menu_order' limit='0' post__in='' exclude='' layout='grid' image_layout='rounded' ]")?>
@@ -417,18 +428,18 @@
 					</ul>
 					<div class="tabs-content">
 					  <section role="tabpanel" aria-hidden="false" class="content contact-wrapper" id="panel2-1">
-					    <h2>Formulario de contacto para emprendedoras</h2>
-							<?php echo do_shortcode( '[contact-form-7 id="5370" title="___Contacto Emprendedoras"]' ); ?>
-					  </section>
-					  
-					  <section role="tabpanel" aria-hidden="true" class="content contact-wrapper" id="panel2-2">
-					    <h2>Formulario de contacto para empresas</h2>
-							<?php echo do_shortcode( '[contact-form-7 id="5372" title="___Contacto Empresas"]' ); ?>
-					  </section>
+					 
+<iframe src='http://www.victoria147.com/formulario-de-contacto-para-emprendedoras'></iframe>
 
+					  </section>
+<section role="tabpanel" aria-hidden="false" class="content contact-wrapper" id="panel2-2">
+					 
+<iframe src='http://www.victoria147.com/formulario-de-contacto-para-emprendedoras'></iframe>
+
+					  </section>
 					  <section role="tabpanel" aria-hidden="true" class="content contact-wrapper" id="panel2-3">
-					    <h2>Formulario para trabajar con nosotros</h2>
-							<?php echo do_shortcode( '[contact-form-7 id="5371" title="___Trabaja con Nosotros"]' ); ?>
+
+Aquí va el otro form
 					  </section>
 					</div><!-- /.tabs-content -->
 
@@ -442,7 +453,7 @@
 	<div id='footer'>
 		<div class="row">
 			<div class="large-4 columns footer-logo">
-				<img src="<?=bloginfo('template_directory'); ?>/img/victoria147-logo-sm.png" alt="Victoria 147">
+				<img src="<?php echo bloginfo('template_directory'); ?>/img/victoria147-logo-sm.png" alt="Victoria 147">
 			</div>
 			<div class="large-4 columns footer-social">
 				<div class="social-btm">

@@ -7,7 +7,7 @@
         $cat_args=array(
             'orderby' => 'name',
             'order' => 'ASC',
-            'include'=> array(62,59,58,60,61,63) 
+            'include'=> array(59,58,60,63,61,62) 
         );                $counter=0;
         $categories=get_categories($cat_args);
         if ($categories) 
@@ -34,7 +34,7 @@
           $cat=get_the_category($post_id);
           $args=array(
           'showposts' => 5,
-          'category__in' => $cat[0]->cat_ID,
+          'category__not_in' => array($cat[0]->cat_ID, 14, 10, 55, 19, 20, 29, 42, 53, 56, 30),
           'caller_get_posts'=>1, 
           'hide_empty'=>1,
           );
@@ -65,6 +65,6 @@
       <iframe width="100%" height="100%" scrolling="no" frameborder="0" src="<?= $_SERVER['SERVER_NAME']  ?>/?wysija-page=1&controller=subscribers&action=wysija_outter&wysija_form=1&external_site=1&wysijap=subscriptions" class="iframe-wysija" tabindex="0" style="position: static; top: 0pt; margin: 0px; border-style: none; height: 330px; left: 0pt; visibility: visible;" marginwidth="0" marginheight="0" allowtransparency="true" title="Subscription MailPoet"></iframe>
     </div> 
     <div class="sidebar-description">
-      Suscríbete a nuestro Newsletter y recibe las noticias más importantes directamente en tu correo
+      Suscríbete a nuestro Newsletter y recibe las noticias más relevantes
     </div> 
   </div>

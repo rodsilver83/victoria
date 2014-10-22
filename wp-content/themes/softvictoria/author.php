@@ -1,6 +1,6 @@
 <?php
 /**
- * The Template for displaying search results
+ * The Template for displaying the author
  *
  * @package WordPress
  * @subpackage softvictoria
@@ -26,15 +26,17 @@ setup_postdata($objPost);
 		    <div class="the-category-title">
 					<p>Acerca de <?php echo $curauth->nickname; ?></p>
 				</div>
-				<p class="the-author-description">
-					<?php echo $curauth->user_description; ?>
-				</p>
-<!-- dl>
-      <dt>Website</dt>
-      <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
-      <dt>Profile</dt>
-      <dd><?php echo $curauth->user_description; ?></dd>
-  </dl -->
+				<div class="row author-page-descript">
+					<div class="large-3 columns the-author-avatar">
+						<?php echo get_avatar($curauth->ID, USER_AVATAR_FULL_HEIGHT); ?>
+					</div>
+					<div class="large-9 columns">
+						<p class="the-author-description">
+							
+							<?php echo $curauth->user_description; ?>
+						</p>
+					</div>
+				</div>
 
 			</div>
 			<div class="the-author-posts">
@@ -50,9 +52,9 @@ setup_postdata($objPost);
 				 rewind_posts();
 
 				/* -- para la biografía del autor -- */
-			if ( get_the_author_meta( 'description' ) ) : 
-				get_template_part( 'author-bio', get_post_format() ); 
-			endif; 
+			//if ( get_the_author_meta( 'description' ) ) : 
+				//get_template_part( 'author-bio', get_post_format() ); 
+			//endif; 
 			/* -- para la biografía del autor -- */
 
 

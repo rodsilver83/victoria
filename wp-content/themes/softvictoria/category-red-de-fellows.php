@@ -6,57 +6,72 @@
 get_header(); ?> 
 
 <div id="primary" class="row site-content">
-	<div id="content" role="main">
+    <div id="content" role="main">
 
 <?php 
 // Check if there are any posts to display
-if ( have_posts() ) : ?>
+$args=array(
+    'category__in' => 56,
 
-		<div role="main" id="the-category" class="large-9 columns">	
-			<div class="archive-header">
-				<?php
-				// Display optional category description
-				 if ( category_description() ) : 
-				?>
-				<div class="the-category-title">
-					<p>
-					<?php single_cat_title( '', false ); ?>
-					<?php echo category_description(); ?>
-					</p>
-				</div>
-				<?php endif; ?>
-			</div>
+    'post_type' => 'ANY',
+    'post_status' => 'publish',
+    'posts_per_page' => 1000,
+    'orderby'=> 'title',
+    'order' => 'asc',
+        'nopaging' => true, 
+  );
 
-			<?php
-			// The Loop
-			while ( have_posts() ) : the_post();
-			?>
-			<div class="category-post">
-				<div class="category-post-title">
-					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-					<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
-				</div>
+      $my_query = new WP_Query($args);
+// print(json_encode($my_query));
+?>
 
-				<div class="the-category-entry">
-					<?php the_content(); ?>
+        <div role="main" id="the-category" class="large-12 columns">    
+            <div class="archive-header">
+                <div class="the-category-title">
+                    <p>
+                    Red de Fellows
+                    </p>
+                </div>
+            </div>
 
-				 <!--p class="postmetadata">
-				 	<?//php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed'); ?>
-				 </p-->
-				</div>
-			</div>
+            <div class="row">
+            <?php
 
-			<?php endwhile; 
+            if( $my_query->have_posts() ) {
 
-				else: ?>
+        while ($my_query->have_posts()) : $my_query->the_post(); 
+            ?>
+                <div class="large-4 columns category-post the-fellow">
+                    <!--div class="category-post-title">
+                        <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+                        <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+                    </div-->
+                    <div class="the-fellow-logo">
+                        <?php 
+                        $post_thumbnail =  get_the_post_thumbnail( $post->ID, array(500,500)); 
+                        print $post_thumbnail = (!empty($post_thumbnail))?$post_thumbnail: "<img src='http://placepuppy.it/500/500' class='the-squared-image' width='100%' height='auto'>";
+                        ?>
+                    </div>
+                    <div class="the-fellow-entry">
+                        <?php  the_content(); ?>
+                    </div>
+                </div>
 
-			<p>Sorry, no posts matched your criteria.</p>
+            <?php endwhile; 
+         }    
+        ?>
+            </div><!-- End row -->
 
+        </div>
 
-		<?php endif; ?>
-		</div>
-
-	</div>
+    </div>
 </div>
+<script type="text/javascript">
+   $('.the-fellow').hover(function () {
+        $('.the-fellow-entry', this).stop(true, true).slideDown("normal");
+    }, function () {
+        $('.the-fellow-entry', this).stop(true, true).hide();
+    });
+</script>
 
 <?php get_footer(); ?>

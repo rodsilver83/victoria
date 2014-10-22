@@ -41,6 +41,8 @@ $catid = get_query_var('cat');
 
 	</div>
 </div>
+
+
 <?php get_footer(); ?>
 
 
